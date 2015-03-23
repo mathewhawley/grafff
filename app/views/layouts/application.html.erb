@@ -10,6 +10,7 @@
 
 <body>
   <nav class="navbar navbar-default" role="navigation">
+    <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
     <div class="container">
       <% if user_signed_in? %>
         <li><%= link_to "Edit account", edit_user_registration_path %></li>
@@ -30,6 +31,5 @@
   <% elsif user_signed_in? %>
     <ng-view></ng-view>
   <% end %>
-
 </body>
 </html>
