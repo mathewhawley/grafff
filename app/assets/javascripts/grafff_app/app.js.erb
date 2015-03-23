@@ -2,12 +2,12 @@ var app = angular.module('grafffApp', ['ngAnimate', 'ngRoute', 'ngResource']);
 
 app.config(function($routeProvider, $locationProvider){
 
-  $routeProvider.
-  when('/home', {
+  $routeProvider
+  .when('/home', {
     controller: 'HomeController',
     templateUrl: "<%= asset_path('home.html') %>"
-  }).
-  otherwise({
+  })
+  .otherwise({
     redirectTo: '/home'
   });
 

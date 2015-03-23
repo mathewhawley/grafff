@@ -4,75 +4,30 @@
   <title>Grafff</title>
   <base href="/test/">
   <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <%= javascript_include_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" %>
-  <%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-resource.min.js" %>
+  <%= javascript_include_tag 'application' %>  
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-
-<nav class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <% if user_signed_in? %>
-          <li>
-            <% if current_user.email? %>
-              <%= current_user.email %>
-            <% end %>
-          </li>
-          <li>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-          Edit
-        </button>
-            <% link_to "Edit", edit_user_registration_path, target: "_self"%>
-            <%= link_to "Editf", edit_user_registration_path %>
-          </li>
-          <li>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          </li>
-        <% else %>
-          <li>
-          <%= link_to "Login", new_user_session_path, target: "_self"%>
-            
-          </li>
-          <li>
-          <%= link_to "Sign Up", new_user_registration_path, target: "_self"%>
-          </li>
-        <% end %>
-          </div>
-        </nav>
-
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <% if user_signed_in? %>
+        <li><%= link_to "Edit account", edit_user_registration_path %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+    </div>
+  </nav>
    
-    <% if !user_signed_in? %>
-    <%= link_to "Login", new_user_session_path %>
-    <%= link_to "Sign Up", new_user_registration_path%>
+  <% if !user_signed_in? %>
     <%= yield %>
-    <% end %>
+  <% end %>
    
   <% if user_signed_in? %>
-
-     <!-- Modal -->
-     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-       <div class="modal-dialog">
-         <div class="modal-content">
-           <div class="modal-header">
-             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-           </div>
-           <div class="modal-body">
-            <%= render 'devise/registrations/edit' %>
-           </div>
-           <div class="modal-footer">
-             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-             <button type="button" class="btn btn-primary">Save changes</button>
-           </div>
-         </div>
-       </div>
-     </div>
     <%= yield %>
-
     <ng-view></ng-view>
-
   <% end %>
 
 </body>
