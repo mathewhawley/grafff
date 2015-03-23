@@ -27,9 +27,7 @@
    
   <% if current_page? edit_user_registration_path %>
     <%= yield %>
-  <% end %>
-
-  <% if user_signed_in? %>
+  <% elsif user_signed_in? %>
     <ng-view></ng-view>
   <% end %>
 
