@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150323114412) do
   create_table "artworks", force: :cascade do |t|
     t.string  "title"
     t.text    "description"
-    t.integer "artist_id"
+    t.integer "user_id"
   end
 
   create_table "comments", force: :cascade do |t|

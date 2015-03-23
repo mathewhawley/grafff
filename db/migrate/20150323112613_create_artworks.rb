@@ -3,7 +3,7 @@ class CreateArtworks < ActiveRecord::Migration
     create_table :artworks do |t|
       t.string :title
       t.text :description
-      t.integer :artist_id
+      t.integer :user_id
     end
   end
 end
