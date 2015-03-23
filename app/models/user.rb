@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_relationships, source: :follower
 
   has_many :comments
+  has_many :artworks
 end
