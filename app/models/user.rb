@@ -12,4 +12,7 @@ class User < ActiveRecord::Base
 
   has_many :comments
   has_many :artworks
+
+  has_many :likes
+  has_many :artworks, through: :likes
 end
