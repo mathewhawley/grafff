@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get '/#/*path' => 'static#index'
-  get '/#/home' => 'static#index', as: 'home'
+  # get '/test/*path' => 'static#index'
+  # get '/test/home/' => 'static#index', as: 'home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

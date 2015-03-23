@@ -4,17 +4,15 @@ var app = angular.module('grafffApp', [
   'ngResource'
 ]);
 
-app.config(function($routeProvider, $locationProvider){
+app.config(function($routeProvider){
 
   $routeProvider
-  .when('/home', {
+  .when('/', {
     controller: 'HomeController',
     templateUrl: "<%= asset_path('home.html') %>"
   })
   .otherwise({
-    redirectTo: '/home'
+    redirectTo: '/'
   });
-
-  $locationProvider.html5Mode(true);
 
 }); 

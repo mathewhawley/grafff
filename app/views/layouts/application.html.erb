@@ -2,7 +2,7 @@
 <html ng-app="grafffApp">
 <head>
   <title>Grafff</title>
-  <base href="/#/">
+  <!-- <base href="/test/"> -->
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>  
   <%= csrf_meta_tags %>
@@ -15,7 +15,7 @@
         <li><%= link_to "Edit account", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Log in", new_user_session_path %></li>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
       <% end %>
     </div>
