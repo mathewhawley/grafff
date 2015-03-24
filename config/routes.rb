@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'static#index'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   # get '/test/*path' => 'static#index'
   # get '/test/home/' => 'static#index', as: 'home'
