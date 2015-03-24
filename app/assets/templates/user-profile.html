@@ -7,6 +7,21 @@
     <p>{{ user.bio }}</p>
     <p ng-if="user.is_artist">{{ currentUser.followers.length }} Followers</p>
     <p ng-if="!user.is_artist">{{ currentUser.following.length }} Following</p>
-    <button>Follow/Unfollow</button><!-- Follow/unfollow button if user profile is artist profile -->
+    <button ng-if="user.is_artist">Follow/Unfollow</button><!-- Follow/unfollow button if user profile is artist profile -->
+  </div>
+</div>
+
+<div><!-- Profile body -->
+  <div><!-- Nav -->
+    <ul><!-- Nav pills -->
+      <li ng-if="!user.is_artist">Likes</li>
+      <li ng-if="!user.is_artist">Artists</li>
+      <li ng-if="!user.is_artist">Activity Feed</li>
+      <li ng-if="user.is_artist">Artworks</li>
+      <li ng-if="user.is_artist">Map</li>
+    </ul>
+  </div>
+  <div><!-- Content -->
+    
   </div>
 </div>
