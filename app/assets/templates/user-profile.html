@@ -1,1 +1,12 @@
-<p>This the profile page of: {{ user.first_name }}</p>
+<div><!-- Profile header -->
+  <div><!-- Profile picture -->
+    <img src="http://lorempixel.com/200/200/abstract">
+  </div>
+  <div><!-- Profile information -->
+    <h3>{{ user.username }}</h3>
+    <p>{{ user.bio }}</p>
+    <p ng-if="user.is_artist">{{ currentUser.followers.length }} Followers</p>
+    <p ng-if="!user.is_artist">{{ currentUser.following.length }} Following</p>
+    <button>Follow/Unfollow</button><!-- Follow/unfollow button if user profile is artist profile -->
+  </div>
+</div>
