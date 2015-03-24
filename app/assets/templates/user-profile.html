@@ -3,5 +3,12 @@
 <h4>About me:</h4>
 <p>{{ currentUser.bio }}</p>
 
+<div ng-if="currentUser.is_artist">
+<p>This user is an artist!</p>
 <h4>My Likes:</h4>
 <p ng-repeat="artwork in currentUserArtworks">{{ artwork.title }}</p>
+</div>
+
+<div ng-if="!currentUser.is_artist">
+  <p>This user isn't an artist</p>
+</div>
