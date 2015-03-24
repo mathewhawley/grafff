@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'static#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :users, only: [:show]
+
+  get 'users/profile' => 'users#profile'
+  get 'users/get_current_user' => 'users#get_current_user'
 
   # get '/test/*path' => 'static#index'
   # get '/test/home/' => 'static#index', as: 'home'
