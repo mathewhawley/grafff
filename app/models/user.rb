@@ -10,9 +10,8 @@ class User < ActiveRecord::Base
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
-  has_many :comments
-  has_many :artworks
+  has_many :comments, dependent: :destroy
+  has_many :artworks, dependent: :destroy
 
-  has_many :likes
-  has_many :artworks, through: :likes
+  has_many :likes, dependent: :destroy
 end
