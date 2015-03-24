@@ -1,5 +1,7 @@
 <p>This is the Angular index.html view</p>
 
+<p>This page will display the main map, showing all artworks</p>
+
 <ul>
-  <li ng-repeat="user in allUsers">{{ user.first_name }}</li>
+  <li ng-repeat="user in allUsers"><a ng-href="#/users/{{ user.id }}/profile">{{ user.first_name }}</a></li>
 </ul>
