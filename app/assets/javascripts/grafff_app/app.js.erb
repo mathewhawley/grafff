@@ -11,10 +11,6 @@ app.config(function($routeProvider){
     controller: 'HomeController',
     templateUrl: "<%= asset_path('index.html') %>"
   })
-  .when('/second-page', {
-    controller: 'HomeController',
-    templateUrl: "<%= asset_path('second-page.html') %>"
-  })
   .otherwise({
     redirectTo: '/'
   });
