@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  get 'users/profile' => 'users#profile'
   get 'users/get_all_users' => 'users#get_all_users'
   get 'users/get_current_user' => 'users#get_current_user'
 
