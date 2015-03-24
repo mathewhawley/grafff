@@ -11,10 +11,6 @@ app.config(function($routeProvider){
     controller: 'HomeController',
     templateUrl: "<%= asset_path('index.html') %>"
   })
-  .when('/users/profile', {
-    controller: 'UserController',
-    templateUrl: "<%= asset_path('user-profile.html') %>"
-  })
   .when('/users/:id/profile', {
     controller: 'UserController',
     templateUrl: "<%= asset_path('user-profile.html') %>"

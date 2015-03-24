@@ -1,9 +1,11 @@
-app.controller('HomeController', function($scope, $http, UserService){
+app.controller('HomeController', function($scope, $http, $routeParams, UserService){
 
   UserService.getAllUsers().then(function(response) {
-    console.log(response.data);
     $scope.allUsers = response.data;
+  });
 
+  UserService.getCurrentUser().then(function(response) {
+    $scope.currentUser = response.data;
   });
 
 });

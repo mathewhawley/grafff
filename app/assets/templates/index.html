@@ -2,6 +2,8 @@
 
 <p>This page will display the main map, showing all artworks</p>
 
+<p ng-if="currentUser"><a ng-href="#/users/{{ currentUser.id }}/profile">View my profile</a></p>
+
 <ul>
-  <li ng-repeat="user in allUsers"><a ng-href="#/users/{{ user.id }}/profile">{{ user.first_name }}</a></li>
+  <li ng-repeat="user in allUsers | orderBy: 'id'"><a ng-href="#/users/{{ user.id }}/profile">{{ user.first_name }}</a></li>
 </ul>
