@@ -13,15 +13,33 @@
 
 <div><!-- Profile body -->
   <div><!-- Nav -->
-    <ul><!-- Nav pills -->
-      <li ng-if="!user.is_artist">Likes</li>
-      <li ng-if="!user.is_artist">Artists</li>
-      <li ng-if="!user.is_artist">Activity Feed</li>
-      <li ng-if="user.is_artist">Artworks</li>
-      <li ng-if="user.is_artist">Map</li>
+    <ul class="nav nav-pills" ng-if="!user.is_artist"><!-- Nav pills -->
+      <li><a href ng-click="$parent.tab = 1">Likes</a></li>
+      <li><a href ng-click="$parent.tab = 2">Artists</a></li>
+      <li><a href ng-click="$parent.tab = 3">Activity Feed</a></li>
     </ul>
+    <ul class="nav nav-pills" ng-if="user.is_artist">
+      <li><a href ng-click="$parent.tab = 4">Artworks</a></li>
+      <li><a href ng-click="$parent.tab = 5">Map</a></li>
+    </ul>
+    {{ tab }}
   </div>
+  
   <div><!-- Content -->
-    
+    <div><!-- Likes -->
+      
+    </div>
+    <div><!-- Artists -->
+      
+    </div>
+    <div><!-- Activity Feed -->
+      
+    </div>
+    <div><!-- Artworks -->
+      
+    </div>
+    <div><!-- Map -->
+      
+    </div>
   </div>
 </div>
