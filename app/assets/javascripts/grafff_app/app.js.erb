@@ -11,6 +11,10 @@ app.config(function($routeProvider){
     controller: 'HomeController',
     templateUrl: "<%= asset_path('index.html') %>"
   })
+  .when('/users/show', {
+    controller: 'UserController',
+    templateUrl: "<%= asset_path('user-profile.html') %>"
+  })
   .otherwise({
     redirectTo: '/'
   });
