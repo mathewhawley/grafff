@@ -4,6 +4,13 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.radio_button 'is_artist', false %>
+    <%= label 'is_artist', 'User' %>
+    <%= f.radio_button 'is_artist', true %>
+    <%= label 'is_artist', 'Artist' %>
+  </div>
+
+  <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
