@@ -1,14 +1,24 @@
-<h3>{{ currentUser.first_name }} {{ currentUser.last_name }}</h3>
-
-<h4>About me:</h4>
-<p>{{ currentUser.bio }}</p>
-
-<div ng-if="currentUser.is_artist">
-<p>This user is an artist!</p>
-<h4>My Likes:</h4>
-<p ng-repeat="artwork in currentUserArtworks">{{ artwork.title }}</p>
+<div><!-- Profile header -->
+  <div><!-- Profile picture -->
+    <img src="http://lorempixel.com/200/200/abstract">
+  </div>
+  <div><!-- Profile information -->
+    <h3>{{ currentUser.username }}</h3>
+    <p>{{ currentUser.bio }}</p>
+    <p ng-if="currentUser.is_artist">{{ currentUser.followers.length }} Followers</p>
+    <p ng-if="!currentUser.is_artist">{{ currentUser.following.length }} Following</p>
+    <button>Follow/Unfollow</button><!-- Follow/unfollow button if user profile is artist profile -->
+  </div>
 </div>
 
-<div ng-if="!currentUser.is_artist">
-  <p>This user isn't an artist</p>
+<div><!-- Profile main/dashboard -->
+  <div><!-- Nav -->
+    <ul><!-- Nav pills -->
+      <li ng-if="!currentUser.is_artist">Likes</li>
+      <li ng-if="!currentUser.is_artist">Artists</li>
+      <li ng-if="!currentUser.is_artist && currentUser">Activity Feed</li>
+      <li ng-if="currentUser.is_artist">Artworks</li>
+      <li ng-if="currentUser.is_artist">Map</li>
+    </ul>
+  </div>
 </div>
