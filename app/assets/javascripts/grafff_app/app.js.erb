@@ -9,11 +9,11 @@ app.config(function($routeProvider){
   $routeProvider
   .when('/', {
     controller: 'HomeController',
-    templateUrl: "<%= asset_path('index.html') %>"
+    templateUrl: "<%= asset_path('views/index.html') %>"
   })
   .when('/users/:id/profile', {
     controller: 'UserController',
-    templateUrl: "<%= asset_path('user-profile.html') %>"
+    templateUrl: "<%= asset_path('views/user-profile.html') %>"
   })
   .otherwise({
     redirectTo: '/'
@@ -25,7 +25,7 @@ app.directive('myProfileLink', function() {
 
   return {
     restrict: 'E',
-    templateUrl: "<%= asset_path('my-profile-link.html') %>",
+    templateUrl: "<%= asset_path('directives/my-profile-link.html') %>",
     controller: function($scope, $http, UserService) {
       UserService.getCurrentUser().then(function(response) {
         $scope.currentUser = response.data;
