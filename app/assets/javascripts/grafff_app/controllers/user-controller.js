@@ -37,8 +37,15 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     }
     $scope.likedArtwork = getLikedArtwork($scope.user.likes);
 
-
-
+    // Get artists followed by user
+    function getFollowedArtists(activeRelationships) {
+      var followedArtists = [];
+      for(var i = 0; i < activeRelationships.length; i++) {
+        followedArtists.push(activeRelationships[i].followed);
+      };
+      return followedArtists;
+    }
+    $scope.followedArtists = getFollowedArtists($scope.user.active_relationships);
 
 
 
