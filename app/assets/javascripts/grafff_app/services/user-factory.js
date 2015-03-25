@@ -1,6 +1,6 @@
-app.factory('UserService', function($http) {
+app.factory('UserFactory', function($http) {
 
-  var UserService = {
+  var UserFactory = {
     getAllUsers: function() {
       return $http.get('/users/get_all_users');
     },
@@ -9,6 +9,6 @@ app.factory('UserService', function($http) {
     }
   };
 
-  return UserService;
+  return UserFactory;
 
 });

@@ -26,8 +26,8 @@ app.directive('myProfileLink', function() {
   return {
     restrict: 'E',
     templateUrl: "<%= asset_path('directives/my-profile-link.html') %>",
-    controller: function($scope, $http, UserService) {
-      UserService.getCurrentUser().then(function(response) {
+    controller: function($scope, $http, UserFactory) {
+      UserFactory.getCurrentUser().then(function(response) {
         $scope.currentUser = response.data;
       });
     }

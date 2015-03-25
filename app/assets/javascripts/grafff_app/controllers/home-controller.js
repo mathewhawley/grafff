@@ -1,10 +1,10 @@
-app.controller('HomeController', function($scope, $http, $routeParams, UserService){
+app.controller('HomeController', function($scope, $http, $routeParams, UserFactory){
 
-  UserService.getAllUsers().then(function(response) {
+  UserFactory.getAllUsers().then(function(response) {
     $scope.allUsers = response.data;
   });
 
-  UserService.getCurrentUser().then(function(response) {
+  UserFactory.getCurrentUser().then(function(response) {
     $scope.currentUser = response.data;
   });
 

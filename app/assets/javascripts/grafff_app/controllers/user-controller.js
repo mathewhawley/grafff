@@ -1,6 +1,6 @@
-app.controller('UserController', function($scope, $http, $routeParams, UserService){
+app.controller('UserController', function($scope, $http, $routeParams, UserFactory){
 
-  UserService.getAllUsers().then(function(response) {
+  UserFactory.getAllUsers().then(function(response) {
     // Store all user data in '$scope.allUsers'
     $scope.allUsers = response.data;
     // Get the user that matches the id in params
@@ -11,9 +11,10 @@ app.controller('UserController', function($scope, $http, $routeParams, UserServi
     });
   });
 
-  UserService.getCurrentUser().then(function(response) {
+  UserFactory.getCurrentUser().then(function(response) {
     // Store current user data in '$scope.currentUser'
     $scope.currentUser = response.data;
+    // Store current user's associated artworks in '$scope.currentUserArtworks'
     $scope.currentUserArtworks = [];
     angular.forEach($scope.currentUser.artworks, function(value, key) {
       $scope.currentUserArtworks.push(value);
