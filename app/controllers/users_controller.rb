@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def get_all_users
-    all_users = User.all.to_json(:include => [:comments, :artworks, :likes, :followers, :following])
+    all_users = User.all.to_json(include: [{ comments: { include: [ :user, :artwork ]}}, { likes: { include: [ :user, :artwork ]}}])
+    
     render json: all_users
   end
 
@@ -11,3 +12,7 @@ class UsersController < ApplicationController
   end
 
 end
+
+# user.as_json(include: :posts)
+
+# user.as_json(include: { posts: { include: { comments: { only: :body } }, only: :title } })

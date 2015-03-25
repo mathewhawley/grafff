@@ -27,7 +27,7 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
 
     $scope.userLikedArtwork = returnLikedArt($scope.artworkIdArray, $scope.allArtworks);
 
-    console.log($scope.userLikedArtwork);
+    // console.log($scope.userLikedArtwork);
 
 
     // Get an array of artists (users) who made each liked artwork
@@ -51,7 +51,7 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
 
     $scope.likedArtworkArtists = likedArtworkArtists($scope.artworkIdArray, $scope.allUsers);
 
-    console.log($scope.likedArtworkArtists);
+    // console.log($scope.likedArtworkArtists);
 
 
     // Artwork Show Page

@@ -5,6 +5,12 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
     // Store all user data in '$scope.allUsers'
     $scope.allUsers = response.data;
+    console.log($scope.allUsers);
+
+    angular.forEach($scope.allUsers, function(value, key) {
+      // console.log(value.comments);
+      console.log(value.likes);
+    })
 
     // Get user from params
     function getUserFromParams(allUsers, routeParams) {
@@ -19,8 +25,7 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     // Store user in variable and get their likes
     $scope.user = getUserFromParams($scope.allUsers, $routeParams);
     $scope.userLikes = $scope.user.likes;
-    
-    // Get likes from user, store in array
+
 
     // Loop through likes, store ID in $scope.artworkIdArray
     function artworkIdArray(userLikes) {
