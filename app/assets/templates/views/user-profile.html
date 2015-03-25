@@ -38,10 +38,17 @@
     <div ng-show="isSelected(1)"><!-- Activity Feed -->
       <p>Activity Feed</p>
     </div>
-    <div ng-show="isSelected(2)" ng-controller="ArtworkController"><!-- Likes -->
-      <p ng-repeat="artist in likedArtworkArtists">{{ artist.first_name }}</p>
-      <p ng-repeat="artwork in userLikedArtwork">{{ artwork.title }}</p>
-      
+    <div ng-show="isSelected(2)"><!-- Likes -->
+      <div ng-repeat="artwork in likedArtwork"><!-- Artwork card -->
+        <img src="http://lorempixel.com/150/100/abstract">
+        <h4>{{ artwork.title }}</h4>
+        <ul>
+          <li>Artist: {{ artwork.user.first_name }} {{ artwork.user.last_name }}</li>
+          <li>Description: {{ artwork.description }}</li>
+          <li>Likes: {{ artwork.likes.length }}</li>
+          <li>Comments: {{ artwork.comments.length }}</li>
+        </ul>
+      </div>
     </div>
     <div ng-show="isSelected(3)"><!-- Artists -->
       <p>Artists</p>
