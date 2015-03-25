@@ -6,14 +6,21 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     // Store all user data in '$scope.allUsers'
     $scope.allUsers = response.data;
 
-    // Get the user that matches the id in params
-    angular.forEach($scope.allUsers, function(value, key) {
-      if(value.id == $routeParams.id) {
-        $scope.user = value;
-      };
-    });
-    // User's 'likes'
+    // Get user from params
+    function getUserFromParams(allUsers, routeParams) {
+      for(var i = 0; i < allUsers.length; i++) {
+        if(allUsers[i].id === JSON.parse(routeParams.id)) {
+          var user = allUsers[i];
+        }
+      }
+      return user;
+    }
+
+    // Store user in variable and get their likes
+    $scope.user = getUserFromParams($scope.allUsers, $routeParams);
     $scope.userLikes = $scope.user.likes;
+    
+    // Get likes from user, store in array
 
     // Loop through likes, store ID in $scope.artworkIdArray
     function artworkIdArray(userLikes) {
