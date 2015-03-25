@@ -3,12 +3,14 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
   UserFactory.getAllUsers().then(function(response) {
     // Store all user data in '$scope.allUsers'
     $scope.allUsers = response.data;
+    console.log($scope.allUsers);
     // Get the user that matches the id in params
     angular.forEach($scope.allUsers, function(value, key) {
       if(value.id == $routeParams.id) {
         $scope.user = value;
-      } 
+      };
     });
+    console.log($scope.user);
   });
 
   UserFactory.getCurrentUser().then(function(response) {
