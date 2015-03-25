@@ -1,10 +1,10 @@
 app.controller('UserController', function($scope, $http, $routeParams, UserFactory, ArtworkFactory){
 
+
   UserFactory.getAllUsers().then(function(response) {
 
     // Store all user data in '$scope.allUsers'
     $scope.allUsers = response.data;
-    console.log($scope.allUsers);
 
     // Get the user that matches the id in params
     angular.forEach($scope.allUsers, function(value, key) {
@@ -15,9 +15,15 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
     // User's 'likes'
     $scope.userLikes = $scope.user.likes;
-    // Loop through and get id of each 'like'
-    console.log($scope.userLikes);
+
+    // Loop through likes, store ID in array
+    $scope.artworkIdArray = [];
+    angular.forEach($scope.userLikes, function(value, key) {
+      $scope.artworkIdArray.push(value.id);
+    });
+
   });
+
 
   UserFactory.getCurrentUser().then(function(response) {
 
@@ -26,8 +32,10 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
   });
 
+
   ArtworkFactory.getAllArtworks().then(function(response) {
     console.log(response.data);
+    console.log($scope.artworkIdArray);
   });
 
 });
