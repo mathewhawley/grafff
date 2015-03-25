@@ -15,13 +15,13 @@
   <div><!-- Nav -->
     <ul class="nav nav-pills" ng-if="!user.is_artist" ng-init="$parent.tab = 1"><!-- Nav pills -->
       <li ng-class="{ active:isSelected(1) }">
-        <a href ng-click="$parent.selectTab(1)">Likes</a>
+        <a href ng-click="$parent.selectTab(1)">Activity Feed</a>
       </li>
       <li ng-class="{ active:isSelected(2) }">
-        <a href ng-click="$parent.selectTab(2)">Artists</a>
+        <a href ng-click="$parent.selectTab(2)">Likes</a>
       </li>
       <li ng-class="{ active:isSelected(3) }">
-        <a href ng-click="$parent.selectTab(3)">Activity Feed</a>
+        <a href ng-click="$parent.selectTab(3)">Artists</a>
       </li>
     </ul>
     <ul class="nav nav-pills" ng-if="user.is_artist" ng-init="$parent.tab = 4"><!-- Nav pills -->
@@ -35,14 +35,14 @@
   </div>
   
   <div><!-- Content -->
-    <div ng-show="isSelected(1)"><!-- Likes -->
+    <div ng-show="isSelected(1)"><!-- Activity Feed -->
+      <p>Activity Feed</p>
+    </div>
+    <div ng-show="isSelected(2)"><!-- Likes -->
       <p>Likes</p>
     </div>
-    <div ng-show="isSelected(2)"><!-- Artists -->
+    <div ng-show="isSelected(3)"><!-- Artists -->
       <p>Artists</p>
-    </div>
-    <div ng-show="isSelected(3)"><!-- Activity Feed -->
-      <p>Activity feed</p>
     </div>
     <div ng-show="isSelected(4)"><!-- Artworks -->
       <p>Artworks</p>
