@@ -4,6 +4,8 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
 
     $scope.allArtworks = response.data;
 
+    // Liked Artwork tiles
+    
     // Get an array of artwork based on user's likes
     function isLiked(artwork, artworkIdArray) {
       for(var i = 0; i < artworkIdArray.length; i++) {
@@ -28,7 +30,7 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
     console.log($scope.userLikedArtwork);
 
 
-    // Get an array of artists (users) who made each artwork
+    // Get an array of artists (users) who made each liked artwork
     function artworkArtist(user, artworkIdArray) {
       for(var i = 0; i < artworkIdArray.length; i++) {
         if(user.id === artworkIdArray[i]) {
@@ -52,7 +54,12 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
     console.log($scope.likedArtworkArtists);
 
 
-    // Get all comments for each artwork
+    // Artwork Show Page
+    
+    // Get all of an artwork's comments
+    // Get all users who commented
+    // Get artist
+    
 
   });
 
