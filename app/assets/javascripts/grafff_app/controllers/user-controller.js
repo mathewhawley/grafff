@@ -16,10 +16,15 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     $scope.userLikes = $scope.user.likes;
 
     // Loop through likes, store ID in $scope.artworkIdArray
-    $scope.artworkIdArray = [];
-    angular.forEach($scope.userLikes, function(value, key) {
-      $scope.artworkIdArray.push(value.artwork_id);
-    });
+    function artworkIdArray(userLikes) {
+      var artworkIdArray = [];
+      for(var i = 0; i < userLikes.length; i++) {
+        artworkIdArray.push(userLikes[i].artwork_id);
+      }
+      return artworkIdArray;
+    }
+    
+    $scope.artworkIdArray = artworkIdArray($scope.userLikes);
 
   });
 
