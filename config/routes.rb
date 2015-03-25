@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'users/get_all_users' => 'users#get_all_users'
   get 'users/get_current_user' => 'users#get_current_user'
+  get 'artworks/get_all_artworks' => 'artworks#get_all_artworks'
 
   # get '/test/*path' => 'static#index'
   # get '/test/home/' => 'static#index', as: 'home'
