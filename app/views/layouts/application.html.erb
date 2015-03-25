@@ -13,6 +13,7 @@
     <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
     <div class="container">
       <% if user_signed_in? %>
+        <li><my-profile-link ng-controller="HomeController"></my-profile-link></li>
         <li><%= link_to "Edit account", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <% else %>

@@ -20,3 +20,17 @@ app.config(function($routeProvider){
   });
 
 });
+
+app.directive('myProfileLink', function() {
+
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('my-profile-link.html') %>",
+    controller: function($scope, $http, UserService) {
+      UserService.getCurrentUser().then(function(response) {
+        $scope.currentUser = response.data;
+      });
+    }
+  };
+
+});
