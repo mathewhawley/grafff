@@ -39,7 +39,7 @@
       <p>Activity Feed</p>
     </div>
     <div ng-show="isSelected(2)"><!-- Likes -->
-      <p>Likes</p>
+      <p ng-repeat="like in userLikes">{{ like }}</p>
     </div>
     <div ng-show="isSelected(3)"><!-- Artists -->
       <p>Artists</p>
