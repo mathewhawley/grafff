@@ -27,19 +27,16 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     // Store user in variable
     $scope.user = getUserFromParams($scope.allUsers, $routeParams);
 
-    // Get user likes
-    $scope.userLikes = $scope.user.likes;
-
-    // Function to get artwork object from each like
+    // Function to get the artwork objects from each like
     function getLikedArtwork(userLikes) {
       var likedArtwork = [];
       for(var i = 0; i < userLikes.length; i++) {
-        likedArtwork.push(userLikes[i]);
+        likedArtwork.push(userLikes[i].artwork);
       };
       return likedArtwork;
     }
-    $scope.likedArtwork = getLikedArtwork($scope.userLikes);
-    console.log($scope.likedArtwork);
+    $scope.likedArtwork = getLikedArtwork($scope.user.likes);
+
 
 
 
