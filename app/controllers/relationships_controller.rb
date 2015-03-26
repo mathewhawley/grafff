@@ -10,4 +10,10 @@ class RelationshipsController < ApplicationController
     render json: relationship
   end
 
+  def unfollow_user
+    relationship_to_delete = Relationship.find(params[:id])
+    relationship_to_delete.destroy
+    render json: relationship_to_delete
+  end
+
 end

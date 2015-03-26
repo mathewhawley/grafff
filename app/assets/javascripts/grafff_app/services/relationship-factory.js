@@ -6,6 +6,13 @@ app.factory('RelationshipFactory', function($http) {
     },
     followUser: function(relationship) {
       return $http.post('relationships/follow_user', relationship);
+    },
+    unfollowUser: function(relationship) {
+      return $http({
+        method: 'POST',
+        url: 'relationships/unfollow_user',
+        data: { id: relationship }
+      })
     }
   };
 
