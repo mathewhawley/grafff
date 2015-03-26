@@ -7,7 +7,11 @@
     <p>{{ user.bio }}</p>
     <p ng-if="user.is_artist">{{ user.passive_relationships.length }} Followers</p>
     <p ng-if="!user.is_artist">{{ user.active_relationships.length }} Following</p>
-    <button ng-if="user.is_artist">Follow/Unfollow</button><!-- Follow/unfollow button if user profile is artist profile -->
+    <div ng-controller="RelationshipController">
+      <form ng-submit="followUser(currentUser.id, user.id)" novalidate>
+        <button>Follow</button>
+      </form>
+    </div>
   </div>
 </div>
 
