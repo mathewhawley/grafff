@@ -1,8 +1,9 @@
-app.controller('CommentController', function($scope, $http, UserFactory) {
+app.controller('CommentController', function($scope, $http, UserFactory, CommentFactory) {
 
   console.log('I am the comment controller');
 
   UserFactory.getCurrentUser().then(function(response) {
+    
     $scope.currentUser = response.data;
 
     $scope.postComment = function(comment) {
@@ -12,7 +13,13 @@ app.controller('CommentController', function($scope, $http, UserFactory) {
       newComment['user_id'] = $scope.currentUser.id;
       newComment['artwork_id'] = $scope.artwork.id;
       console.log(newComment);
+
+      CommentFactory.newComment(newComment).then(function(response) {
+        console.log('success?');
+      });
+
     };
+
   });
 
 });
