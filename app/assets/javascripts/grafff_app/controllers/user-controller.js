@@ -1,4 +1,4 @@
-app.controller('UserController', function($scope, $http, $routeParams, UserFactory, ArtworkFactory){
+app.controller('UserController', function($scope, $http, $routeParams, UserFactory){
 
 
   UserFactory.getAllUsers().then(function(response) {
@@ -12,14 +12,12 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
       for(var i = 0; i < allUsers.length; i++) {
         if(allUsers[i].id === JSON.parse(routeParams.id)) {
           var user = allUsers[i];
-        }
+        };
       };
       return user;
     }
-
-
-    // Store user in variable
     $scope.user = getUserFromParams($scope.allUsers, $routeParams);
+
 
     // Function to get the artwork objects from each like
     function getLikedArtworks(userLikes) {
