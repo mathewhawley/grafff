@@ -42,9 +42,9 @@ app.controller('RelationshipController', function($scope, $http, RelationshipFac
           array.splice(index, 1);
         }
 
-        function deleteRelationship(array, idkill) {
+        function deleteRelationship(array, id) {
           for(var i = 0; i < array.length; i++) {
-            if(array[i].id == idkill) {
+            if(array[i].id == id) {
               removeRelationshipWithIndex(array, i);
             };
           };
@@ -56,29 +56,6 @@ app.controller('RelationshipController', function($scope, $http, RelationshipFac
       $scope.followingThisUser = false;
 
     };
-
-// testArray = [{name: "Oli", id: 1}, {name: "Matt", id: 2}]
-
-// removeItemWithId(testArray, 2);
-
-
-
-
-
-  //   $scope.unmakeAFollowing = function() {
-  //   $scope.relationshipId = _.where($scope.profileUser.followings, {follower_id: $scope.currentUser.id})
-  //   // console.log($scope.relationshipId[0].id)
-  //   data = {following_id: $scope.relationshipId[0].id}
-  //   FollowService.destroyFollowing(data)
-  //   .then(function(response){
-  //     $http.get('/users/user_data')
-  //     .success(function(data){
-  //       console.log(data);
-  //       $scope.getProfileUserFollowers(data);
-  //       $scope.currentUserFollowers = JSON.parse(data.all_users);
-  //     })
-  //   });
-  // }
 
   });
 
