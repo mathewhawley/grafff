@@ -5,8 +5,8 @@
   <div><!-- Profile information -->
     <h3>{{ user.username }}</h3>
     <p>{{ user.bio }}</p>
-    <p ng-if="user.is_artist">{{ user.followers.length }} Followers</p>
-    <p ng-if="!user.is_artist">{{ user.following.length }} Following</p>
+    <p ng-if="user.is_artist">{{ user.passive_relationships.length }} Followers</p>
+    <p ng-if="!user.is_artist">{{ user.active_relationships.length }} Following</p>
     <button ng-if="user.is_artist">Follow/Unfollow</button><!-- Follow/unfollow button if user profile is artist profile -->
   </div>
 </div>
