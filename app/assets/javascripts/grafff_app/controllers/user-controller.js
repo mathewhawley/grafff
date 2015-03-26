@@ -8,7 +8,7 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
     angular.forEach($scope.allUsers, function(value, key) {
       // console.log(value.comments);
-      console.log(value.likes);
+      // console.log(value.likes);
       // console.log(value.artworks);
       // console.log(value.active_relationships);
       // console.log(value.passive_relationships);
@@ -20,22 +20,24 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
         if(allUsers[i].id === JSON.parse(routeParams.id)) {
           var user = allUsers[i];
         }
-      }
+      };
       return user;
     }
+
 
     // Store user in variable
     $scope.user = getUserFromParams($scope.allUsers, $routeParams);
 
     // Function to get the artwork objects from each like
-    function getLikedArtwork(userLikes) {
-      var likedArtwork = [];
+    function getLikedArtworks(userLikes) {
+      var likedArtworks = [];
       for(var i = 0; i < userLikes.length; i++) {
-        likedArtwork.push(userLikes[i].artwork);
+        likedArtworks.push(userLikes[i].artwork);
       };
-      return likedArtwork;
+      return likedArtworks;
     }
-    $scope.likedArtwork = getLikedArtwork($scope.user.likes);
+    $scope.likedArtworks = getLikedArtworks($scope.user.likes);
+
 
     // Get artists followed by user
     function getFollowedArtists(activeRelationships) {
@@ -46,6 +48,13 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
       return followedArtists;
     }
     $scope.followedArtists = getFollowedArtists($scope.user.active_relationships);
+
+
+    // Get user artworks
+    $scope.userArtworks = $scope.user.artworks;
+
+
+
 
 
 
