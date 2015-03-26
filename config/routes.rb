@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'users/get_all_users' => 'users#get_all_users'
   get 'users/get_current_user' => 'users#get_current_user'
   get 'artworks/get_all_artworks' => 'artworks#get_all_artworks'
+  get 'relationships/get_all_relationships' => 'relationships#get_all_relationships'
+  post 'relationships/follow_user' => 'relationships#follow_user'
+  get 'relationships/unfollow_user' => 'relationships#unfollow_user'
 
   # get '/test/*path' => 'static#index'
   # get '/test/home/' => 'static#index', as: 'home'
