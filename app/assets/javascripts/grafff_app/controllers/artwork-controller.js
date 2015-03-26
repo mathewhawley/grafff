@@ -15,7 +15,7 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
       return artwork;
     }
     $scope.artwork = getArtworkFromParams($scope.allArtworks, $routeParams);
-    $scope.comments = $scope.artwork.comments;    
+    $scope.comments = $scope.artwork.comments;
 
   });
 

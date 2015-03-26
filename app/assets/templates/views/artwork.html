@@ -4,7 +4,7 @@
   <p>{{ artwork.user.username }}</p>
 </div>
 <div><!-- Artwork image -->
-  
+  <img src="http://lorempixel.com/500/200/abstract">
 </div>
 <div><!-- Artwork information: description, location, likes etc -->
   <div><!-- Main: Description -->
@@ -14,11 +14,11 @@
     <p>Likes: {{ artwork.likes.length }}</p>
   </div>
 </div>
-<div><!-- Comments -->
+<div ng-controller="CommentController"><!-- Comments -->
   <h4>Comments: ({{ artwork.comments.length }})</h4>
   <div><!-- Comment field -->
     <form>
-    <textarea cols="30" rows="2"></textarea>
+      <textarea cols="30" rows="2"></textarea>
     </form>
   </div>
   <div ng-repeat="comment in comments">
