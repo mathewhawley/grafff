@@ -15,15 +15,7 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
       return artwork;
     }
     $scope.artwork = getArtworkFromParams($scope.allArtworks, $routeParams);
-    console.log($scope.artwork);
-
-
-    // Artwork Show Page
-    
-    // Get all of an artwork's comments
-    // Get all users who commented
-    // Get artist
-    
+    $scope.comments = $scope.artwork.comments;    
 
   });
 

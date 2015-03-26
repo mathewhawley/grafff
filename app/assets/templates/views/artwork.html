@@ -1,17 +1,30 @@
 <div><!-- Header: Artwork title, artist -->
-  <h3>Artwork name goes here</h3>
+  <h3>{{ artwork.title }}</h3>
+  <!-- Artist profile image to go here -->
+  <p>{{ artwork.user.username }}</p>
 </div>
 <div><!-- Artwork image -->
   
 </div>
 <div><!-- Artwork information: description, location, likes etc -->
   <div><!-- Main: Description -->
-    
+    <p>{{ artwork.description }}</p>
   </div>
   <div><!-- Aside: Map, likes, address -->
-    
+    <p>Likes: {{ artwork.likes.length }}</p>
   </div>
 </div>
 <div><!-- Comments -->
-  
+  <h4>Comments: ({{ artwork.comments.length }})</h4>
+  <div><!-- Comment field -->
+    <form>
+    <textarea cols="30" rows="2"></textarea>
+    </form>
+  </div>
+  <div ng-repeat="comment in comments">
+    <div><!-- Individual comment -->
+      <p>{{ comment.content }}</p>
+      <p>By: {{ comment.user.username }}, {{ comment.created_at }}</p>
+    </div>
+  </div>
 </div>
