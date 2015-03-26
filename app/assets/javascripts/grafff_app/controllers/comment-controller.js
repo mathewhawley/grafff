@@ -1,9 +1,7 @@
 app.controller('CommentController', function($scope, $http, UserFactory, CommentFactory) {
 
-  console.log('I am the comment controller');
-
   UserFactory.getCurrentUser().then(function(response) {
-    
+
     $scope.currentUser = response.data;
 
     $scope.postComment = function(comment) {
@@ -15,8 +13,11 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
       console.log(newComment);
 
       CommentFactory.newComment(newComment).then(function(response) {
-        console.log('success?');
+        $scope.comments.push(response.data);
+        $scope.commentField.$setPristine();
       });
+
+      
 
     };
 
