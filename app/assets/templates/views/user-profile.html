@@ -51,7 +51,11 @@
       </div>
     </div>
     <div ng-show="isSelected(3)"><!-- Artists -->
-      <p>Artists</p>
+      <div ng-repeat="artist in followedArtists"><!-- Artwork card -->
+        <img src="http://lorempixel.com/150/100/abstract">
+        <h4>{{ artist.username }}</h4>
+        <p>{{ artist.bio }}</p>
+      </div>
     </div>
     <div ng-show="isSelected(4)"><!-- Artworks -->
       <p>Artworks</p>

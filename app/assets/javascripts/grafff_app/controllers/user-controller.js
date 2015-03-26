@@ -8,7 +8,7 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
     angular.forEach($scope.allUsers, function(value, key) {
       // console.log(value.comments);
-      // console.log(value.likes);
+      console.log(value.likes);
       // console.log(value.artworks);
       // console.log(value.active_relationships);
       // console.log(value.passive_relationships);
