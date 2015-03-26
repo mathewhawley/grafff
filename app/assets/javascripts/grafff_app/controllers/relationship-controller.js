@@ -1,11 +1,10 @@
-app.controller('RelationshipController', function($scope, $http, RelationshipFactory, UserFactory) {
+app.controller('RelationshipController', function($scope, $http, RelationshipFactory) {
 
   // Get all relationships, store in variable
   RelationshipFactory.getAllRelationships().then(function(response) {
 
     // Store all relationships
     $scope.allRelationships = response.data;
-    // console.log($scope.allRelationships);
 
     // Function to follow user
     $scope.followUser = function(currentUserId, userId) {
@@ -20,10 +19,11 @@ app.controller('RelationshipController', function($scope, $http, RelationshipFac
 
     };
 
+    
+
     // Function to check if current user is following user
     $scope.isFollowing = function(currentUserId) {
 
-      // return true;
       hasRelationship($scope.allRelationships, currentUserId);
 
     };
