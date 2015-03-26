@@ -1,4 +1,4 @@
-app.controller('UserController', function($scope, $http, $routeParams, UserFactory){
+app.controller('UserController', function($scope, $http, $routeParams, UserFactory) {
 
 
   UserFactory.getAllUsers().then(function(response) {
