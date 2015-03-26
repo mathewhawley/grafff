@@ -6,7 +6,7 @@ app.controller('CommentController', function($scope, $http, UserFactory) {
     $scope.currentUser = response.data;
 
     $scope.postComment = function(comment) {
-      // Make a hash to be passed to database
+      // Make an object to be passed to database
       var newComment = {};
       newComment['content'] = comment.content;
       newComment['user_id'] = $scope.currentUser.id;
