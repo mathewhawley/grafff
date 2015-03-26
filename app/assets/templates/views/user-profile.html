@@ -53,14 +53,18 @@
     </div>
     <div ng-show="isSelected(2)"><!-- Likes -->
       <div ng-repeat="artwork in likedArtworks"><!-- Artwork card -->
-        <img src="http://lorempixel.com/150/100/abstract">
-        <h4>{{ artwork.title }}</h4>
-        <ul>
-          <li>Artist: {{ artwork.user.first_name }} {{ artwork.user.last_name }}</li>
-          <li>Description: {{ artwork.description }}</li>
-          <li>Likes: {{ artwork.likes.length }}</li>
-          <li>Comments: {{ artwork.comments.length }}</li>
-        </ul>
+        <a ng-href="#/artworks/{{ artwork.id }}">
+          <div><!-- Card wrapper -->
+            <img src="http://lorempixel.com/150/100/abstract">
+            <h4>{{ artwork.title }}</h4>
+            <ul>
+              <li>Artist: {{ artwork.user.first_name }} {{ artwork.user.last_name }}</li>
+              <li>Description: {{ artwork.description }}</li>
+              <li>Likes: {{ artwork.likes.length }}</li>
+              <li>Comments: {{ artwork.comments.length }}</li>
+            </ul>
+          </div>
+        </a>
       </div>
     </div>
     <div ng-show="isSelected(3)"><!-- Artists -->
@@ -76,13 +80,17 @@
     </div>
     <div ng-show="isSelected(4)"><!-- Artworks -->
       <div ng-repeat="artwork in userArtworks"><!-- Artwork card -->
-        <img src="http://lorempixel.com/150/100/abstract">
-        <h4>{{ artwork.title }}</h4>
-        <ul>
-          <li>Description: {{ artwork.description }}</li>
-          <li>Likes: {{ artwork.likes.length }}</li>
-          <li>Comments: {{ artwork.comments.length }}</li>
-        </ul>
+        <a ng-href="#/artworks/{{ artwork.id }}">
+          <div><!-- Card wrapper -->
+            <img src="http://lorempixel.com/150/100/abstract">
+            <h4>{{ artwork.title }}</h4>
+            <ul>
+              <li>Description: {{ artwork.description }}</li>
+              <li>Likes: {{ artwork.likes.length }}</li>
+              <li>Comments: {{ artwork.comments.length }}</li>
+            </ul>
+          </div>
+        </a>
       </div>
     </div>
     <div ng-show="isSelected(5)"><!-- Map -->
