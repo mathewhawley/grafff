@@ -1,13 +1,26 @@
-app.controller('RelationshipController', function($scope, $http, RelationshipFactory) {
+app.controller('RelationshipController', function($scope, $http, RelationshipFactory, UserFactory) {
+
+  UserFactory.getCurrentUser().then(function(response) {
+
+    // Store current user data in '$scope.currentUser'
+    $scope.currentUser = response.data;
+    //
+    var currentUserActiveRelationships = $scope.currentUser.active_relationships;
+    var userId = $scope.user.id;
+
+    function isFollowing(array, id) {
+      for(var i = 0; i < array.length; i++) {
+        if(array[i].followed_id === id) {
+          $scope.followingThisUser = true;
+        };
+      };
+    }
+    isFollowing(currentUserActiveRelationships, userId);
+
+  });
+
 
   RelationshipFactory.getAllRelationships().then(function(response) {
-
-    // RelationshipFactory.amIFollowing($scope.user.id)
-    // .then(function(response) {
-    //   // find out if i am following?
-    //   $scope.followingThisUser = true/false?
-
-    // })
 
     // Store all relationships
     $scope.allRelationships = response.data;

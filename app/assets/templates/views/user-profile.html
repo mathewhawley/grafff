@@ -2,6 +2,7 @@
   <div><!-- Profile picture -->
     <img src="http://lorempixel.com/200/200/abstract">
   </div>
+
   <div><!-- Profile information -->
     <h3>{{ user.username }}</h3>
     <p>{{ user.bio }}</p>
@@ -9,7 +10,7 @@
     <p ng-if="!user.is_artist">{{ user.active_relationships.length }} Following</p>
 
     <div ng-controller="RelationshipController" ng-if="user.is_artist">
-    
+
       <form ng-submit="followUser(currentUser.id, user.id)" novalidate>
         <button ng-hide="followingThisUser">Follow</button>
       </form>

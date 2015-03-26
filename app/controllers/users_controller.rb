@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def get_current_user
-    logged_in_user = current_user.to_json(include: [:comments, :artworks, :likes, :followers, :following])
+    logged_in_user = current_user.to_json(include: [:comments, :artworks, :likes, :followers, :following, :active_relationships])
     render json: logged_in_user
   end
 
