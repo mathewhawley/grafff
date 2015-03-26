@@ -6,13 +6,6 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     // Store all user data in '$scope.allUsers'
     $scope.allUsers = response.data;
 
-    angular.forEach($scope.allUsers, function(value, key) {
-      // console.log(value.comments);
-      // console.log(value.likes);
-      // console.log(value.artworks);
-      // console.log(value.active_relationships);
-      // console.log(value.passive_relationships);
-    })
 
     // Get user from params
     function getUserFromParams(allUsers, routeParams) {
@@ -52,24 +45,6 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
     // Get user artworks
     $scope.userArtworks = $scope.user.artworks;
-
-
-
-
-
-
-    $scope.userLikes = $scope.user.likes;
-
-    // Loop through likes, store ID in $scope.artworkIdArray
-    function artworkIdArray(userLikes) {
-      var artworkIdArray = [];
-      for(var i = 0; i < userLikes.length; i++) {
-        artworkIdArray.push(userLikes[i].artwork_id);
-      }
-      return artworkIdArray;
-    }
-    
-    $scope.artworkIdArray = artworkIdArray($scope.userLikes);
 
   });
 
