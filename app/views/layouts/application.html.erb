@@ -11,7 +11,9 @@
 <body>
   <nav class="navbar navbar-default" role="navigation">
     <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
-    <input type="search" placeholder="Search Artists">
+    <form ng-controller="SearchController" ng-submit="testFunction()">
+      <input placeholder="Search users and artists" ng-model="query">
+    </form>
     <div class="container">
       <% if user_signed_in? %>
         <li><my-profile-link></my-profile-link></li>
