@@ -12,7 +12,7 @@ app.factory('RelationshipFactory', function($http) {
         method: 'POST',
         url: 'relationships/unfollow_user',
         data: { id: relationship }
-      })
+      });
     }
   };
 
