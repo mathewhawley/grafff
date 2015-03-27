@@ -31,6 +31,10 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
 
       });
 
+      $scope.comment = '';
+      var commentField = document.getElementById('comment-field');
+      commentField.blur();
+
     };
 
   });
