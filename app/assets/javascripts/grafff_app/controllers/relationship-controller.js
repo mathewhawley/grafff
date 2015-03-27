@@ -5,7 +5,6 @@ app.controller('RelationshipController', function($scope, $http, RelationshipFac
     // Store current user data in '$scope.currentUser'
     $scope.currentUser = response.data;
     
-
     // On page load – check if current user is already following user
     var currentUserActiveRelationships = $scope.currentUser.active_relationships;
     var userId = $scope.user.id;

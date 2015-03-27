@@ -1,8 +1,26 @@
 app.controller('LikeController', function($scope, $http, UserFactory, LikeFactory) {
 
   UserFactory.getCurrentUser().then(function(response) {
-    
+
+    // Store current user data in '$scope.currentUser'
     $scope.currentUser = response.data;
+
+    // On page load – check if current user already likes artwork
+    var currentUserLikes = $scope.currentUser.likes;
+    var artworkId = $scope.artwork.id;
+
+    function doesLike(array, id) {
+      for(var i = 0; i < array.length; i++) {
+        if(array[i].artwork_id === id) {
+          $scope.likeThisArtwork = true;
+        };
+      };
+    }
+    doesLike(currentUserLikes, artworkId);
+
+  });
+
+  LikeFactory.getAllLikes().then(function(response) {
 
     // Function to like an artwork
     $scope.likeArtwork = function(userId, artworkId) {
