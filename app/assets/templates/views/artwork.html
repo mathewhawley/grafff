@@ -11,7 +11,9 @@
     <p>{{ artwork.description }}</p>
   </div>
   <div><!-- Aside: Map, likes, address -->
-    <button>Like</button>
+    <div ng-controller="LikeController">
+      <button ng-click="likeArtwork()">Like</button>
+    </div>
     <p>Likes: {{ artwork.likes.length }}</p>
   </div>
 </div>
