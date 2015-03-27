@@ -16,6 +16,8 @@ app.controller('LikeController', function($scope, $http, UserFactory, LikeFactor
         $scope.artwork.likes.push(response.data);
       });
 
+      $scope.likeThisArtwork = true;
+
     };
 
     // Function to unlike an artwork
@@ -47,6 +49,8 @@ app.controller('LikeController', function($scope, $http, UserFactory, LikeFactor
         deleteLike($scope.artwork.likes, toDelete);
 
       });
+
+      $scope.likeThisArtwork = false;
 
     };
 
