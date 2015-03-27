@@ -12,7 +12,7 @@
   </div>
   <div><!-- Aside: Map, likes, address -->
     <div ng-controller="LikeController">
-      <button ng-click="likeArtwork()">Like</button>
+      <button ng-click="likeArtwork(currentUser.id, artwork.id)">Like</button>
     </div>
     <p>Likes: {{ artwork.likes.length }}</p>
   </div>

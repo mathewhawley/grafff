@@ -4,10 +4,16 @@ app.controller('LikeController', function($scope, $http, UserFactory, $routePara
     
     $scope.currentUser = response.data;
 
-    $scope.likeArtwork = function() {
-      console.log('button clicked');
+    $scope.likeArtwork = function(userId, artworkId) {
+
+      // Create 'like' object to send back to controller
+      var like = {};
+      like['user_id'] = userId;
+      like['artwork_id'] = artworkId;
+
+      console.log(like);
     };
-    // Create 'like' object to send back to controller
+    
 
   });
   
