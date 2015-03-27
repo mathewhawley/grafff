@@ -6,15 +6,16 @@ Rails.application.routes.draw do
 
   get 'users/get_all_users' => 'users#get_all_users'
   get 'users/get_current_user' => 'users#get_current_user'
+
   get 'artworks/get_all_artworks' => 'artworks#get_all_artworks'
+
   get 'relationships/get_all_relationships' => 'relationships#get_all_relationships'
   post 'relationships/follow_user' => 'relationships#follow_user'
   post 'relationships/unfollow_user' => 'relationships#unfollow_user'
+
   get 'comments/get_all_comments' => 'comments#get_all_comments'
   post 'comments/new_comment' => 'comments#new_comment'
 
-  # get '/test/*path' => 'static#index'
-  # get '/test/home/' => 'static#index', as: 'home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
