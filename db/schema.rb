@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20150323114412) do
     t.datetime "updated_at"
   end
 
+  add_index "likes", ["artwork_id"], name: "index_likes_on_artwork_id", using: :btree
+  add_index "likes", ["user_id", "artwork_id"], name: "index_likes_on_user_id_and_artwork_id", unique: true, using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
+
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
