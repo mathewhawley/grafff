@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'relationships/get_all_relationships' => 'relationships#get_all_relationships'
   post 'relationships/follow_user' => 'relationships#follow_user'
   post 'relationships/unfollow_user' => 'relationships#unfollow_user'
+  get 'comments/get_all_comments' => 'comments#get_all_comments'
   post 'comments/new_comment' => 'comments#new_comment'
 
   # get '/test/*path' => 'static#index'
