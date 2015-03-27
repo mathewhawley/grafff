@@ -15,7 +15,7 @@
   </div>
 </div>
 <div ng-controller="CommentController"><!-- Comments -->
-  <h4>Comments: ({{ artwork.comments.length }})</h4>
+  <h4>Comments: ({{ comments.length }})</h4>
   <div><!-- Comment field -->
     <form ng-keypress="($event.which === 13) ? postComment(comment) : 0">
       <textarea name="commentField" cols="30" rows="2" ng-model="comment.content" ></textarea>

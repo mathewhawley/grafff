@@ -5,6 +5,7 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
     $scope.currentUser = response.data;
 
     $scope.postComment = function(comment) {
+
       // Make an object to be passed to database
       var newComment = {};
       newComment['content'] = comment.content;
@@ -29,8 +30,6 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
         });
 
       });
-
-      
 
     };
 
