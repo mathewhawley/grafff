@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'comments/get_all_comments' => 'comments#get_all_comments'
   post 'comments/new_comment' => 'comments#new_comment'
 
+  get 'likes/get_all_likes' => 'likes#get_all_likes'
   post 'likes/new_like' => 'likes#new_like'
 
   # The priority is based upon order of creation: first created -> highest priority.

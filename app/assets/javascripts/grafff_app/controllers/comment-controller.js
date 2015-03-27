@@ -15,7 +15,7 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
       CommentFactory.newComment(newComment).then(function(response) {
         CommentFactory.getAllComments().then(function(response) {
           
-          // Loop through all artworks. Get ones that have artwork id that matches '$scope.artwork.id'
+          // Loop through all comments. Get ones that have artwork id that matches '$scope.artwork.id'
           function thisArtworkComments(array, id) {
             var comments = [];
             for(var i = 0; i < array.length; i++) {

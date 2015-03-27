@@ -12,11 +12,10 @@ app.controller('LikeController', function($scope, $http, UserFactory, LikeFactor
       like['artwork_id'] = artworkId;
 
       LikeFactory.newLike(like).then(function(response) {
-        console.log(response.data);
+        $scope.artwork.likes.push(response.data);
       });
 
     };
-    
 
   });
   
