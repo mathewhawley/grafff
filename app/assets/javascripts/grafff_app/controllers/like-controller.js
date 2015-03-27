@@ -1,4 +1,4 @@
-app.controller('LikeController', function($scope, $http, UserFactory, $routeParams) {
+app.controller('LikeController', function($scope, $http, UserFactory, LikeFactory) {
 
   UserFactory.getCurrentUser().then(function(response) {
     
@@ -11,7 +11,10 @@ app.controller('LikeController', function($scope, $http, UserFactory, $routePara
       like['user_id'] = userId;
       like['artwork_id'] = artworkId;
 
-      console.log(like);
+      LikeFactory.newLike(like).then(function(response) {
+        console.log(response.data);
+      });
+
     };
     
 
