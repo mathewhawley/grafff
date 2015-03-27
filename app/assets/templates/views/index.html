@@ -1,6 +1,12 @@
 <p>This is the Angular index.html view</p>
 
-<p>This page will display the main map, showing all artworks, artists, latest postings, most popular postings etc</p>
+<p>This page will display:</p>
+<ul>
+  <li>Main map (will show pins for each artwork)</li>
+  <li>Most popular artworks (with link to view all artworks as a list view – cards)</li>
+  <li>Latest artworks</li>
+  <li>Handful of artists, with link to view all as list view</li>
+</ul>
 
 <ul>
   <li ng-repeat="user in allUsers"><a ng-href="#/users/{{ user.id }}/profile">{{ user.first_name }}</a></li>
