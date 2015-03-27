@@ -18,7 +18,7 @@
   <h4>Comments: ({{ comments.length }})</h4>
   <div><!-- Comment field -->
     <form ng-keypress="($event.which === 13) ? postComment(comment) : 0">
-      <textarea id="comment-field" name="commentField" cols="30" rows="2" ng-model="comment.content" ></textarea>
+      <textarea id="comment-field" name="commentField" ng-model="comment.content" ></textarea>
     </form>
   </div>
   <div ng-repeat="comment in comments | orderBy: '-created_at'">

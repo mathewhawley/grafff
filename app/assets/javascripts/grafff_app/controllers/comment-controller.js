@@ -31,6 +31,7 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
 
       });
 
+      // Clear input field, remove focus
       $scope.comment = '';
       var commentField = document.getElementById('comment-field');
       commentField.blur();
