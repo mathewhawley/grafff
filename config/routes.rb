@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   post 'comments/new_comment' => 'comments#new_comment'
 
   get 'likes/get_all_likes' => 'likes#get_all_likes'
-  post 'likes/new_like' => 'likes#new_like'
+  post 'likes/like_artwork' => 'likes#like_artwork'
+  post 'likes/unlike_artwork' => 'likes#unlike_artwork'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

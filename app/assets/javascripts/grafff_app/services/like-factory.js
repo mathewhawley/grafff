@@ -4,8 +4,15 @@ app.factory('LikeFactory', function($http) {
     getAllLikes: function() {
       return $http.get('/likes/get_all_likes');
     },
-    newLike: function(like) {
-      return $http.post('/likes/new_like', like);
+    likeArtwork: function(like) {
+      return $http.post('/likes/like_artwork', like);
+    },
+    unlikeArtwork: function(like) {
+      return $http({
+        method: 'POST',
+        url: 'likes/unlike_artwork',
+        data: { id: like }
+      });
     }
   };
 
