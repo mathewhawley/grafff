@@ -21,7 +21,7 @@
       <textarea name="commentField" cols="30" rows="2" ng-model="comment.content" ></textarea>
     </form>
   </div>
-  <div ng-repeat="comment in comments">
+  <div ng-repeat="comment in comments | orderBy: '-created_at'">
     <div><!-- Individual comment -->
       <p>{{ comment.content }}</p>
       <p>By: {{ comment.user.username }}, {{ comment.created_at }}</p>

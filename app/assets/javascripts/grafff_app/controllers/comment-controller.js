@@ -10,11 +10,24 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
       newComment['content'] = comment.content;
       newComment['user_id'] = $scope.currentUser.id;
       newComment['artwork_id'] = $scope.artwork.id;
-      console.log(newComment);
 
       CommentFactory.newComment(newComment).then(function(response) {
-        $scope.comments.push(response.data);
-        $scope.commentField.$setPristine();
+        CommentFactory.getAllComments().then(function(response) {
+          
+          // Loop through all artworks. Get ones that have artwork id that matches '$scope.artwork.id'
+          function thisArtworkComments(array, id) {
+            var comments = [];
+            for(var i = 0; i < array.length; i++) {
+              if(array[i].artwork_id === id) {
+                comments.push(array[i]);
+              };
+            };
+            return comments;
+          }
+          $scope.comments = thisArtworkComments(response.data, $scope.artwork.id);
+
+        });
+
       });
 
       
