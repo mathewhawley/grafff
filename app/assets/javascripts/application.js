@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
+//= require aws-sdk.min
 //= require angular
 //= require angular-animate
 //= require angular-resource
