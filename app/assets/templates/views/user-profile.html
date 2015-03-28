@@ -100,7 +100,18 @@
       <p>Map</p>
     </div>
     <div ng-show="isSelected(6)"><!-- Add artwork form -->
-      <p>Form goes here!</p>
+      <h3>Add new artwork</h3>
+      <form name="artworkForm" novalidate>
+        <label for="title">Title</label>
+        <input id="title" type="text">
+        <label for="description">Description</label>
+        <textarea id="description"></textarea>
+        <label for="location">Location</label>
+        <!-- Map with draggable markers to go here? -->
+        <label for="images">Images</label>
+        <!-- Multiple image upload functionality goes here? -->
+        <button>Submit</button>
+      </form>
     </div>
   </div>
 </div>
