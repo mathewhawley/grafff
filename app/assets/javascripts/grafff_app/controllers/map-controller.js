@@ -10,7 +10,8 @@ app.controller('MapController', function($scope, $http) {
   //   };
   // });
 
-  $scope.test = function(position) {
+  $scope.getPosition = function(position) {
+
     console.log('marker clicked');
     console.log(position);
   };
