@@ -1,4 +1,4 @@
-app.controller('ProfileController', function($scope) {
+app.controller('TabController', function($scope) {
 
   // Set initial tab
   $scope.tab = 1;
