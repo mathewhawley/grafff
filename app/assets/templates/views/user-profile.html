@@ -51,10 +51,10 @@
   </div>
   
   <div><!-- Content -->
-    <div ng-show="isSelected(1)"><!-- Activity Feed -->
+    <div ng-if="isSelected(1)"><!-- Activity Feed -->
       <p>Activity Feed</p>
     </div>
-    <div ng-show="isSelected(2)"><!-- Likes -->
+    <div ng-if="isSelected(2)"><!-- Likes -->
       <div ng-repeat="artwork in likedArtworks"><!-- Artwork card -->
         <a ng-href="#/artworks/{{ artwork.id }}">
           <div><!-- Card wrapper -->
@@ -70,7 +70,7 @@
         </a>
       </div>
     </div>
-    <div ng-show="isSelected(3)"><!-- Artists -->
+    <div ng-if="isSelected(3)"><!-- Artists -->
         <div ng-repeat="artist in followedArtists"><!-- Artist card -->
           <a ng-href="#/users/{{ artist.id }}/profile">
             <div><!-- Card wrapper -->
@@ -81,7 +81,7 @@
           </a>
         </div>
     </div>
-    <div ng-show="isSelected(4)"><!-- Artworks -->
+    <div ng-if="isSelected(4)"><!-- Artworks -->
       <div ng-repeat="artwork in userArtworks"><!-- Artwork card -->
         <a ng-href="#/artworks/{{ artwork.id }}">
           <div><!-- Card wrapper -->
@@ -96,10 +96,10 @@
         </a>
       </div>
     </div>
-    <div ng-show="isSelected(5)"><!-- Map -->
+    <div ng-if="isSelected(5)"><!-- Map -->
       <artist-artwork-map></artist-artwork-map>
     </div>
-    <div ng-show="isSelected(6)"><!-- Add artwork form -->
+    <div ng-if="isSelected(6)"><!-- Add artwork form -->
       <h3>Add new artwork</h3>
       <form name="artworkForm" novalidate>
         <label for="title">Title</label>
