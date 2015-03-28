@@ -49,3 +49,13 @@ app.directive('artistArtworkMap', function() {
   };
 
 });
+
+app.directive('newArtworkForm', function() {
+
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('directives/new-artwork-form.html') %>",
+    controller: 'MapController'
+  }
+
+});

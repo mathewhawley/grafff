@@ -100,21 +100,7 @@
       <artist-artwork-map></artist-artwork-map>
     </div>
     <div ng-if="isSelected(6)"><!-- Add artwork form -->
-      <h3>Add new artwork</h3>
-      <form name="artworkForm" novalidate>
-        <label for="title">Title</label>
-        <input id="title" type="text">
-        <label for="description">Description</label>
-        <textarea id="description"></textarea>
-        <label for="location">Location</label>
-        <map id="artwork-form-map"
-          zoom="12"
-          center="London, United Kingdom">
-        </map>
-        <label for="images">Images</label>
-        <!-- Multiple image upload functionality goes here? -->
-        <button>Submit</button>
-      </form>
+      <new-artwork-form></new-artwork-form>
     </div>
   </div>
 </div>
