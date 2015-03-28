@@ -4,6 +4,12 @@
 }
 
 #artwork-form-map {
+  position: relative;
   height: 300px;
   width: 300px;
+}
+
+#artwork-location-marker {
+  position: absolute;
+  top: 0;
 }
