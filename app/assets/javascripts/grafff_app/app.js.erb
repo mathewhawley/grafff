@@ -63,7 +63,7 @@ app.directive('artistArtworkMap', function() {
   return {
     restrict: 'E',
     templateUrl: "<%= asset_path('directives/artist-artwork-map.html') %>",
-    controller: 'MapController'
+    controller: 'UserController'
   };
 
 });
@@ -73,7 +73,7 @@ app.directive('newArtworkForm', function() {
   return {
     restrict: 'E',
     templateUrl: "<%= asset_path('directives/new-artwork-form.html') %>",
-    controller: 'MapController'
+    controller: 'ProfileController'
   }
 
 });
