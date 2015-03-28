@@ -36,11 +36,8 @@ app.controller('ProfileController', function($scope, $http, ArtworkFactory, User
     $scope.newArtwork['lng'] = longitude;
     $scope.newArtwork['user_id'] = $scope.user.id
 
-    console.log($scope.user);
-    console.log($scope.newArtwork);
-
     ArtworkFactory.addArtwork($scope.newArtwork).then(function(response) {
-      console.log('worked?');
+      $scope.user.artworks.push(response.data);
     });
 
   };
