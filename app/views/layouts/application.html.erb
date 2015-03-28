@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-default" role="navigation">
     <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
-    <form ng-controller="SearchController" ng-submit="testFunction()">
+    <form ng-controller="SearchController" ng-submit="searchUsers()">
       <input placeholder="Search users and artists" ng-model="query">
     </form>
     <div class="container">
