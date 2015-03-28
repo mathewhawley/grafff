@@ -1,7 +1,8 @@
 var app = angular.module('grafffApp', [
   'ngAnimate',
   'ngRoute',
-  'ngResource'
+  'ngResource',
+  'ngMap'
 ]);
 
 app.config(function($routeProvider){
@@ -35,6 +36,16 @@ app.directive('myProfileLink', function() {
         $scope.currentUser = response.data;
       });
     }
+  };
+
+});
+
+app.directive('artistArtworkMap', function() {
+  
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('directives/artist-artwork-map.html') %>",
+    controller: 'MapController'
   };
 
 });

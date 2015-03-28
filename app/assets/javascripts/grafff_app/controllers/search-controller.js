@@ -1,7 +1,5 @@
 app.controller('SearchController', function($scope, $http, UserFactory) {
 
-  console.log('I am the Search Controller');
-
   UserFactory.getAllUsers().then(function(response) {
 
     function searchUsers(query) {
