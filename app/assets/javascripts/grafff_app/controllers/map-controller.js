@@ -11,9 +11,8 @@ app.controller('MapController', function($scope, $http) {
   // });
 
   $scope.getPosition = function(position) {
-
-    console.log('marker clicked');
-    console.log(position);
+    $scope.longitude = position.latLng.D;
+    $scope.latitude = position.latLng.k;
   };
 
 });
