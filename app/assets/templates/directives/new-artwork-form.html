@@ -1,10 +1,13 @@
 <h3>Add new artwork</h3>
 
 <form name="artworkForm" novalidate>
+
   <label for="title">Title</label>
   <input id="title" type="text">
+
   <label for="description">Description</label>
   <textarea id="description"></textarea>
+
   <label for="location">Location</label>
   <map id="artwork-form-map"
     zoom="10"
@@ -13,8 +16,11 @@
       position="[51.508800, -0.127477]"
       draggable="true"></marker>
   </map>
-  <label for="images">Images</label>
   <p>Nearest address: {{ nearestAddress }}</p>
+
+  <label for="images">Images</label>
   <!-- Multiple image upload functionality goes here? -->
+  
   <button>Submit</button>
+
 </form>
