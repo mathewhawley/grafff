@@ -1,3 +1,7 @@
+#main-map {
+  height: 500px;
+}
+
 #artist-artwork-map {
   height: 300px;
   width: 500px;
@@ -7,9 +11,4 @@
   position: relative;
   height: 300px;
   width: 300px;
-}
-
-#artwork-location-marker {
-  position: absolute;
-  top: 0;
 }
