@@ -1,0 +1,51 @@
+@import 'colors';
+
+nav {
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid $mid-grey;
+  
+  h3 {
+    display: inline-block;
+  }
+
+  form {
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    left: 150px;
+
+    input {
+      height: 35px;
+      width: 250px;
+      font-weight: bold;
+      padding-left: 10px;
+      border: none;
+    }
+
+    input:focus {
+      outline: 0;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right;
+
+    li {
+      display: inline-block;
+      margin: 19px 0px;
+      font-weight: bold;
+
+      a {
+        padding: 22px 16px;
+      }
+
+      a:hover {
+        background: $light-grey;
+      }
+    }
+  }
+}
