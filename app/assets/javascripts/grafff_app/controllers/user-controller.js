@@ -44,6 +44,7 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
     // Get user artworks
     $scope.userArtworks = $scope.user.artworks;
 
+
   });
 
 

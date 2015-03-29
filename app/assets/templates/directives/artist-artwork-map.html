@@ -1,6 +1,9 @@
 <h2>This will be the artist's map</h2>
 
 <map id="artist-artwork-map"
-    zoom="14"
-    center="Hanbury Street, London">
+    zoom="11"
+    center="51.508800, -0.127477">
+    <marker ng-repeat="marker in userArtworks"
+      position="{{ marker.lat }}, {{ marker.lng }}">
+    </marker>
 </map>

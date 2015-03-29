@@ -11,7 +11,7 @@
   <label>Location</label>
   <map id="artwork-form-map"
     zoom="11"
-    center="[51.508800, -0.127477]">
+    center="51.508800, -0.127477">
     <marker id="artwork-location-marker" on-mouseup="getPosition(position)"
       position="[51.508800, -0.127477]"
       draggable="true"></marker>
@@ -19,7 +19,7 @@
   <p>Nearest address: {{ nearestAddress }}</p>
 
   <label>Add an image</label>
-  <input type="file" file ng-model="newArtwork.image">
+  <input name="file" type="file" file />
 
   <button>Submit</button>
 

@@ -6,7 +6,7 @@ class ArtworksController < ApplicationController
   end
 
   def add_artwork
-    artwork = Artwork.create(params.require(:artwork).permit(:user_id, :title, :description, :address, :lat, :lng))
+    artwork = Artwork.create(params.require(:artwork).permit(:user_id, :title, :description, :address, :lat, :lng, :image))
     render json: artwork
   end
 

@@ -82,7 +82,7 @@
         </div>
     </div>
     <div ng-if="isSelected(4)"><!-- Artworks -->
-      <div ng-repeat="artwork in userArtworks"><!-- Artwork card -->
+      <div ng-repeat="artwork in userArtworks | orderBy: '-created_at'"><!-- Artwork card -->
         <a ng-href="#/artworks/{{ artwork.id }}">
           <div><!-- Card wrapper -->
             <img src="http://lorempixel.com/150/100/abstract">
