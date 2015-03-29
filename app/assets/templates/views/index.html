@@ -2,9 +2,18 @@
   zoom="12"
   center="51.508800, -0.127477"
   scrollwheel="false">
-  <marker ng-repeat="artwork in allArtworks"
-    position="{{ artwork.lat }}, {{ artwork.lng }}">
-  </marker>
+  <div ng-repeat="artwork in allArtworks">
+    <marker on-click="showInfoWindow(event, artwork.id)"
+      position="{{ artwork.lat }}, {{ artwork.lng }}">
+    </marker>
+    <info-window id="{{ artwork.id }}" position="{{ artwork.lat }}, {{ artwork.lng }}" visible="true">
+      <div>
+        <h4>{{ artwork.title }}</h4>
+        <p><strong>{{ artwork.user.username }}</strong></p>
+        <p>{{ artwork.description }}</p>
+      </div>
+    </info-window>
+  </div>
 </map>
 
 <p>This page will display:</p>
