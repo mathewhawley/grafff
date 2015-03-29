@@ -4,7 +4,7 @@
     zoom="11"
     center="51.508800, -0.127477"
     scrollwheel="false">
-    <marker ng-repeat="marker in userArtworks"
-      position="{{ marker.lat }}, {{ marker.lng }}">
+    <marker ng-repeat="artwork in userArtworks"
+      position="{{ artwork.lat }}, {{ artwork.lng }}">
     </marker>
 </map>

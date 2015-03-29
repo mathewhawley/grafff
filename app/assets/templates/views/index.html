@@ -1,8 +1,10 @@
 <map id="main-map"
-  zoom="11"
+  zoom="12"
   center="51.508800, -0.127477"
   scrollwheel="false">
-  <marker></marker>
+  <marker ng-repeat="artwork in allArtworks"
+    position="{{ artwork.lat }}, {{ artwork.lng }}">
+  </marker>
 </map>
 
 <p>This page will display:</p>

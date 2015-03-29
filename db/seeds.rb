@@ -21,11 +21,11 @@ user_4 = User.create(first_name: 'Sarah', last_name: 'Jackson', username: 'sarah
 
 # ARTWORKS
 
-artwork_1 = Artwork.create(title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet', user_id: user_2.id)
-artwork_2 = Artwork.create(title: 'Dolor sit', description: 'Lorem ipsum dolor sit amet', user_id: user_2.id)
-artwork_3 = Artwork.create(title: 'Amet consectectur', description: 'Lorem ipsum dolor sit amet', user_id: user_4.id,  lat: 51.505380957008015, lng: -0.09932453417968645)
+artwork_1 = Artwork.create(title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet', user_id: user_2.id, lat: 51.50025191145822, lng: -0.10413105273437395)
+artwork_2 = Artwork.create(title: 'Dolor sit', description: 'Lorem ipsum dolor sit amet', user_id: user_2.id, lat: 51.493839792696555, lng: -0.13091022753906145)
+artwork_3 = Artwork.create(title: 'Amet consectectur', description: 'Lorem ipsum dolor sit amet', user_id: user_4.id, lat: 51.505380957008015, lng: -0.09932453417968645)
 artwork_4 = Artwork.create(title: 'Lorem ipsum dolor', description: 'Lorem ipsum dolor sit amet', user_id: user_4.id, lat: 51.51734648505407, lng: -0.11237079882812395)
-artwork_5 = Artwork.create(title: 'Ipsum sit amet', description: 'Lorem ipsum dolor sit amet', user_id: user_2.id)
+artwork_5 = Artwork.create(title: 'Ipsum sit amet', description: 'Lorem ipsum dolor sit amet', user_id: user_2.id, lat: 51.50067935396985, lng: -0.08627826953124895)
 artwork_6 = Artwork.create(title: 'Test artwork', description: 'Lorem ipsum dolor sit amet', user_id: user_4.id, lat: 51.51734648505407, lng: -0.08627826953124895)
 artwork_7 = Artwork.create(title: 'Awesome sprayz', description: 'Lorem ipsum dolor sit amet', user_id: user_4.id, lat: 51.51435539767495, lng: -0.09451801562499895)
 
