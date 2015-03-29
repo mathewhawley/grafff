@@ -10,7 +10,6 @@ app.controller('HomeController', function($scope, $http, $routeParams, UserFacto
 
   ArtworkFactory.getAllArtworks().then(function(response) {
     $scope.allArtworks = response.data;
-    console.log($scope.allArtworks);
   });
 
 });
