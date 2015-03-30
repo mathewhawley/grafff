@@ -1,5 +1,7 @@
-<h2>Search Results</h2>
+<div id="wrapper">
+  <h3 class="page-title">Search Results</h3>
 
-<div ng-repeat="user in searchResults">
-  <p>{{ user.first_name }}</p>
+  <div ng-repeat="user in searchResults">
+    <p>{{ user.first_name }} {{ user.last_name}}, {{ user.username }}</p>
+  </div>
 </div>

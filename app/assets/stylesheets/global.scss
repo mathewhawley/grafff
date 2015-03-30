@@ -1,3 +1,5 @@
+@import 'colors';
+
 #main-content, footer {
   p, i, li {
     font-size: 13px;
@@ -7,4 +9,20 @@
 #wrapper {
   width: 1040px;
   margin: 0 auto;
+}
+
+.page-title {
+  margin: 50px 0;
+}
+
+footer {
+  height: 150px;
+  padding: 40px 0;
+  background: $light-grey;
+  border-top: 1px solid $mid-grey;
+
+  .footer-wrapper {
+    width: 1040px;
+    margin: 0 auto;
+  }
 }
