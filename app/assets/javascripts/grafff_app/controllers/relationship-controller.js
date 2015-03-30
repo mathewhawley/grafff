@@ -1,4 +1,4 @@
-app.controller('RelationshipController', function($scope, $http, RelationshipFactory, UserFactory) {
+app.controller('RelationshipController', ['$scope', '$http', 'RelationshipFactory', 'UserFactory', function($scope, $http, RelationshipFactory, UserFactory) {
 
   UserFactory.getCurrentUser().then(function(response) {
 
@@ -73,4 +73,4 @@ app.controller('RelationshipController', function($scope, $http, RelationshipFac
 
   });
 
-});
+}]);

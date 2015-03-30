@@ -1,4 +1,4 @@
-app.controller('UserController', function($scope, $http, $routeParams, UserFactory) {
+app.controller('UserController', ['$scope', '$http', '$routeParams', 'UserFactory', function($scope, $http, $routeParams, UserFactory) {
 
 
   UserFactory.getAllUsers().then(function(response) {
@@ -56,4 +56,4 @@ app.controller('UserController', function($scope, $http, $routeParams, UserFacto
 
   });
 
-});
+}]);

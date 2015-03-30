@@ -1,4 +1,4 @@
-app.controller('ProfileController', function($scope, $http, ArtworkFactory, UserFactory) {
+app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserFactory', function($scope, $http, ArtworkFactory, UserFactory) {
 
   // Set initial tab
   $scope.tab = 1;
@@ -79,4 +79,4 @@ app.controller('ProfileController', function($scope, $http, ArtworkFactory, User
     }
   };
 
-});
+}]);

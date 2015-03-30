@@ -1,4 +1,4 @@
-app.controller('HomeController', function($scope, $http, $routeParams, UserFactory, ArtworkFactory){
+app.controller('HomeController', ['$scope', '$http', '$routeParams', 'UserFactory', 'ArtworkFactory', function($scope, $http, $routeParams, UserFactory, ArtworkFactory){
 
   UserFactory.getAllUsers().then(function(response) {
     $scope.allUsers = response.data;
@@ -12,4 +12,4 @@ app.controller('HomeController', function($scope, $http, $routeParams, UserFacto
     $scope.allArtworks = response.data;
   });
 
-});
+}]);

@@ -1,4 +1,4 @@
-app.controller('LikeController', function($scope, $http, UserFactory, LikeFactory) {
+app.controller('LikeController', ['$scope', '$http', 'UserFactory', 'LikeFactory', function($scope, $http, UserFactory, LikeFactory) {
 
   UserFactory.getCurrentUser().then(function(response) {
 
@@ -74,4 +74,4 @@ app.controller('LikeController', function($scope, $http, UserFactory, LikeFactor
 
   });
   
-});
+}]);

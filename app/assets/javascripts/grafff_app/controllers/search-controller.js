@@ -1,4 +1,4 @@
-app.controller('SearchController', function($scope, $http, UserFactory) {
+app.controller('SearchController', ['$scope','$http', 'UserFactory', function($scope, $http, UserFactory) {
 
   UserFactory.getAllUsers().then(function(response) {
 
@@ -16,4 +16,4 @@ app.controller('SearchController', function($scope, $http, UserFactory) {
 
   });
 
-});
+}]);

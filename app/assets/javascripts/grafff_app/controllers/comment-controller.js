@@ -1,4 +1,4 @@
-app.controller('CommentController', function($scope, $http, UserFactory, CommentFactory) {
+app.controller('CommentController', ['$scope', '$http', 'UserFactory', 'CommentFactory', function($scope, $http, UserFactory, CommentFactory) {
 
   UserFactory.getCurrentUser().then(function(response) {
 
@@ -40,4 +40,4 @@ app.controller('CommentController', function($scope, $http, UserFactory, Comment
 
   });
 
-});
+}]);

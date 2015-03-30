@@ -1,4 +1,4 @@
-app.controller('ArtworkController', function($scope, $http, UserFactory, ArtworkFactory, $routeParams) {
+app.controller('ArtworkController', ['$scope', '$http', 'UserFactory', 'ArtworkFactory', '$routeParams', function($scope, $http, UserFactory, ArtworkFactory, $routeParams) {
 
   ArtworkFactory.getAllArtworks().then(function(response) {
 
@@ -19,4 +19,4 @@ app.controller('ArtworkController', function($scope, $http, UserFactory, Artwork
 
   });
 
-});
+}]);
