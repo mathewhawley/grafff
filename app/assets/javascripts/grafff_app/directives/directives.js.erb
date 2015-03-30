@@ -35,3 +35,13 @@ app.directive('newArtworkForm', function() {
   }
 
 });
+
+app.directive('artworkCards', function() {
+
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('directives/artwork-cards.html') %>",
+    controller: 'ProfileController'
+  }
+
+});

@@ -59,23 +59,7 @@
         <div class="card-container">
           <div class="row">
             <div ng-repeat="artwork in likedArtworks | orderBy: '-created_at'" class="col-md-3">
-              <a ng-href="#/artworks/{{ artwork.id }}" class="thumbnail-link">
-                <div class="thumbnail">
-                  <div class="thumbnail-image">
-                    <img src="{{ artwork.image }}">
-                  </div>
-                  <div class="thumbnail-info">
-                    <p class="thumbnail-title"><strong>{{ artwork.title }}</strong></p>
-                    <p class="thumbnail-artist">{{ artwork.user.username }}</p>
-                    <p class="thumbnail-address"><em><i class="fa fa-map-marker"></i> {{ artwork.address }}</em></p>
-                    <p class="thumbnail-description">{{ artwork.description }}</p>
-                    <div class="card-footer">
-                      <i class="fa fa-thumbs-up likes"> {{ artwork.likes.length }}</i>
-                      <i class="fa fa-comment comments"> {{ artwork.comments.length }}</i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <artwork-cards></artwork-cards>
             </div>
           </div>
         </div>
@@ -96,23 +80,7 @@
         <div class="card-container">
           <div class="row">
             <div ng-repeat="artwork in userArtworks | orderBy: '-created_at'" class="col-md-3">
-              <a ng-href="#/artworks/{{ artwork.id }}" class="thumbnail-link">
-                <div class="thumbnail">
-                  <div class="thumbnail-image">
-                    <img src="{{ artwork.image }}">
-                  </div>
-                  <div class="thumbnail-info">
-                    <p class="thumbnail-title"><strong>{{ artwork.title }}</strong></p>
-                    <p class="thumbnail-artist">{{ artwork.user.username }}</p>
-                    <p class="thumbnail-address"><em><i class="fa fa-map-marker"></i> {{ artwork.address }}</em></p>
-                    <p class="thumbnail-description">{{ artwork.description }}</p>
-                    <div class="card-footer">
-                      <i class="fa fa-thumbs-up likes"> {{ artwork.likes.length }}</i>
-                      <i class="fa fa-comment comments"> {{ artwork.comments.length }}</i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <artwork-cards></artwork-cards>
             </div>
           </div>
         </div>
