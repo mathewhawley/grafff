@@ -1,4 +1,8 @@
-app.controller('SearchController', ['$scope','$http', 'UserFactory', function($scope, $http, UserFactory) {
+app.controller('SearchController', ['$scope','$http', '$location', 'UserFactory', function($scope, $http, $location, UserFactory) {
+
+  UserFactory.getCurrentUser().then(function(response) {
+    $scope.currentUser = response.data;
+  });
 
   UserFactory.getAllUsers().then(function(response) {
 
@@ -19,6 +23,7 @@ app.controller('SearchController', ['$scope','$http', 'UserFactory', function($s
       }
 
       $scope.searchResults = filterAllUsers($scope.allUsers, query);
+      $location.path('/search');
   
     };
 

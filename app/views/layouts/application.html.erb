@@ -13,7 +13,7 @@
 <body>
   <nav ng-controller="HomeController">
     <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
-    <form ng-controller="SearchController" ng-submit="searchUsers(query)">
+    <form ng-controller="SearchController" ng-submit="searchUsers(query)" ng-if="currentUser">
       <i class="fa fa-search"></i>
       <input placeholder="Search users and artists" ng-model="query">
     </form>

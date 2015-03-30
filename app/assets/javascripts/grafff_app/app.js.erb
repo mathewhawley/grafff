@@ -24,6 +24,10 @@ app.config(['$routeProvider', function($routeProvider){
     controller: 'HomeController',
     templateUrl: "<%= asset_path('views/all-artwork.html') %>"
   })
+  .when('/search', {
+    controller: 'SearchController',
+    templateUrl: "<%= asset_path('views/search-results.html') %>"
+  })
   .otherwise({
     redirectTo: '/'
   });
