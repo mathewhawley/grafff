@@ -4,6 +4,7 @@
   <title>Grafff</title>
   <%= include_gon %>
   <%= stylesheet_link_tag 'application' %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= javascript_include_tag 'application' %>
   <script src="http://maps.google.com/maps/api/js"></script>
   <%= csrf_meta_tags %>
@@ -13,6 +14,7 @@
   <nav ng-controller="HomeController">
     <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
     <form ng-controller="SearchController" ng-submit="searchUsers()">
+      <i class="fa fa-search"></i>
       <input placeholder="Search users and artists" ng-model="query">
     </form>
     <% if user_signed_in? %>
@@ -27,14 +29,16 @@
       </ul>
     <% end %>
   </nav>
-   
-  <% if !user_signed_in? %>
-    <%= yield %>
-  <% elsif current_page? edit_user_registration_path %>
-    <%= yield %>
-  <% elsif user_signed_in? %>
-    <ng-view></ng-view>
-  <% end %>
+  
+  <div class="main-content">
+    <% if !user_signed_in? %>
+      <%= yield %>
+    <% elsif current_page? edit_user_registration_path %>
+      <%= yield %>
+    <% elsif user_signed_in? %>
+      <ng-view></ng-view>
+    <% end %>
+  </div>
 
   <footer>
     <p>&copy; 2015 grafff Ltd.</p>

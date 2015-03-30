@@ -13,18 +13,22 @@ nav {
     position: absolute;
     display: inline-block;
     top: 12px;
-    left: 150px;
+    left: 180px;
 
     input {
       height: 35px;
       width: 250px;
       font-weight: bold;
-      padding-left: 10px;
+      padding-left: 7px;
       border: none;
     }
 
     input:focus {
       outline: 0;
+    }
+
+    i {
+      color: $dark-grey;
     }
   }
 
@@ -33,6 +37,7 @@ nav {
     margin: 0;
     list-style: none;
     float: right;
+    margin-right: 35px;
 
     li {
       display: inline-block;
