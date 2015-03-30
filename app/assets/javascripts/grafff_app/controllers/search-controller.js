@@ -4,6 +4,17 @@ app.controller('SearchController', ['$scope','$http', '$location', 'UserFactory'
     $scope.currentUser = response.data;
   });
 
-  $scope.searchResults = SearchService.getResults();
+  UserFactory.getAllUsers().then(function(response) {
+
+    var allUsers = response.data;
+    var query = document.getElementById('search-input').value;
+    
+    function searchUsers(users, searchQuery) {
+      SearchService.searchUsers(users, searchQuery);
+      return results = SearchService.getResults();
+    }
+    $scope.searchResults = searchUsers(allUsers, query);
+
+  });
 
 }]);
