@@ -60,7 +60,7 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
         } else {
           // Success!
           alert('Upload Done');
-        }
+        };
       })
       .on('httpUploadProgress',function(progress) {
             // Log Progress Information
@@ -69,7 +69,8 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
     } else {
       // No File Selected
       alert('No File Selected');
-    }
+    };
+
     $scope.imageUrl = 'https://s3-eu-west-1.amazonaws.com/grafff/' + $scope.file.name;
 
     $scope.newArtwork['address'] = address;
