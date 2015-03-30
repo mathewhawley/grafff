@@ -1,4 +1,4 @@
-app.factory('ArtworkFactory', function($http) {
+app.factory('ArtworkFactory', ['$http', function($http) {
 
   var ArtworkFactory = {
     getAllArtworks: function() {
@@ -11,4 +11,4 @@ app.factory('ArtworkFactory', function($http) {
 
   return ArtworkFactory;
 
-});
+}]);

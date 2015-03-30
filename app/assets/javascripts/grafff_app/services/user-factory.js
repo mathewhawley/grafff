@@ -1,4 +1,4 @@
-app.factory('UserFactory', function($http) {
+app.factory('UserFactory', ['$http', function($http) {
 
   var UserFactory = {
     getAllUsers: function() {
@@ -11,4 +11,4 @@ app.factory('UserFactory', function($http) {
 
   return UserFactory;
 
-});
+}]);

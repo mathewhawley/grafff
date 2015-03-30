@@ -1,4 +1,4 @@
-app.factory('RelationshipFactory', function($http) {
+app.factory('RelationshipFactory', ['$http', function($http) {
 
   var RelationshipFactory = {
     getAllRelationships: function() {
@@ -18,4 +18,4 @@ app.factory('RelationshipFactory', function($http) {
 
   return RelationshipFactory;
 
-});
+}]);

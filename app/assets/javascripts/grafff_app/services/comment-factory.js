@@ -1,4 +1,4 @@
-app.factory('CommentFactory', function($http) {
+app.factory('CommentFactory', ['$http', function($http) {
 
   var CommentFactory = {
     getAllComments: function() {
@@ -11,4 +11,4 @@ app.factory('CommentFactory', function($http) {
 
   return CommentFactory;
 
-});
+}]);

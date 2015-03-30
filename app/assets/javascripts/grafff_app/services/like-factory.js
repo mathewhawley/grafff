@@ -1,4 +1,4 @@
-app.factory('LikeFactory', function($http) {
+app.factory('LikeFactory', ['$http', function($http) {
 
   var LikeFactory = {
     getAllLikes: function() {
@@ -18,4 +18,4 @@ app.factory('LikeFactory', function($http) {
 
   return LikeFactory;
 
-});
+}]);
