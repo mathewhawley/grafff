@@ -1,5 +1,19 @@
-.profile-picture {
-  width: 200px;
+@import 'colors';
+
+.profile-header {
+  background: $light-grey;
+  border-bottom: 1px solid $mid-grey;
+  margin-bottom: 40px;
+  padding: 40px 0;
+
+  .profile-header-wrapper {
+    width: 1040px;
+    margin: 0 auto;
+  }
+
+  .profile-picture {
+    width: 100%;
+  }
 }
 
 .profile-content-tabs {

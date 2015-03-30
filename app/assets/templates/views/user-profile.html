@@ -1,26 +1,28 @@
-<div><!-- Profile header -->
-  <div><!-- Profile picture -->
-    <img src="{{ user.profile_pic.url }}" class="profile-picture">
-  </div>
+<div class="profile-header"><!-- Profile header -->
+  <div class="profile-header-wrapper">
+    <div class="row">
+      <div class="col-md-3"><!-- Profile picture -->
+        <img src="{{ user.profile_pic.url }}" class="profile-picture">
+      </div>
 
-  <div><!-- Profile information -->
-    <h3>{{ user.username }}</h3>
-    <p>{{ user.bio }}</p>
-    <p ng-if="user.is_artist">{{ user.passive_relationships.length }} Followers</p>
-    <p ng-if="!user.is_artist">{{ user.active_relationships.length }} Following</p>
+      <div class="col-md-9"><!-- Profile information -->
+        <h3>{{ user.username }}</h3>
+        <p>{{ user.bio }}</p>
+        <p ng-if="user.is_artist">{{ user.passive_relationships.length }} Followers</p>
+        <p ng-if="!user.is_artist">{{ user.active_relationships.length }} Following</p>
 
-    <div ng-controller="RelationshipController" ng-if="user.is_artist && !currentUser.is_artist">
+        <div ng-controller="RelationshipController" ng-if="user.is_artist && !currentUser.is_artist">
 
-      <form ng-submit="followUser(currentUser.id, user.id)" novalidate>
-        <button ng-hide="followingThisUser">Follow</button>
-      </form>
+          <form ng-submit="followUser(currentUser.id, user.id)" novalidate>
+            <button ng-hide="followingThisUser">Follow</button>
+          </form>
 
-      <form ng-submit="unfollowUser(currentUser.id)" novalidate>
-        <button ng-show="followingThisUser">Unfollow</button>
-      </form>
-
+          <form ng-submit="unfollowUser(currentUser.id)" novalidate>
+            <button ng-show="followingThisUser">Unfollow</button>
+          </form>
+        </div>
+      </div>
     </div>
-
   </div>
 </div>
 
