@@ -4,6 +4,8 @@ gem 'devise'
 gem 'angularjs-rails'
 gem 'underscore-rails'
 gem 'gon'
+gem 'thin'
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
