@@ -5,11 +5,13 @@
         <img src="{{ user.profile_pic.url }}" class="profile-picture">
       </div>
 
-      <div class="col-md-9"><!-- Profile information -->
-        <h3>{{ user.username }}</h3>
+      <div class="profile-info col-md-9"><!-- Profile information -->
+        <h2>{{ user.username }}</h2>
+        <p class="role" ng-if="user.is_artist"><strong>Artist</strong></p>
+        <p>Joined </p>
+        <p ng-if="user.is_artist"><strong>{{ user.passive_relationships.length }}</strong> Followers</p>
+        <p ng-if="!user.is_artist"><strong>{{ user.active_relationships.length }}</strong> Following</p>
         <p>{{ user.bio }}</p>
-        <p ng-if="user.is_artist">{{ user.passive_relationships.length }} Followers</p>
-        <p ng-if="!user.is_artist">{{ user.active_relationships.length }} Following</p>
 
         <div ng-controller="RelationshipController" ng-if="user.is_artist && !currentUser.is_artist">
 
