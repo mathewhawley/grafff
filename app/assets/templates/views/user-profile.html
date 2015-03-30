@@ -56,19 +56,28 @@
         <p>Activity Feed</p>
       </div>
       <div ng-if="isSelected(2)"><!-- Likes -->
-        <div ng-repeat="artwork in likedArtworks"><!-- Artwork card -->
-          <a ng-href="#/artworks/{{ artwork.id }}">
-            <div><!-- Card wrapper -->
-              <img src="http://lorempixel.com/150/100/abstract">
-              <h4>{{ artwork.title }}</h4>
-              <ul>
-                <li>Artist: {{ artwork.user.first_name }} {{ artwork.user.last_name }}</li>
-                <li>Description: {{ artwork.description }}</li>
-                <li>Likes: {{ artwork.likes.length }}</li>
-                <li>Comments: {{ artwork.comments.length }}</li>
-              </ul>
+        <div class="card-container">
+          <div class="row">
+            <div ng-repeat="artwork in likedArtworks | orderBy: '-created_at'" class="col-md-3">
+              <a ng-href="#/artworks/{{ artwork.id }}" class="thumbnail-link">
+                <div class="thumbnail">
+                  <div class="thumbnail-image">
+                    <img src="{{ artwork.image }}">
+                  </div>
+                  <div class="thumbnail-info">
+                    <p class="thumbnail-title"><strong>{{ artwork.title }}</strong></p>
+                    <p class="thumbnail-artist">{{ artwork.user.username }}</p>
+                    <p class="thumbnail-address"><em><i class="fa fa-map-marker"></i> {{ artwork.address }}</em></p>
+                    <p class="thumbnail-description">{{ artwork.description }}</p>
+                    <div class="card-footer">
+                      <i class="fa fa-thumbs-up likes"> {{ artwork.likes.length }}</i>
+                      <i class="fa fa-comment comments"> {{ artwork.comments.length }}</i>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
       <div ng-if="isSelected(3)"><!-- Artists -->
