@@ -10,61 +10,59 @@
   }
   
   .thumbnail {
-  padding: 0px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  border: 1px solid $mid-grey;
+    padding: 0px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid $mid-grey;
 
-  .thumbnail-image {
-    width: 235.5px;
-    height: 200px;
-    margin-bottom: 16px;
-    overflow: hidden;
-    border-radius: 4.5px 4.5px 0px 0px;
-    
-    img {
+    .thumbnail-image {
+      width: 235.5px;
       height: 200px;
-    }
-  }
-
-  .thumbnail-info {
-    position: relative;
-    padding: 0 20px 15px;
-    text-align: left;
-
-    .thumbnail-description {
-      height: 65px;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
       overflow: hidden;
-      margin-bottom: 25px;
+      border-radius: 4.5px 4.5px 0px 0px;
+      
+      img {
+        height: 200px;
+      }
     }
 
-    .card-footer {
-      position: absolute;
-      bottom: 12px;
-      width: 196px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 70%);
-      padding-top: 70px;
+    .thumbnail-info {
+      position: relative;
+      padding: 0 20px 15px;
+      text-align: left;
+
+      .thumbnail-description {
+        height: 65px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        margin-bottom: 25px;
+      }
+
+      .card-footer {
+        position: absolute;
+        bottom: 12px;
+        width: 196px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 70%);
+        padding-top: 70px;
+      }
     }
   }
-}
 
-.thumbnail:hover {
-  box-shadow: 0px 0px 10px 0px $mid-grey;
-}
-
-.thumbnail-link {
-  color: $dark-grey;
-
-  .thumbnail-title {
-    color: $black;
-    margin-bottom: 0;
+  .thumbnail:hover {
+    box-shadow: 0px 0px 10px 0px $mid-grey;
   }
-}
 
-.likes {
-  margin-right: 10px;
-}
+  .thumbnail-link {
+    color: $dark-grey;
 
+    .thumbnail-title {
+      color: $black;
+      margin-bottom: 0;
+    }
+  }
 
+  .likes {
+    margin-right: 10px;
+  }
 }
