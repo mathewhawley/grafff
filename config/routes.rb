@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   post 'likes/like_artwork' => 'likes#like_artwork'
   post 'likes/unlike_artwork' => 'likes#unlike_artwork'
 
+  post 'search/all_users' => 'searches#all_users'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
