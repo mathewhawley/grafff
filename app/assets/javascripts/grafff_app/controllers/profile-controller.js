@@ -31,26 +31,19 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
   $scope.addArtwork = function(address) {
 
     // Create new artwork object
-    $scope.newArtwork['address'] = address;
-    $scope.newArtwork['lat'] = latitude;
-    $scope.newArtwork['lng'] = longitude;
-    $scope.newArtwork['user_id'] = $scope.user.id
-
-    ArtworkFactory.addArtwork($scope.newArtwork).then(function(response) {
-      $scope.user.artworks.push(response.data);
-    });
+    
 
   };
 
 
   // File uploads
   $scope.creds = {
-    bucket: 'grafff-temp-bucket',
+    bucket: 'grafff',
     access_key: gon.aws_access_key,
     secret_key: gon.aws_secret_key
   };
    
-  $scope.upload = function() {
+  $scope.upload = function(address) {
     // Configure The S3 Object 
     AWS.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
     AWS.config.region = 'eu-west-1';
@@ -77,6 +70,18 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
       // No File Selected
       alert('No File Selected');
     }
+    $scope.imageUrl = 'https://s3-eu-west-1.amazonaws.com/grafff/' + $scope.file.name;
+
+    $scope.newArtwork['address'] = address;
+    $scope.newArtwork['lat'] = latitude;
+    $scope.newArtwork['lng'] = longitude;
+    $scope.newArtwork['user_id'] = $scope.user.id;
+    $scope.newArtwork['image'] = $scope.imageUrl;
+
+    ArtworkFactory.addArtwork($scope.newArtwork).then(function(response) {
+      $scope.user.artworks.push(response.data);
+    });
+
   };
 
 }]);
