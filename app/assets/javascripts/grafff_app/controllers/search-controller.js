@@ -2,16 +2,25 @@ app.controller('SearchController', ['$scope','$http', 'UserFactory', function($s
 
   UserFactory.getAllUsers().then(function(response) {
 
-    function searchUsers(query) {
-      console.log('Searching for a match...');
-    }
+    $scope.allUsers = response.data;
 
-    $scope.searchUsers = function() {
-      console.log(response.data);
-      console.log($scope.query);
+    $scope.searchUsers = function(query) {
+      // console.log($scope.allUsers);
+      
       // Loop through all users
       // If any part of username, first_name or last_name matches the query, console.log them thangs!
-      searchUsers($scope.query);
+      function filterAllUsers(allUsers, query) {
+        for(var i = 0; i< allUsers.length; i++) {
+          if(allUsers[i].first_name.indexOf(query) >= 0) {
+            console.log(allUsers[i]);
+          }
+          // console.log(allUsers[i].first_name);
+          // console.log(query);
+        };
+      }
+
+      filterAllUsers($scope.allUsers, query);
+  
     };
 
   });
