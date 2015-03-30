@@ -36,6 +36,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :profile_pic %><br />
+    <%= f.file_field :profile_pic %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @validatable %>
     <% end %><br />
