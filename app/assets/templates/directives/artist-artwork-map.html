@@ -1,7 +1,5 @@
-<h2>This will be the artist's map</h2>
-
 <map id="artist-artwork-map"
-    zoom="11"
+    zoom="12"
     center="51.508800, -0.127477"
     scrollwheel="false">
     
@@ -11,10 +9,21 @@
     </marker>
 
     <info-window id="{{ artwork.id }}" position="{{ artwork.lat }}, {{ artwork.lng }}" visible-on-marker="{{ artwork.id }}">
-      <div class="infoWindow">
+      <div class="info-window">
         <a ng-href="#/artworks/{{ artwork.id }}">
-          <h4>{{ artwork.title }}</h4>
-          <p>{{ artwork.user.username }}</p>
+          <div class="row">
+            <div class="info-window-image col-md-4">
+              <img src="{{ artwork.image }}">
+            </div>
+            <div class="col-md-7 info-window-text">
+              <p class="info-window-title"><strong>{{ artwork.title }}</strong></p>
+              <p>{{ artwork.user.username }}</p>
+            </div>
+            <div class="info-window-stats col-md-7">
+              <i class="fa fa-thumbs-up likes"> {{ artwork.likes.length }}</i>
+              <i class="fa fa-comment comments"> {{ artwork.comments.length }}</i>
+            </div>
+          </div>
         </a>
       </div>
     </info-window>

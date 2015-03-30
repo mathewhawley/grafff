@@ -26,7 +26,7 @@
 
 <div id="wrapper">
   <div ng-controller="ProfileController"><!-- Profile body -->
-    <div><!-- Nav -->
+    <div class="profile-content-tabs"><!-- Nav -->
       <ul class="nav nav-pills" ng-if="!user.is_artist" ng-init="$parent.tab = 1"><!-- Nav pills -->
         <li ng-class="{ active:isSelected(1) }">
           <a href ng-click="$parent.selectTab(1)">Activity Feed</a>
