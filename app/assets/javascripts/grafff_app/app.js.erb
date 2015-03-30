@@ -20,6 +20,10 @@ app.config(['$routeProvider', function($routeProvider){
     controller: 'ArtworkController',
     templateUrl: "<%= asset_path('views/artwork.html') %>"
   })
+  .when('/artworks', {
+    controller: 'HomeController',
+    templateUrl: "<%= asset_path('views/all-artwork.html') %>"
+  })
   .otherwise({
     redirectTo: '/'
   });
