@@ -12,12 +12,13 @@
   <map id="artwork-form-map"
     zoom="11"
     center="51.508800, -0.127477"
-    scrollwheel="false">
+    scrollwheel="false"
+    styles="[{'featureType':'landscape','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'poi','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'road','elementType':'geometry','stylers':[{'lightness':57}]},{'featureType':'road','elementType':'labels.text.fill','stylers':[{'visibility':'on'},{'lightness':24}]},{'featureType':'road','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'transit','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'off'}]}]">
     <marker id="artwork-location-marker" on-mouseup="getPosition(position)"
       position="51.508800, -0.127477"
       draggable="true"></marker>
   </map>
-  <p>Nearest address: {{ nearestAddress }}</p>
+  <p ng-if="nearestAddress"><i class="fa fa-map-marker"></i> {{ nearestAddress }}</p>
 
   <label>Add an image</label>
   <input name="file" type="file" file />
