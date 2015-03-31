@@ -17,7 +17,8 @@
             </div>
             <div class="col-md-7 info-window-text">
               <p class="info-window-title"><strong>{{ artwork.title }}</strong></p>
-              <p>{{ artwork.user.username }}</p>
+              <p class="info-window-artist">{{ artwork.user.username }}</p>
+              <p class="info-window-address"><em><i class="fa fa-map-marker"></i> {{ artwork.address }}</em></p>
             </div>
             <div class="info-window-stats col-md-7">
               <i class="fa fa-thumbs-up likes"> {{ artwork.likes.length }}</i>

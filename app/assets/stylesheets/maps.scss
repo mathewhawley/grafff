@@ -20,22 +20,22 @@
 
 .gm-style-iw {
   font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-  height: 100px;
+  height: 108px;
   left: 1px !important;
   top: 1px !important;
 
   .info-window {
     width: 380px;
-    height: 115.5px;
+    height: 124px;
 
     .info-window-image {
       width: 170px;
-      height: 115.5px;
+      height: 124px;
       overflow: hidden;
       display: inline-block;
 
       img {
-        height: 115.5px;
+        height: 124px;
         border-radius: 2px 0 0 2px;
       }
     }
@@ -46,6 +46,14 @@
       .info-window-title {
         margin: 10px 0 0 0;
         color: $black;
+      }
+
+      .info-window-artist {
+        margin-bottom: 12px;
+      }
+
+      .info-window-address {
+        margin-bottom: 0;
       }
 
       .info-window-stats {
