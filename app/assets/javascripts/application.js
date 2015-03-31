@@ -18,6 +18,8 @@
 //= require angular-animate
 //= require angular-resource
 //= require angular-route
+//= require moment
+//= require angular-moment.min
 //= require ng-map.min
 //= require bootstrap
 //= require_tree .
