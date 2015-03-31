@@ -1,5 +1,13 @@
 @import 'colors';
 
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 #main-content, footer {
   p, i, li {
     font-size: 13px;

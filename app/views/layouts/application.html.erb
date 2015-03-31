@@ -12,7 +12,7 @@
 
 <body>
   <nav ng-controller="HomeController">
-    <h3><%= link_to 'grafff', root_path, target: "_self" %></h3>
+    <%= link_to image_tag('grafff_logo.png'), root_path, target: "_self", id: "logo" %>
     <form ng-submit="searchUsers()" ng-if="currentUser">
       <i class="fa fa-search"></i>
       <input id="search-input" placeholder="Search users and artists">
