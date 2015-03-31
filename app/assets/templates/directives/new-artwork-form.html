@@ -19,10 +19,8 @@
   <p ng-if="nearestAddress"><i class="fa fa-map-marker"></i> {{ nearestAddress }}</p>
 
   <label>Add an image</label>
-  <input type="file" valid-file name="newArtwork" file ng-model="newArtwork.image" required />
+  <input type="file" valid-file file ng-model="newArtwork.image" required />
 
   <button>Submit</button>
 
 </form>
-
-<p>{{ newArtworkForm.$valid }}</p>
