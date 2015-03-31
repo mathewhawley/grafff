@@ -1,10 +1,10 @@
-<form name="newArtworkForm" ng-submit="upload(nearestAddress)" novalidate>
+<form name="newArtworkForm" ng-submit="newArtworkForm.$valid && upload(nearestAddress)" novalidate>
 
   <label>Title</label>
-  <input type="text" ng-model="newArtwork.title">
+  <input type="text" ng-model="newArtwork.title" required>
 
   <label>Description</label>
-  <textarea ng-model="newArtwork.description"></textarea>
+  <textarea ng-model="newArtwork.description" required></textarea>
 
   <label>Location</label>
   <map id="artwork-form-map"
@@ -19,8 +19,10 @@
   <p ng-if="nearestAddress"><i class="fa fa-map-marker"></i> {{ nearestAddress }}</p>
 
   <label>Add an image</label>
-  <input name="file" type="file" file />
+  <input type="file" valid-file name="newArtwork" file ng-model="newArtwork.image" required />
 
   <button>Submit</button>
 
 </form>
+
+<p>{{ newArtworkForm.$valid }}</p>
