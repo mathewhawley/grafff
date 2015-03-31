@@ -7,7 +7,7 @@ app.controller('ProfileController', ['$scope', '$http', '$route', 'ArtworkFactor
     // If user isn't an artist get artworks for activity feed
     function ifArtist(user) {
 
-      if($scope.user && $scope.user.is_artist !== true) {
+      if($scope.user && !$scope.user.active_relationships && $scope.user.is_artist !== true) {
         var userRelationships = $scope.user.active_relationships;
 
         function getArtworks(artists) {
