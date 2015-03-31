@@ -36,7 +36,7 @@
     <% elsif current_page? edit_user_registration_path %>
       <%= yield %>
     <% elsif user_signed_in? %>
-      <ng-view></ng-view>
+      <ng-view autoscroll="true"></ng-view>
     <% end %>
   </div>
 

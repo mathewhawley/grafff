@@ -43,8 +43,16 @@
       </div>
     </div>
 
-
     <div class="col-md-5"><!-- Aside: Map, likes, address -->
+      <map id="artwork-map"
+        zoom="13"
+        center="{{ artwork.lat }}, {{ artwork.lng }}"
+        scrollwheel="false"
+        styles="[{'featureType':'landscape','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'poi','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'road','elementType':'geometry','stylers':[{'lightness':57}]},{'featureType':'road','elementType':'labels.text.fill','stylers':[{'visibility':'on'},{'lightness':24}]},{'featureType':'road','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'transit','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'off'}]}]">
+        <marker position="{{ artwork.lat }}, {{ artwork.lng }}">
+        </marker>
+    </map>
+
       <div ng-controller="LikeController">
         <button ng-hide="likeThisArtwork" ng-click="likeArtwork(currentUser.id, artwork.id)">Like</button>
         <button ng-show="likeThisArtwork" ng-click="unlikeArtwork(currentUser.id)">Unlike</button>
