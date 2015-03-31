@@ -49,11 +49,15 @@
       }
 
       .info-window-artist {
-        margin-bottom: 12px;
+        margin-bottom: 28px;
       }
 
       .info-window-address {
         margin-bottom: 0;
+        width: 210px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
       }
 
       .info-window-stats {
