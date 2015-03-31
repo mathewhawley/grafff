@@ -1,5 +1,45 @@
 app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserFactory', function($scope, $http, ArtworkFactory, UserFactory) {
 
+  // ACTIVITY FEED
+
+  UserFactory.getAllUsers().then(function(response) {
+
+    var userRelationships = $scope.user.active_relationships;
+    // console.log(userRelationships);
+
+    function getArtworks(artists) {
+      var artworks = [];
+      for(var i = 0; i < artists.length; i++) {
+        artworks.push(artists[i].artworks);
+      };
+      return artworks;
+    }
+
+    // Loop through relationships, get artists
+    function getArtistsFromRelationships(relationships) {
+      var artists = [];
+      for(var i = 0; i < relationships.length; i++) {
+        artists.push(relationships[i].followed);
+        var artworks = getArtworks(artists);
+      };
+      return artworks;
+    }
+    var artworksArray = getArtistsFromRelationships(userRelationships);
+    
+    // Put all artworks into one object
+    $scope.followedArtistArtworks = artworksArray.reduce(function(prev, curr) {
+      return prev.concat(curr);
+    });
+    console.log($scope.followedArtistArtworks);
+
+  });
+
+
+
+
+
+  // NAVIGATION TABS
+
   // Set initial tab
   $scope.tab = 1;
 
@@ -14,6 +54,12 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
   };
 
 
+
+
+
+
+  // NEW ARTWORK FORM
+
   // Set new artwork location
   $scope.getPosition = function(position) {
 
@@ -25,16 +71,6 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
     });
 
   };
-
-
-  // Submit form, add new artwork
-  $scope.addArtwork = function(address) {
-
-    // Create new artwork object
-    
-
-  };
-
 
   // File uploads
   $scope.creds = {

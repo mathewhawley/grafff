@@ -57,7 +57,10 @@
     
     <div><!-- Content -->
       <div ng-if="isSelected(1)"><!-- Activity Feed -->
-        <p>Activity Feed</p>
+        <div ng-repeat="artwork in followedArtistArtworks | orderBy: '-created_at'">
+          <img src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic">
+          <p>{{ artwork.user.username }} has posted a new artwork!</p>
+        </div>
       </div>
       <div ng-if="isSelected(2)"><!-- Likes -->
         <div class="card-container">

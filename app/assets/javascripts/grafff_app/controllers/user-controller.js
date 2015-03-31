@@ -43,8 +43,6 @@ app.controller('UserController', ['$scope', '$http', '$routeParams', 'UserFactor
 
     // Get user artworks
     $scope.userArtworks = $scope.user.artworks;
-    console.log($scope.userArtworks);
-
 
   });
 
