@@ -4,33 +4,40 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
 
   UserFactory.getAllUsers().then(function(response) {
 
-    var userRelationships = $scope.user.active_relationships;
-    // console.log(userRelationships);
+    // If user isn't an artist get artworks for activity feed
+    function ifArtist(user) {
 
-    function getArtworks(artists) {
-      var artworks = [];
-      for(var i = 0; i < artists.length; i++) {
-        artworks.push(artists[i].artworks);
-      };
-      return artworks;
-    }
+      if($scope.user.is_artist !== true) {
+        var userRelationships = $scope.user.active_relationships;
 
-    // Loop through relationships, get artists
-    function getArtistsFromRelationships(relationships) {
-      var artists = [];
-      for(var i = 0; i < relationships.length; i++) {
-        artists.push(relationships[i].followed);
-        var artworks = getArtworks(artists);
+        function getArtworks(artists) {
+          var artworks = [];
+          for(var i = 0; i < artists.length; i++) {
+            artworks.push(artists[i].artworks);
+          };
+          return artworks;
+        }
+
+        // Loop through relationships, get artists
+        function getArtistsFromRelationships(relationships) {
+          var artists = [];
+          for(var i = 0; i < relationships.length; i++) {
+            artists.push(relationships[i].followed);
+            var artworks = getArtworks(artists);
+          };
+          return artworks;
+        }
+        var artworksArray = getArtistsFromRelationships(userRelationships);
+        
+        // Put all artworks into one object
+        $scope.followedArtistArtworks = artworksArray.reduce(function(prev, curr) {
+          return prev.concat(curr);
+        });
       };
-      return artworks;
+
     }
-    var artworksArray = getArtistsFromRelationships(userRelationships);
-    
-    // Put all artworks into one object
-    $scope.followedArtistArtworks = artworksArray.reduce(function(prev, curr) {
-      return prev.concat(curr);
-    });
-    console.log($scope.followedArtistArtworks);
+    ifArtist($scope.user);
+    // console.log($scope.user);
 
   });
 

@@ -60,6 +60,7 @@
         <div ng-repeat="artwork in followedArtistArtworks | orderBy: '-created_at'">
           <img src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic">
           <p>{{ artwork.user.username }} has posted a new artwork!</p>
+          <p>{{ artwork.created_at | amCalendar }}</p>
         </div>
       </div>
       <div ng-if="isSelected(2)"><!-- Likes -->
