@@ -1,34 +1,55 @@
-<div><!-- Header: Artwork title, artist -->
-  <h3>{{ artwork.title }}</h3>
-  <!-- Artist profile image to go here -->
-  <p>{{ artwork.user.username }}</p>
-</div>
-<div><!-- Artwork image -->
-  <img src="http://lorempixel.com/500/200/abstract">
-</div>
-<div><!-- Artwork information: description, location, likes etc -->
-  <div><!-- Main: Description -->
-    <p>{{ artwork.description }}</p>
-  </div>
-  <div><!-- Aside: Map, likes, address -->
-    <div ng-controller="LikeController">
-      <button ng-hide="likeThisArtwork" ng-click="likeArtwork(currentUser.id, artwork.id)">Like</button>
-      <button ng-show="likeThisArtwork" ng-click="unlikeArtwork(currentUser.id)">Unlike</button>
+<div class="artwork-header"><!-- Header: Artwork title, artist -->
+  <div class="artwork-header-wrapper">
+    <h1>{{ artwork.title }}</h1>
+    <!-- Artist profile image to go here -->
+      <div class="artist-info">
+        <a ng-href="#/users/{{ artwork.user.id }}/profile">
+          <img src="{{ artwork.user.profile_pic.url }}">
+          <p>{{ artwork.user.username }}</p>
+        </a>
+      </div>
+
+    <div class="artwork-main-image"><!-- Artwork image -->
+      <img src="{{ artwork.image }}">
     </div>
-    <p>Likes: {{ artwork.likes.length }}</p>
   </div>
 </div>
-<div ng-controller="CommentController"><!-- Comments -->
-  <h4>Comments: ({{ comments.length }})</h4>
-  <div><!-- Comment field -->
-    <form ng-keypress="($event.which === 13) ? postComment(comment) : 0">
-      <textarea id="comment-field" name="commentField" ng-model="comment.content" ></textarea>
-    </form>
-  </div>
-  <div ng-repeat="comment in comments | orderBy: '-created_at'">
-    <div><!-- Individual comment -->
-      <blockquote>{{ comment.content }}</blockquote>
-      <p>By: {{ comment.user.username }}, {{ comment.created_at }}</p>
+
+<div id="wrapper">
+  <div class="row artwork-body"><!-- Artwork information: description, location, likes etc -->
+    <div class="col-md-7">
+      <div class="artwork-body-copy"><!-- Main: Description -->
+        <p id="artwork-description">{{ artwork.description }}</p>
+      </div>
+
+      <div class="comment-area" ng-controller="CommentController"><!-- Comments -->
+        <h3>Comments: ({{ comments.length }})</h3>
+        <div><!-- Comment field -->
+          <form ng-keypress="($event.which === 13) ? postComment(comment) : 0">
+            <textarea id="comment-field" class="form-control" name="commentField" ng-model="comment.content" placeholder="Write a commment" ></textarea>
+          </form>
+        </div>
+        <div ng-repeat="comment in comments | orderBy: '-created_at'">
+          <div class="comment"><!-- Individual comment -->
+            <p id="comment-content">{{ comment.content }}</p>
+            <a ng-href="#/users/{{ comment.user.id }}/profile">
+              <img class="comment-author-pic" src="{{ comment.user.profile_pic.url }}">
+              <p class="comment-author">{{ comment.user.username }}</p>
+            </a>
+            <p class="comment-timestamp">{{ comment.created_at | amCalendar }}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-5"><!-- Aside: Map, likes, address -->
+      <div ng-controller="LikeController">
+        <button ng-hide="likeThisArtwork" ng-click="likeArtwork(currentUser.id, artwork.id)">Like</button>
+        <button ng-show="likeThisArtwork" ng-click="unlikeArtwork(currentUser.id)">Unlike</button>
+      </div>
+      <p>Likes: {{ artwork.likes.length }}</p>
     </div>
   </div>
 </div>

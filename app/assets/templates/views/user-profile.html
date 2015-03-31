@@ -8,7 +8,7 @@
       <div class="profile-info col-md-9"><!-- Profile information -->
         <h2>{{ user.username }}</h2>
         <p class="role" ng-if="user.is_artist"><strong>Artist</strong></p>
-        <p>Joined </p>
+        <p>Joined {{ user.created_at | amCalendar }}</p>
         <p ng-if="user.is_artist"><strong>{{ user.passive_relationships.length }}</strong> Followers</p>
         <p ng-if="!user.is_artist"><strong>{{ user.active_relationships.length }}</strong> Following</p>
         <p>{{ user.bio }}</p>
@@ -57,7 +57,7 @@
     
     <div><!-- Content -->
       <div ng-if="isSelected(1)"><!-- Activity Feed -->
-        <div ng-repeat="artwork in followedArtistArtworks | orderBy: '-created_at'">
+        <div ng-repeat="artwork in followedArtistArtworks | orderBy: '-created_at' | limitTo: '20'">
           <img src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic">
           <p>{{ artwork.user.username }} has posted a new artwork!</p>
           <p>{{ artwork.created_at | amCalendar }}</p>

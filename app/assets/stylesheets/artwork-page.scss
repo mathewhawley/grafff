@@ -1,0 +1,109 @@
+@import 'colors';
+
+.artwork-header {
+  background: $light-grey;
+  border-bottom: 1px solid $mid-grey;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  text-align: center;
+
+  .artwork-header-wrapper {
+    width: 1040px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 15px;
+    }
+
+    a {
+      display: inline-block;
+      color: $black;
+    }
+
+    .artist-info {
+      margin-bottom: 30px;
+
+      img {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+
+      p {
+        display: inline-block;
+      }
+    }
+
+    .artwork-main-image {
+      width: 100%;
+      height: 550px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        margin-top: -10%;
+      }
+    }
+  }
+}
+
+.artwork-body {
+
+  .artwork-body-copy {
+    margin-bottom: 40px;
+  }
+
+  #artwork-description {
+    font-size: 15px;
+  }
+  
+  .comment-area {
+    
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    #comment-field {
+      margin-bottom: 20px;
+    }
+
+    .comment {
+      margin: 10px 0;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 5px;
+      
+      #comment-content {
+        margin: 7px 0 20px 5px;
+        font-size: 16px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $dark-grey;
+      }
+
+      .comment-author-pic {
+        width: 30px;
+        margin-right: 5px;
+        border-radius: 50%;
+      }
+
+      .comment-author {
+        display: inline-block;
+      }
+
+      .comment-timestamp {
+        display: inline-block;
+        float: right;
+        margin: 8px 5px 0 0;
+        color: $mid-grey;
+      }
+    }  
+  }
+  
+}
