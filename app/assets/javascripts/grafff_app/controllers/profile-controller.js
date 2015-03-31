@@ -1,4 +1,4 @@
-app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserFactory', function($scope, $http, ArtworkFactory, UserFactory) {
+app.controller('ProfileController', ['$scope', '$http', '$route', 'ArtworkFactory', 'UserFactory', function($scope, $http, $route, ArtworkFactory, UserFactory) {
 
   // ACTIVITY FEED
 
@@ -102,7 +102,7 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
           return false;
         } else {
           // Success!
-          alert('Upload Done');
+          // alert('Upload Done');
         };
       })
       .on('httpUploadProgress',function(progress) {
@@ -124,6 +124,7 @@ app.controller('ProfileController', ['$scope', '$http', 'ArtworkFactory', 'UserF
 
     ArtworkFactory.addArtwork($scope.newArtwork).then(function(response) {
       $scope.user.artworks.push(response.data);
+      $route.reload();
     });
 
   };
