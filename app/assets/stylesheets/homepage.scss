@@ -95,10 +95,22 @@
 
   /* Featured artists */
 
-  .featured-artists-header, .search-results-header {
+  .featured-artists-header, {
 
     h3 {
       margin: 80px 0 50px;
+    }
+
+    p {
+      margin-top: 80px;
+      text-align: right;
+    }
+  }
+
+  .search-results-header {
+
+    h3 {
+      margin: 50px 0;
     }
 
     p {
@@ -112,6 +124,7 @@
   }
 
   .artist-thumbnail, .user-thumbnail {
+    padding: 14px 8px 5px;
     text-align: center;
 
     .artist-profile-pic, .user-profile-pic {
@@ -123,14 +136,26 @@
       }
     }
 
-    .artist-name, .user-name {
+    .artist-name, .user-name, .user-full-name {
       margin-bottom: 0;
+    }
+
+    .user-full-name, .user-role {
+      color: $dark-grey;
     }
   }
 
+  .user-thumbnail {
+    height: 220px;
+  }
+
+
+  .user-thumbnail {
+    margin-bottom: 30px;
+  }
+
   .artist-thumbnail:hover, .user-thumbnail:hover {
-    img {
-      box-shadow: 0px 0px 10px 0px $dark-grey;
-    }
+    box-shadow: 0px 0px 10px 0px $mid-grey;
+    border-radius: 5px;
   }
 }

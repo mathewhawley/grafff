@@ -15,7 +15,8 @@
               <img ng-src="{{ user.profile_pic.url }}">
             </div>
             <p class="user-name"><strong>{{ user.username }}</strong></p>
-            <p ng-if="user.is_artist">Artist</p>
+            <p class="user-full-name">{{ user.first_name }} {{ user.last_name }}</p>
+            <p class="user-role" ng-if="user.is_artist"><strong><em>Artist</em></strong></p>
           </div>
         </a>
       </div>

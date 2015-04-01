@@ -72,7 +72,7 @@
     </div>
 
     <div class="row">
-      <div ng-repeat="artist in artists | orderBy: 'artist.passive_relationships.count' | limitTo: '6'" class="col-md-2">
+      <div ng-repeat="artist in artists | orderBy: '-passive_relationships.length' | limitTo: '6'" class="col-md-2">
         <a ng-href="#/users/{{ artist.id }}/profile">
           <div class="artist-thumbnail">
             <div class="artist-profile-pic">
