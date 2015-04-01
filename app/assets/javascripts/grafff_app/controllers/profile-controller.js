@@ -98,6 +98,7 @@ app.controller('ProfileController', ['$scope', '$http', '$route', 'ArtworkFactor
       bucket.putObject(params, function(err, data) {
         if(err) {
           // There Was An Error With Your S3 Config
+          console.log(err)
           alert(err.message);
           return false;
         } else {
