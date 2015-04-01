@@ -2,6 +2,18 @@ app.controller('HomeController', ['$scope', '$http', '$routeParams', '$location'
 
   UserFactory.getAllUsers().then(function(response) {
     $scope.allUsers = response.data;
+    // Get all artists
+    function getArtists(users) {
+      var artists = [];
+      for(var i = 0; i < users.length; i++) {
+        if(users[i].is_artist === true) {
+          artists.push(users[i]);
+        }
+      }
+      return artists;
+    }
+    $scope.artists = getArtists($scope.allUsers);
+
   });
 
   UserFactory.getCurrentUser().then(function(response) {

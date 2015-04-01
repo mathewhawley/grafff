@@ -64,12 +64,33 @@
       </div>
     </div>
 
-    <div class="row"><!-- Featured artists -->
-      
+    <div class="featured-artists-header">
+      <div class="row">
+        <h3 class="col-md-4">Featured Artists</h3>
+        <p class="col-md-4 col-md-offset-4"><a ng-href="#/artists" class="btn btn-default">View all</a></p>
+      </div>
     </div>
+
+    <div class="row">
+      <div ng-repeat="artist in artists | orderBy: 'artist.passive_relationships.count' | limitTo: '6'" class="col-md-2">
+        <a ng-href="#/users/{{ artist.id }}/profile">
+          <div class="artist-thumbnail">
+            <div class="artist-profile-pic">
+              <img ng-src="{{ artist.profile_pic.url }}">
+            </div>
+            <p class="artist-name"><strong>{{ artist.username }}</strong></p>
+            <p>Artist</p>
+            <div class="artist-thumbnail-stats">
+              <p><strong>{{ artist.passive_relationships.length }}</strong> Followers</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<ul>
+<!-- <ul>
   <li ng-repeat="user in allUsers"><a ng-href="#/users/{{ user.id }}/profile">{{ user.first_name }}</a></li>
-</ul>
+</ul> -->
