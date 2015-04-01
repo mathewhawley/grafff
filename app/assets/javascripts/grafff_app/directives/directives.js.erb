@@ -46,6 +46,16 @@ app.directive('artworkCards', function() {
 
 });
 
+app.directive('siteFooter', function() {
+
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('directives/site-footer.html') %>",
+    controller: 'HomeController'
+  }
+
+});
+
 app.directive('validFile',function() {
   return {
     require: 'ngModel',
