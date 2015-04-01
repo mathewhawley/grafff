@@ -24,8 +24,6 @@ artist_5 = User.create(first_name: 'Silver', last_name: 'Surfer', username: 'sil
 artist_6 = User.create(first_name: 'Lucas', last_name: 'Bishop', username: 'lucasbishop', email: 'lucas.bishop@gmail.com', password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', created_at: Time.now, updated_at: Time.now, is_artist: true)
 artist_7 = User.create(first_name: 'Bruce', last_name: 'Banner', username: 'brucebanner', email: 'bruce.banner@gmail.com', password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', created_at: Time.now, updated_at: Time.now, is_artist: true)
 artist_8 = User.create(first_name: 'Max', last_name: 'Eisenhardt', username: 'maxeisenhardt', email: 'max.eisenhardt@gmail.com', password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', created_at: Time.now, updated_at: Time.now, is_artist: true)
-artist_9 = User.create(first_name: 'Al', last_name: 'Simmons', username: 'alsimmons', email: 'al.simmons@gmail.com', password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', created_at: Time.now, updated_at: Time.now, is_artist: true)
-artist_10 = User.create(first_name: 'Wade', last_name: 'Wilson', username: 'wadewilson', email: 'wade.wilson@gmail.com', password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', created_at: Time.now, updated_at: Time.now, is_artist: true)
 
 ## FANS
 
@@ -48,26 +46,9 @@ user_14 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name
 user_15 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
 user_16 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
 user_17 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_18 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_19 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_20 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_21 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_22 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_23 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_24 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_25 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_26 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_27 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_28 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_29 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_30 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_31 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_32 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_33 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_34 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
-user_35 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: 'password', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar dictum hendrerit. Cras efficitur ligula sed euismod dapibus. Pellentesque a nunc id nibh posuere varius id eget nibh. Nulla sed fermentum lectus. Pellentesque vitae nunc sollicitudin, ornare dolor ac, laoreet tortor.', is_artist: false)
 
-user_array << user_1 << user_2 << user_3 << user_4 << user_5 << user_6 << user_7 << user_8 << user_9 << user_10 << user_11 << user_12 << user_13 << user_14 << user_15 << user_16 << user_17 << user_18 << user_19 << user_20 << user_21 << user_22 << user_23 << user_24 << user_25 << user_26 << user_27 << user_28 << user_29 << user_30 << user_31 << user_32 << user_33 << user_34 << user_35
+
+user_array << user_1 << user_2 << user_3 << user_4 << user_5 << user_6 << user_7 << user_8 << user_9 << user_10 << user_11 << user_12 << user_13 << user_14 << user_15 << user_16 << user_17
 
 # ARTWORKS
 
@@ -215,15 +196,6 @@ artwork_15 = Artwork.create(
   address: '30 Lupus Street, Pimlico, London SW1V 3DZ, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/fauxreel_joe_1000.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_16 = Artwork.create(
-  title: 'Euismod fermentum', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_3.id, 
-  lat: 51.51435539767495, 
-  lng: -0.1106541850585927, 
-  address: 'Cliffords Inn, London WC2A 1PR, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/getxophoto_showcase-550x365.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
 
 
 # Artist 4
@@ -353,19 +325,10 @@ artwork_29 = Artwork.create(
   address: '86 Grantley Street, London E1 4BT, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_6281bfe517bc3503f96f464fad1d1537.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_30 = Artwork.create(
-  title: 'Lacus mattis tellus', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_7.id, 
-  lat: 51.51585096591652, 
-  lng: -0.04851276660156145, 
-  address: '114 Aylward Street, London E1 0QW, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_93d11cfde35a1c6113894a572f02e8d1.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
 
 
 # Artist 8
-artwork_31 = Artwork.create(
+artwork_30 = Artwork.create(
   title: 'Non sit amet', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
   user_id: artist_8.id, 
@@ -374,7 +337,7 @@ artwork_31 = Artwork.create(
   address: '238 Roman Road, London E2 0RY, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a0c020d2e5f21519fefd8a8bd650fbf9.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_32 = Artwork.create(
+artwork_31 = Artwork.create(
   title: 'Imperdiet', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
   user_id: artist_8.id, 
@@ -383,7 +346,7 @@ artwork_32 = Artwork.create(
   address: '20 White Tower Way, London E1 4RN, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a8e86535750520d540353c2ff507aa37.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_33 = Artwork.create(
+artwork_32 = Artwork.create(
   title: 'Donec id eros', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
   user_id: artist_8.id, 
@@ -392,7 +355,7 @@ artwork_33 = Artwork.create(
   address: 'Prospect Street, London SE16 2EQ, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_dcf01cbf8d4ce7a9937ddeda6e3ae710.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_34 = Artwork.create(
+artwork_33 = Artwork.create(
   title: 'Lacus mauris', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
   user_id: artist_8.id, 
@@ -401,86 +364,10 @@ artwork_34 = Artwork.create(
   address: '48 Wilcox Road, London SW8 2UX, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/brooklyn-street-art-roa-jaime-rojo-atlanta-12-13-web-6.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_35 = Artwork.create(
-  title: 'Ex auctor tristique', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_8.id, 
-  lat: 51.492557260697254, 
-  lng: -0.14532978320312395, 
-  address: '8 Hugh Street, Pimlico, London SW1V 1RP, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/fauxreel_joe_1000.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
 
 
-# Artist 9
-artwork_36 = Artwork.create(
-  title: 'Malesuada rhoncus', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_9.id, 
-  lat: 51.50815894898174, 
-  lng: -0.1477330424804677, 
-  address: '15 Hay\'s Mews, Mayfair, London W1J 5PX, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/getxophoto_showcase-550x365.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_37 = Artwork.create(
-  title: 'Malesuada rhoncus', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_9.id, 
-  lat: 51.488923224079485, 
-  lng: -0.1717656352539052, 
-  address: '85 Dovehouse Street, Chelsea, London SW3 6JZ, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/london-street-art-tour-daniel-rolnik-insa-ungnilish-broken-fingaz-sunglasses-mustache.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_38 = Artwork.create(
-  title: 'Justo euismod', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_9.id, 
-  lat: 51.52567776422941, 
-  lng: -0.1271336772460927, 
-  address: '18 Burton Street, Kings Cross, London WC1H 9AQ, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/pure-evil-ring-thief.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_39 = Artwork.create(
-  title: 'Nec lacus vitae', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_9.id, 
-  lat: 51.52631856872826, 
-  lng: -0.1113408305664052, 
-  address: '22 Easton Street, London WC1X 0DS, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/street-art-east-london.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
 
-
-# Artist 10
-artwork_40 = Artwork.create(
-  title: 'Venenatis', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_10.id, 
-  lat: 51.51029575063311, 
-  lng: -0.1237004497070302, 
-  address: '2 Exchange Court, London WC2N 4HN, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/London-Street-Art-photos-20.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_41 = Artwork.create(
-  title: 'Consectetur adipiscing elit', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_10.id, 
-  lat: 51.518628319518186, 
-  lng: -0.116490671874998952, 
-  address: '54 Red Lion Street, London WC1R 4PD, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a0c020d2e5f21519fefd8a8bd650fbf9.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-artwork_42 = Artwork.create(
-  title: 'Commodo tellus', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
-  user_id: artist_10.id, 
-  lat: 51.5179874067956, 
-  lng: -0.0879948833007802, 
-  address: '31 Finsbury Circus, London EC2M 5SQ, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/brooklyn-street-art-roa-jaime-rojo-atlanta-12-13-web-6.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
-
-artwork_array << artwork_1 << artwork_2 << artwork_3 << artwork_4 << artwork_5 << artwork_6 << artwork_7 << artwork_8 << artwork_9 << artwork_10 << artwork_11 << artwork_12 << artwork_13 << artwork_14 << artwork_15 << artwork_16 << artwork_17 << artwork_18 << artwork_19 << artwork_20 << artwork_21 << artwork_22 << artwork_23 << artwork_24 << artwork_25 << artwork_26 << artwork_27 << artwork_28 << artwork_29 << artwork_30 << artwork_31 << artwork_32 << artwork_33 << artwork_34 << artwork_35 << artwork_36 << artwork_37 << artwork_38 << artwork_39 << artwork_40 << artwork_41 << artwork_42
+artwork_array << artwork_1 << artwork_2 << artwork_3 << artwork_4 << artwork_5 << artwork_6 << artwork_7 << artwork_8 << artwork_9 << artwork_10 << artwork_11 << artwork_12 << artwork_13 << artwork_14 << artwork_15 << artwork_17 << artwork_18 << artwork_19 << artwork_20 << artwork_21 << artwork_22 << artwork_23 << artwork_24 << artwork_25 << artwork_26 << artwork_27 << artwork_28 << artwork_29 << artwork_30 << artwork_31 << artwork_32 << artwork_33
 
 # COMMENTS
 
@@ -496,42 +383,42 @@ artwork_array << artwork_1 << artwork_2 << artwork_3 << artwork_4 << artwork_5 <
 
 # # LIKES
 
-35.times do |n|
+10.times do |n|
   Like.create(
   user_id: user_array[n][:id],
   artwork_id: artwork_array[n][:id]
   )
 end
 
-20.times do |n|
+ 17.times do |n|
   Like.create(
   user_id: user_array[n][:id],
   artwork_id: artwork_array[n + 1][:id]
   )
 end
 
-20.times do |n|
+15.times do |n|
   Like.create(
   user_id: user_array[n][:id],
   artwork_id: artwork_array[n + 2][:id]
   )
 end
 
-35.times do |n|
+10.times do |n|
   Like.create(
   user_id: user_array[n][:id],
   artwork_id: artwork_array[n + 3][:id]
   )
 end
 
-20.times do |n|
+15.times do |n|
   Like.create(
   user_id: user_array[n][:id],
   artwork_id: artwork_array[n + 4][:id]
   )
 end
 
-35.times do |n|
+10.times do |n|
   Like.create(
   user_id: user_array[n][:id],
   artwork_id: artwork_array[n + 5][:id]
@@ -572,32 +459,31 @@ Relationship.create(follower_id: user_16.id, followed_id: artist_2.id)
 
 # Artist 3
 Relationship.create(follower_id: user_17.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_18.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_19.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_20.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_21.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_22.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_23.id, followed_id: artist_3.id)
-Relationship.create(follower_id: user_24.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_1.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_2.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_3.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_4.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_5.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_6.id, followed_id: artist_3.id)
+Relationship.create(follower_id: user_7.id, followed_id: artist_3.id)
 
 # Artist 4
-Relationship.create(follower_id: user_25.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_26.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_27.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_28.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_29.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_30.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_31.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_32.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_33.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_34.id, followed_id: artist_4.id)
-Relationship.create(follower_id: user_35.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_8.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_9.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_10.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_11.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_12.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_13.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_14.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_15.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_16.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_17.id, followed_id: artist_4.id)
 Relationship.create(follower_id: user_1.id, followed_id: artist_4.id)
 Relationship.create(follower_id: user_2.id, followed_id: artist_4.id)
 Relationship.create(follower_id: user_3.id, followed_id: artist_4.id)
+Relationship.create(follower_id: user_4.id, followed_id: artist_4.id)
 
 # Artist 5
-Relationship.create(follower_id: user_4.id, followed_id: artist_5.id)
 Relationship.create(follower_id: user_5.id, followed_id: artist_5.id)
 Relationship.create(follower_id: user_6.id, followed_id: artist_5.id)
 Relationship.create(follower_id: user_7.id, followed_id: artist_5.id)
@@ -607,84 +493,38 @@ Relationship.create(follower_id: user_10.id, followed_id: artist_5.id)
 Relationship.create(follower_id: user_11.id, followed_id: artist_5.id)
 Relationship.create(follower_id: user_12.id, followed_id: artist_5.id)
 Relationship.create(follower_id: user_13.id, followed_id: artist_5.id)
+Relationship.create(follower_id: user_14.id, followed_id: artist_5.id)
 
 # Artist 6
-Relationship.create(follower_id: user_14.id, followed_id: artist_6.id)
 Relationship.create(follower_id: user_15.id, followed_id: artist_6.id)
 Relationship.create(follower_id: user_16.id, followed_id: artist_6.id)
+Relationship.create(follower_id: user_17.id, followed_id: artist_6.id)
 
 # Artist 7
-Relationship.create(follower_id: user_17.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_18.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_19.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_20.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_21.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_22.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_23.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_24.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_25.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_26.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_27.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_28.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_29.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_31.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_32.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_33.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_34.id, followed_id: artist_7.id)
-Relationship.create(follower_id: user_35.id, followed_id: artist_7.id)
 Relationship.create(follower_id: user_1.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_2.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_3.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_4.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_5.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_6.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_7.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_8.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_9.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_10.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_11.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_12.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_13.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_14.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_15.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_16.id, followed_id: artist_7.id)
+Relationship.create(follower_id: user_17.id, followed_id: artist_7.id)
 
 # Artist 8
-Relationship.create(follower_id: user_35.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_34.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_33.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_32.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_31.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_30.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_29.id, followed_id: artist_8.id)
-Relationship.create(follower_id: user_28.id, followed_id: artist_8.id)
-
-# Artist 9
-Relationship.create(follower_id: user_10.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_11.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_12.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_13.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_14.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_15.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_16.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_17.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_18.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_19.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_21.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_22.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_23.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_24.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_25.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_26.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_27.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_28.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_29.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_30.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_31.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_32.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_33.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_34.id, followed_id: artist_9.id)
-Relationship.create(follower_id: user_35.id, followed_id: artist_9.id)
-
-# Artist 10
-Relationship.create(follower_id: user_1.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_2.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_3.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_4.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_5.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_6.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_7.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_8.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_9.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_10.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_11.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_12.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_13.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_14.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_15.id, followed_id: artist_10.id)
-Relationship.create(follower_id: user_16.id, followed_id: artist_10.id)
+Relationship.create(follower_id: user_11.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_12.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_13.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_14.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_15.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_16.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_17.id, followed_id: artist_8.id)
+Relationship.create(follower_id: user_3.id, followed_id: artist_8.id)
