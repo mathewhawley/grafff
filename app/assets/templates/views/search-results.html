@@ -1,7 +1,25 @@
 <div id="wrapper">
-  <h3 class="page-title">Search Results</h3>
 
-  <div ng-repeat="user in searchResults">
-    <p>{{ user.first_name }} {{ user.last_name}}, {{ user.username }}</p>
+  <div class="card-container">
+    <div class="search-results-header">
+      <div class="row">
+        <h3 class="col-md-4">Search Results</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="user in searchResults" class="col-md-2">
+        <a ng-href="#/users/{{ user.id }}/profile">
+          <div class="user-thumbnail">
+            <div class="user-profile-pic">
+              <img ng-src="{{ user.profile_pic.url }}">
+            </div>
+            <p class="user-name"><strong>{{ user.username }}</strong></p>
+            <p ng-if="user.is_artist">Artist</p>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
+
 </div>

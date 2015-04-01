@@ -8,7 +8,7 @@
       <div class="profile-info col-md-9"><!-- Profile information -->
         <h2>{{ user.username }}</h2>
         <p class="role" ng-if="user.is_artist"><strong>Artist</strong></p>
-        <p>Joined {{ user.created_at | amCalendar }}</p>
+        <a ng-if="currentUser.id === user.id" ng-href="/users/edit" class="btn btn-default btn-xs registration-button">Edit registration</a>
         <p ng-if="user.is_artist"><strong>{{ user.passive_relationships.length }}</strong> Followers</p>
         <p ng-if="!user.is_artist"><strong>{{ user.active_relationships.length }}</strong> Following</p>
         <p>{{ user.bio }}</p>

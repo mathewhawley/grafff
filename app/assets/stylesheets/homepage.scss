@@ -95,7 +95,7 @@
 
   /* Featured artists */
 
-  .featured-artists-header {
+  .featured-artists-header, .search-results-header {
 
     h3 {
       margin: 80px 0 50px;
@@ -111,10 +111,10 @@
     color: $black;
   }
 
-  .artist-thumbnail {
+  .artist-thumbnail, .user-thumbnail {
     text-align: center;
 
-    .artist-profile-pic {
+    .artist-profile-pic, .user-profile-pic {
 
       img {
         width: 90%;
@@ -123,12 +123,12 @@
       }
     }
 
-    .artist-name {
+    .artist-name, .user-name {
       margin-bottom: 0;
     }
   }
 
-  .artist-thumbnail:hover {
+  .artist-thumbnail:hover, .user-thumbnail:hover {
     img {
       box-shadow: 0px 0px 10px 0px $dark-grey;
     }
