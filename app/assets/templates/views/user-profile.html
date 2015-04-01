@@ -2,7 +2,7 @@
   <div class="profile-header-wrapper">
     <div class="row">
       <div class="col-md-3"><!-- Profile picture -->
-        <img src="{{ user.profile_pic.url }}" class="profile-picture">
+        <img ng-src="{{ user.profile_pic.url }}" class="profile-picture">
       </div>
 
       <div class="profile-info col-md-9"><!-- Profile information -->
@@ -58,7 +58,7 @@
     <div><!-- Content -->
       <div ng-if="isSelected(1)"><!-- Activity Feed -->
         <div ng-repeat="artwork in followedArtistArtworks | orderBy: '-created_at' | limitTo: '20'">
-          <img src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic">
+          <img ng-src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic">
           <p>{{ artwork.user.username }} has posted a new artwork!</p>
           <p>{{ artwork.created_at | amCalendar }}</p>
         </div>
@@ -76,7 +76,7 @@
           <div ng-repeat="artist in followedArtists"><!-- Artist card -->
             <a ng-href="#/users/{{ artist.id }}/profile">
               <div><!-- Card wrapper -->
-                <img src="http://lorempixel.com/150/100/abstract">
+                <img ng-src="http://lorempixel.com/150/100/abstract">
                 <h4>{{ artist.username }}</h4>
                 <p>{{ artist.bio }}</p>
               </div>

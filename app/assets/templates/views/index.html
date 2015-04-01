@@ -14,7 +14,7 @@
         <a ng-href="#/artworks/{{ artwork.id }}">
           <div class="row">
             <div class="info-window-image col-md-4">
-              <img src="{{ artwork.image }}">
+              <img ng-src="{{ artwork.image }}">
             </div>
             <div class="col-md-7 info-window-text">
               <p class="info-window-title"><strong>{{ artwork.title }}</strong></p>
@@ -47,7 +47,7 @@
         <a ng-href="#/artworks/{{ artwork.id }}" class="large-thumbnail-link">
           <div class="large-thumbnail">
             <div class="large-thumbnail-image">
-              <img src="{{ artwork.image }}">
+              <img ng-src="{{ artwork.image }}">
             </div>
             <div class="large-thumbnail-info">
               <p class="large-thumbnail-title"><strong>{{ artwork.title }}</p></strong>
