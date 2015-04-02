@@ -215,7 +215,7 @@ artwork_18 = Artwork.create(
   lat: 51.53422108272045, 
   lng: -0.0701421000976552, 
   address: '86 Queensbridge Road, London E2 8PA, UK', 
-  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/pure-evil-ring-thief.jpg', 
+  image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a0c020d2e5f21519fefd8a8bd650fbf9.jpg', 
   created_at: Faker::Time.between(14.days.ago, Time.now, :day))
 
 
