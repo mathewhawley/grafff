@@ -11,23 +11,23 @@ app.config(['$routeProvider', function($routeProvider){
   $routeProvider
   .when('/', {
     controller: 'HomeController',
-    templateUrl: "<%= asset_path('views/index.html') %>"
+    templateUrl: "<%= asset_path('pages/home/index.html') %>"
   })
   .when('/users/:id/profile', {
     controller: 'UserController',
-    templateUrl: "<%= asset_path('views/user-profile.html') %>"
+    templateUrl: "<%= asset_path('pages/user/show.html') %>"
   })
   .when('/artworks/:id', {
-    controller: 'ArtworkController',
-    templateUrl: "<%= asset_path('views/artwork.html') %>"
+    controller: 'ArtworkShowController',
+    templateUrl: "<%= asset_path('pages/artwork/show.html') %>"
   })
   .when('/artworks', {
-    controller: 'HomeController',
-    templateUrl: "<%= asset_path('views/all-artwork.html') %>"
+    controller: 'ArtworkIndexController',
+    templateUrl: "<%= asset_path('pages/artwork/index.html') %>"
   })
   .when('/search', {
     controller: 'SearchController',
-    templateUrl: "<%= asset_path('views/search-results.html') %>"
+    templateUrl: "<%= asset_path('pages/search/index.html') %>"
   })
   .otherwise({
     redirectTo: '/'

@@ -1,4 +1,4 @@
-app.controller('HomeController', ['$scope', '$http', '$routeParams', '$location', '$route', 'UserFactory', 'ArtworkFactory', function($scope, $http, $routeParams, $location, $route, UserFactory, ArtworkFactory){
+app.controller('HomeController', ['$scope', '$http', '$location', '$route', 'UserFactory', 'ArtworkFactory', function($scope, $http, $location, $route, UserFactory, ArtworkFactory){
 
   UserFactory.getAllUsers().then(function(response) {
     $scope.allUsers = response.data;
