@@ -16,17 +16,8 @@ app.controller('HomeController', ['$scope', '$http', '$location', '$route', 'Use
 
   });
 
-  UserFactory.getCurrentUser().then(function(response) {
-    $scope.currentUser = response.data;
-  });
-
   ArtworkFactory.getAllArtworks().then(function(response) {
     $scope.allArtworks = response.data;
   });
-
-  $scope.searchUsers = function() {    
-    $location.path('/search');
-    $route.reload();
-  };
 
 }]);
