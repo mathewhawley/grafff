@@ -19,7 +19,7 @@
     </form>
     <% if user_signed_in? %>
       <ul>
-        <li class="signed-in"><a ng-href="#/users/{{ currentUser.id }}/profile" ng-if="currentUser"><img ng-src="{{ currentUser.profile_pic.url }}" class="nav-profile-pic"> {{ currentUser.username }}</a></li>
+        <li class="signed-in"><a ng-href="#/users/{{ ::currentUser.id }}/profile" ng-if="currentUser"><img ng-src="{{ ::currentUser.profile_pic.url }}" class="nav-profile-pic"> {{ ::currentUser.username }}</a></li>
         <li class="signed-in"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     <% else %>

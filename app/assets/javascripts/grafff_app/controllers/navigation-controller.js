@@ -1,4 +1,4 @@
-app.controller('NavigationController', ['$scope', '$http', '$location', '$route', 'UserFactory', 'ArtworkFactory', function($scope, $http, $location, $route, UserFactory, ArtworkFactory){
+app.controller('NavigationController', ['$scope', '$http', '$location', '$route', 'UserFactory', function($scope, $http, $location, $route, UserFactory){
 
   UserFactory.getCurrentUser().then(function(response) {
     $scope.currentUser = response.data;
