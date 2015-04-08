@@ -10,7 +10,7 @@ app.config(['$routeProvider', function($routeProvider){
 
   $routeProvider
   .when('/', {
-    controller: 'HomeController',
+    controller: 'IndexController',
     templateUrl: "<%= asset_path('pages/home/index.html') %>"
   })
   .when('/users/:id/profile', {

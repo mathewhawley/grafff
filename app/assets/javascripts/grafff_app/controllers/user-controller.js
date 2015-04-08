@@ -43,15 +43,15 @@ app.controller('UserController', ['$scope', '$http', '$routeParams', 'UserFactor
 
     // Get user artworks
     $scope.userArtworks = $scope.user.artworks;
-
   });
 
+  
 
-  UserFactory.getCurrentUser().then(function(response) {
+  // UserFactory.getCurrentUser().then(function(response) {
 
-    // Store current user data in '$scope.currentUser'
-    $scope.currentUser = response.data;
+  //   // Store current user data in '$scope.currentUser'
+  //   $scope.currentUser = response.data;
 
-  });
+  // });
 
 }]);
