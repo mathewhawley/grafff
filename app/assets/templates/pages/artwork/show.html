@@ -3,7 +3,7 @@
     <h1>{{ artwork.title }}</h1>
     <!-- Artist profile image to go here -->
       <div class="artist-info">
-        <a ng-href="#/users/{{ artwork.user.id }}/profile">
+        <a ng-href="#/users/{{ artwork.user.id }}">
           <img ng-src="{{ artwork.user.profile_pic.url }}">
           <p>{{ artwork.user.username }}</p>
         </a>
@@ -38,7 +38,7 @@
         <div ng-repeat="comment in comments | orderBy: '-created_at'">
           <div class="comment"><!-- Individual comment -->
             <p id="comment-content">{{ comment.content }}</p>
-            <a ng-href="#/users/{{ comment.user.id }}/profile">
+            <a ng-href="#/users/{{ comment.user.id }}">
               <img class="comment-author-pic" ng-src="{{ comment.user.profile_pic.url }}">
               <p class="comment-author">{{ comment.user.username }}</p>
             </a>

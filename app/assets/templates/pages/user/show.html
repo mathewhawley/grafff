@@ -74,7 +74,7 @@
       </div>
       <div ng-if="isSelected(3)"><!-- Artists -->
           <div ng-repeat="artist in followedArtists"><!-- Artist card -->
-            <a ng-href="#/users/{{ artist.id }}/profile">
+            <a ng-href="#/users/{{ artist.id }}">
               <div><!-- Card wrapper -->
                 <img ng-src="http://lorempixel.com/150/100/abstract">
                 <h4>{{ artist.username }}</h4>
