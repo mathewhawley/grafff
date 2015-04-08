@@ -5,6 +5,11 @@ class ArtworksController < ApplicationController
     render json: artworks
   end
 
+  def get_main_map_artworks
+    main_map_artworks = Artwork.all.to_json(include: [ :comments, :likes, :user ])
+    render json: main_map_artworks
+  end
+
   def get_latest_artworks
     latest_artworks = Artwork.last(3).to_json(include: [ :comments, :likes, :user ])
     render json: latest_artworks

@@ -7,6 +7,9 @@ app.factory('ArtworkFactory', ['$http', function($http) {
     getLatestArtworks: function() {
       return $http.get('/artworks/get_latest_artworks');
     },
+    getMainMapArtworks: function() {
+      return $http.get('/artworks/get_main_map_artworks');
+    },
     addArtwork: function(newArtwork) {
       return $http.post('/artworks/add_artwork', newArtwork);
     }

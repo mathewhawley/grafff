@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'artworks/get_all_artworks' => 'artworks#get_all_artworks'
   get 'artworks/get_latest_artworks' => 'artworks#get_latest_artworks'
+  get 'artworks/get_main_map_artworks' => 'artworks#get_main_map_artworks'
   post 'artworks/add_artwork' => 'artworks#add_artwork'
 
   get 'relationships/get_all_relationships' => 'relationships#get_all_relationships'
