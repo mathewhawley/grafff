@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'users/get_all_users' => 'users#get_all_users'
   get 'users/get_artists' => 'users#get_artists'
 
-  get 'artworks/get_all_artworks' => 'artworks#get_all_artworks'
+  get 'artworks' => 'artworks#index'
   get 'artworks/get_latest_artworks' => 'artworks#get_latest_artworks'
   get 'artworks/get_main_map_artworks' => 'artworks#get_main_map_artworks'
   post 'artworks/add_artwork' => 'artworks#add_artwork'

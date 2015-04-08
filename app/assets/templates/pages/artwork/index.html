@@ -8,7 +8,23 @@
 
     <div class="row">
       <div ng-repeat="artwork in allArtworks | orderBy: '-created_at'" class="col-md-3">
-        <artwork-cards></artwork-cards>
+        <a ng-href="#/artworks/{{ artwork.id }}" class="thumbnail-link">
+          <div class="thumbnail">
+            <div class="thumbnail-image">
+              <img ng-src="{{ artwork.image }}">
+            </div>
+            <div class="thumbnail-info">
+              <p class="thumbnail-title"><strong>{{ artwork.title }}</strong></p>
+              <p class="thumbnail-artist">{{ artwork.user.username }}</p>
+              <p class="thumbnail-address"><em><i class="fa fa-map-marker"></i> {{ artwork.address }}</em></p>
+              <p class="thumbnail-description">{{ artwork.description }}</p>
+              <div class="card-footer">
+                <i class="fa fa-thumbs-up likes"> {{ artwork.likes.length }}</i>
+                <i class="fa fa-comment comments"> {{ artwork.comments.length }}</i>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>

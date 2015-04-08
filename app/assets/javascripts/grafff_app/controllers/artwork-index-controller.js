@@ -1,10 +1,7 @@
-app.controller('ArtworkIndexController', ['$scope', '$http', 'UserFactory', 'ArtworkFactory', '$routeParams', function($scope, $http, UserFactory, ArtworkFactory, $routeParams) {
+app.controller('ArtworkIndexController', ['$scope', '$http', 'ArtworkFactory', function($scope, $http, ArtworkFactory) {
 
   ArtworkFactory.getAllArtworks().then(function(response) {
-
-    // Store all user data in '$scope.allArtworks'
     $scope.allArtworks = response.data;
-
   });
 
 }]);
