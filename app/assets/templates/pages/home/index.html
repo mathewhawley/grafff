@@ -43,7 +43,7 @@
     </div>
 
     <div class="row">
-      <div ng-repeat="artwork in allArtworks | orderBy: '-created_at' | limitTo: '3'" class="col-md-4">
+      <div ng-repeat="artwork in latestArtworks | orderBy: '-created_at'" class="col-md-4">
         <a ng-href="#/artworks/{{ artwork.id }}" class="large-thumbnail-link">
           <div class="large-thumbnail">
             <div class="large-thumbnail-image">

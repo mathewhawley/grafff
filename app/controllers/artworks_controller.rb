@@ -5,6 +5,11 @@ class ArtworksController < ApplicationController
     render json: artworks
   end
 
+  def get_latest_artworks
+    latest_artworks = Artwork.last(3).to_json(include: [ :comments, :likes, :user ])
+    render json: latest_artworks
+  end
+
   def add_artwork
     artwork = Artwork.create(params.require(:artwork).permit(:user_id, :title, :description, :address, :lat, :lng, :image))
     render json: artwork
