@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body ng-controller="SessionController">
   <nav ng-controller="NavigationController">
     <%= link_to image_tag('grafff_spray_logo.png'), root_path, target: "_self", id: "logo" %>
     <form ng-submit="searchUsers()" ng-if="currentUser">

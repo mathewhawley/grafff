@@ -17,44 +17,52 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
 
   // Create new comment – on submission of comment form, create new comment object to be sent to database
   $scope.postComment = function(commentContent, artworkId) {
-    UserFactory.getCurrentUser().then(function(response) {
-      var currentUser = response.data;
+    var newComment = {};
+    newComment['content'] = commentContent;
+    newComment['user_id'] = $scope.currentUser.id;
+    newComment['artwork_id'] = artworkId;
 
-      var newComment = {};
-      newComment['content'] = commentContent;
-      newComment['user_id'] = currentUser.id;
-      newComment['artwork_id'] = artworkId;
+    // Post new comment to database
+    CommentFactory.newComment(newComment).then(function(response) {
+      // Update artwork comments on the view
+      $scope.artworkComments.push(response.data);
 
-      // Post new comment to database
-      CommentFactory.newComment(newComment).then(function(response) {
-        // Update artwork comments on the view
-        $scope.artworkComments.push(response.data);
-
-        // Clear comment field and remove focus
-        $scope.commentContent = '';
-        var commentField = document.getElementById('comment-field');
-        commentField.blur();
-      });
+      // Clear comment field and remove focus
+      $scope.commentContent = '';
+      var commentField = document.getElementById('comment-field');
+      commentField.blur();
     });
   };
 
   // Like artwork – on 'like' button click
   $scope.likeArtwork = function() {
-    UserFactory.getCurrentUser().then(function(response) {
-      var currentUser = response.data;
+    var like = {};
+    like['user_id'] = $scope.currentUser.id;
+    like['artwork_id'] = $scope.artwork.id;
 
-      var like = {};
-      like['user_id'] = currentUser.id;
-      like['artwork_id'] = $scope.artwork.id;
+    // Post new like to database
+    LikeFactory.likeThisArtwork(like).then(function(response) {
+      // Update artwork likes on the view
+      $scope.artworkLikes.push(response.data);
 
-      // Post new like to database
-      LikeFactory.likeThisArtwork(like).then(function(response) {
-        // Update artwork likes on the view
-        $scope.artworkLikes.push(response.data);
+      // Set variable to true – this will switch 'like' button to 'unlike'
+      $scope.likeThisArtwork = true;
+    });
+  };
 
-        // Set variable to true – this will switch 'like' button to 'unlike'
-        $scope.likeThisArtwork = true;
-      });
+  // Unlike artwork – on 'unlike' button click
+  $scope.unlikeArtwork = function() {
+    var like = {};
+    like['user_id'] = $scope.currentUser.id;
+    like['artwork_id'] = $scope.artwork.id;
+
+    // Post new like to database
+    LikeFactory.unlikeThisArtwork(like).then(function(response) {
+      // Update artwork likes on the view
+      $scope.artworkLikes = response.data;
+
+      // Set variable to true – this will switch 'like' button to 'unlike'
+      $scope.likeThisArtwork = false;
     });
   };
 
