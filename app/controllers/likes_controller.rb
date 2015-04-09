@@ -14,9 +14,10 @@ class LikesController < ApplicationController
 
   # 'Unlike' an artwork
   def unlike_artwork
-    like_to_delete = Like.find(params[:id])
-    like_to_delete.destroy
-    render json: like_to_delete 
+    like_to_delete = Like.where(user_id: params[:user_id], artwork_id: params[:artwork_id])
+    like_to_delete[0].destroy
+    likes = Like.where(artwork_id: params[:artwork_id])
+    render json: likes
   end
 
   # User profile page – gets all of the user's likes to be displayed under the 'likes' tab

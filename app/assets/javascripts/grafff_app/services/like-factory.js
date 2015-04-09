@@ -7,12 +7,8 @@ app.factory('LikeFactory', ['$http', function($http) {
     likeThisArtwork: function(like) {
       return $http.post('/likes/like_artwork', like);
     },
-    unlikeArtwork: function(like) {
-      return $http({
-        method: 'POST',
-        url: 'likes/unlike_artwork',
-        data: { id: like }
-      });
+    unlikeThisArtwork: function(like) {
+      return $http.post('/likes/unlike_artwork', like);
     }
   };
 
