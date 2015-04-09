@@ -1,5 +1,10 @@
 class CommentsController < ApplicationController
 
+  def artwork_comments
+    comments = Comment.where(artwork_id: params[:id]).to_json(include: [ :user ])
+    render json: comments
+  end
+
   # Artwork show page – get all comments associated with current artwork
   def all_comments
     comments = Comment.all.to_json(include: [ :user ])

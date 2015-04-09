@@ -8,7 +8,7 @@ class ArtworksController < ApplicationController
 
   # Artwork show page – gets artwork object from params to render on artwork show page
   def show
-    this_artwork = Artwork.find(params[:id]).to_json(include: [ :comments, :likes, :user ])
+    this_artwork = Artwork.find(params[:id]).to_json(include: [ :user ])
     render json: this_artwork
   end
 

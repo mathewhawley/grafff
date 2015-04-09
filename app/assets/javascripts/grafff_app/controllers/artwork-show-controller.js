@@ -1,22 +1,13 @@
-app.controller('ArtworkShowController', ['$scope', '$http', 'UserFactory', 'ArtworkFactory', '$routeParams', function($scope, $http, UserFactory, ArtworkFactory, $routeParams) {
+app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'ArtworkFactory', 'CommentFactory', function($scope, $http, $routeParams, UserFactory, ArtworkFactory, CommentFactory) {
 
-  ArtworkFactory.getAllArtworks().then(function(response) {
+  // Get artwork object from params to render on show template
+  ArtworkFactory.getThisArtwork($routeParams).then(function(response) {
+    $scope.artwork = response.data;
+  });
 
-    // Store all user data in '$scope.allArtworks'
-    $scope.allArtworks = response.data;
-
-    // Get artwork from params
-    function getArtworkFromParams(allArtworks, routeParams) {
-      for(var i = 0; i < allArtworks.length; i++) {
-        if(allArtworks[i].id === JSON.parse(routeParams.id)) {
-          var artwork = allArtworks[i];
-        };
-      };
-      return artwork;
-    }
-    $scope.artwork = getArtworkFromParams($scope.allArtworks, $routeParams);
-    $scope.comments = $scope.artwork.comments;
-
+  // Get all comments for this artwork
+  CommentFactory.getThisArtworkComments($routeParams).then(function(response) {
+    $scope.artworkComments = response.data;
   });
 
 }]);
