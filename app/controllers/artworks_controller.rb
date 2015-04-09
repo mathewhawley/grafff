@@ -1,10 +1,12 @@
 class ArtworksController < ApplicationController
   
+  # Artwork index – gets all artworks
   def index
     artworks = Artwork.all.to_json(include: [ :comments, :likes, :user ])
     render json: artworks
   end
 
+  # Create new artwork
   def new_artwork
     artwork = Artwork.create(params.require(:artwork).permit(:user_id, :title, :description, :address, :lat, :lng, :image))
     render json: artwork
