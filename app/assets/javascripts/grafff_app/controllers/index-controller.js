@@ -6,7 +6,7 @@ app.controller('IndexController', ['$scope', '$http', 'UserFactory', 'ArtworkFac
   });
 
   // Get all artworks for main map
-  ArtworkFactory.getMapArtwork().then(function(response) {
+  ArtworkFactory.getMainMapArtwork().then(function(response) {
     $scope.mapArtwork = response.data;
   });
 

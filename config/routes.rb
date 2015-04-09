@@ -12,12 +12,15 @@ Rails.application.routes.draw do
   ##########################################################################################
 
   # Homepage
-  get '/home/map' => 'artworks#main_map'
+  get '/home/map' => 'artworks#main_map_artwork'
   get '/home/popular_artists' => 'users#popular_artists'
   get '/home/latest_artworks' => 'artworks#latest_artworks'
 
   # Artwork index page
   get '/artworks' => 'artworks#index'
+
+  # Artwork show page
+  get '/artworks/show' => 'artworks#show'
 
   # User show page
   get '/users/show' => 'users#show'

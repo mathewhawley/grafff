@@ -1,9 +1,15 @@
 class ArtworksController < ApplicationController
   
-  # Artwork index – gets all artworks
+  # Artwork index page – gets all artworks
   def index
     artworks = Artwork.all.to_json(include: [ :comments, :likes, :user ])
     render json: artworks
+  end
+
+  # Artwork show page – gets artwork object from params to render on artwork show page
+  def show
+    this_artwork = Artwork.find(params[:id]).to_json(include: [ :comments, :likes, :user ])
+    render json: this_artwork
   end
 
   # Create new artwork
@@ -13,7 +19,7 @@ class ArtworksController < ApplicationController
   end
 
   # Homepage – gets all artwork to be rendered as markers on the main map
-  def main_map
+  def main_map_artwork
     main_map_artwork = Artwork.all.to_json(include: [ :comments, :likes, :user ])
     render json: main_map_artwork
   end
@@ -26,7 +32,7 @@ class ArtworksController < ApplicationController
 
   # User profile page – gets all artworks associated with a user, to be displayed if a user is an artist
   def user_artworks
-    artist_artworks = Artwork.where(user_id: params[:id]).to_json(include: [:likes, :comments, :user])
+    artist_artworks = Artwork.where(user_id: params[:id]).to_json(include: [ :likes, :comments, :user ])
     render json: artist_artworks
   end
 
