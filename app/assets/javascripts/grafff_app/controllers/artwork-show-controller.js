@@ -10,12 +10,12 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
     $scope.artworkComments = response.data;
   });
 
-  // Create a new comment
-  UserFactory.getCurrentUser().then(function(response) {
-    var currentUser = response.data;
+  // On submission of comment form, create new comment object to be sent to database
+  $scope.postComment = function(commentContent, artworkId) {
 
-    // On submission of comment form, create new comment object to be sent to database
-    $scope.postComment = function(commentContent, artworkId) {
+    UserFactory.getCurrentUser().then(function(response) {
+      var currentUser = response.data;
+
       var newComment = {};
       newComment['content'] = commentContent;
       newComment['user_id'] = currentUser.id;
@@ -31,7 +31,7 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
         var commentField = document.getElementById('comment-field');
         commentField.blur();
       });
-    };
-  });
+    });
+  };
 
 }]);
