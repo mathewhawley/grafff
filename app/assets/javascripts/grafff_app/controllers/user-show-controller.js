@@ -11,17 +11,17 @@ app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFa
   });
 
   // Get an artists artworks to render on show template
-  UserFactory.getArtistArtworks($routeParams).then(function(response) {
+  UserFactory.getThisArtistArtworks($routeParams).then(function(response) {
     $scope.artistArtworks = response.data;
   });
 
   // Get the user's likes to render on show template
-  UserFactory.getUserLikes($routeParams).then(function(response) {
+  UserFactory.getThisUserLikes($routeParams).then(function(response) {
     $scope.userLikes = response.data;
   });
 
   // Get the user's active relationships
-  UserFactory.getUserFollowedArtists($routeParams).then(function(response) {
+  UserFactory.getThisUserFollowedArtists($routeParams).then(function(response) {
     $scope.userRelationships = response.data;
   });
 
