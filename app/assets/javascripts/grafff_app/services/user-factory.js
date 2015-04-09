@@ -1,17 +1,26 @@
 app.factory('UserFactory', ['$http', function($http) {
 
   var UserFactory = {
-    getUser: function(userId) {
-      return $http.get('/users', { params: userId });
-    },
     getCurrentUser: function() {
-      return $http.get('/users/get_current_user');
+      return $http.get('/users/current_user');
     },
-    getAllUsers: function() {
-      return $http.get('/users/get_all_users');
+    getUser: function(userId) {
+      return $http.get('/users/show', { params: userId });
     },
-    getArtists: function() {
-      return $http.get('/users/get_artists');
+    getUserLikes: function(userId) {
+      return $http.get('/users/likes', { params: userId });
+    },
+    getUserFollowedArtists: function(userId) {
+      return $http.get('/users/followed_artists', { params: userId });
+    },
+    getAllArtists: function() {
+      return $http.get('/artists');
+    },
+    getPopularArtists: function() {
+      return $http.get('/home/popular_artists');
+    },
+    getArtistArtworks: function(userId) {
+      return $http.get('/users/artworks', { params: userId });
     }
   };
 
