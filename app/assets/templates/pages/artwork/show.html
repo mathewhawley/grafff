@@ -27,15 +27,16 @@
         <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork(currentUser.id)">Unlike</button>
         <p>Likes: {{ artwork.likes.length }}</p>
       </div>
-
       <div class="comment-area"><!-- Comments -->
         <h3>Comments: ({{ artworkComments.length }})</h3>
         <div><!-- Comment field -->
-          <form ng-keypress="($event.which === 13) ? postComment(comment) : 0">
-            <textarea id="comment-field" class="form-control" name="commentField" ng-model="comment.content" placeholder="Write a commment" ></textarea>
+          <form ng-keypress="($event.which === 13) ? postComment(commentContent, artwork.id) : 0">
+            <textarea id="comment-field" class="form-control" ng-model="commentContent" placeholder="Write a commment" ></textarea>
           </form>
         </div>
+
         <div ng-repeat="comment in artworkComments | orderBy: '-created_at'">
+
           <div class="comment"><!-- Individual comment -->
             <p id="comment-content">{{ comment.content }}</p>
             <a ng-href="#/users/{{ comment.user.id }}">
@@ -43,8 +44,8 @@
               <p class="comment-author">{{ comment.user.username }}</p>
             </a>
             <p class="comment-timestamp">{{ comment.created_at | amCalendar }}</p>
-
           </div>
+
         </div>
       </div>
     </div>

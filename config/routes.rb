@@ -43,7 +43,6 @@ Rails.application.routes.draw do
   post '/relationships/unfollow_user' => 'relationships#unfollow_user'
 
   # Artwork show page
-  get '/comments/all_comments' => 'comments#all_comments'
   post '/comments/new_comment' => 'comments#new_comment'
   post '/likes/like_artwork' => 'likes#like_artwork'
   post '/likes/unlike_artwork' => 'likes#unlike_artwork'
