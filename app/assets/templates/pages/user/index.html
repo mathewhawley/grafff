@@ -1,0 +1,28 @@
+<div id="wrapper">
+
+  <div class="card-container">
+    <div class="artist-index-header">
+      <div class="row">
+        <h3 class="col-md-4">All Artists</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="artist in allArtists" class="col-md-2">
+        <a ng-href="#/users/{{ artist.id }}">
+          <div class="artist-thumbnail">
+            <div class="artist-profile-pic">
+              <img ng-src="{{ artist.profile_pic.url }}">
+            </div>
+            <p class="artist-name"><strong>{{ artist.username }}</strong></p>
+            <p>Artist</p>
+            <div class="artist-thumbnail-stats">
+              <p><strong>{{ artist.passive_relationships.length }}</strong> Followers</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>

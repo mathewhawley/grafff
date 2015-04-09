@@ -4,7 +4,7 @@
   scrollwheel="false"
   styles="[{'featureType':'administrative.province','elementType':'all','stylers':[{'visibility':'off'}]},{'featureType':'landscape','elementType':'all','stylers':[{'visibility':'on'},{'color':'#f4f6f7'}]},{'featureType':'poi','elementType':'all','stylers':[{'saturation':-100},{'lightness':51},{'visibility':'simplified'},{'color':'#dee2e4'}]},{'featureType':'road.highway','elementType':'all','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'road.arterial','elementType':'all','stylers':[{'saturation':-100},{'lightness':30},{'visibility':'on'}]},{'featureType':'road.local','elementType':'all','stylers':[{'saturation':-100},{'lightness':40},{'visibility':'on'}]},{'featureType':'transit','elementType':'all','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'water','elementType':'geometry','stylers':[{'lightness':-25},{'saturation':-97},{'color':'#a4afb6'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'on'},{'lightness':-25},{'saturation':-100}]}]">
 
-  <div ng-repeat="artwork in mainMapArtworks">
+  <div ng-repeat="artwork in mapArtwork">
     <marker id="{{ artwork.id }}" on-click="showInfoWindow(event, artwork.id)"
       position="{{ artwork.lat }}, {{ artwork.lng }}">
     </marker>
@@ -72,7 +72,7 @@
     </div>
 
     <div class="row">
-      <div ng-repeat="artist in artists | orderBy: '-passive_relationships.length' | limitTo: '6'" class="col-md-2">
+      <div ng-repeat="artist in popularArtists | orderBy: '-passive_relationships.length' | limitTo: '6'" class="col-md-2">
         <a ng-href="#/users/{{ artist.id }}">
           <div class="artist-thumbnail">
             <div class="artist-profile-pic">
