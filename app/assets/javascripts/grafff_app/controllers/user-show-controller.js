@@ -1,60 +1,43 @@
 app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFactory', function($scope, $http, $routeParams, UserFactory) {
 
+  // Get current user
+  UserFactory.getCurrentUser().then(function(response) {
+    $scope.currentUser = response.data;
+  });
+
+  // Get user object from params to render on show template
   UserFactory.getUser($routeParams).then(function(response) {
     $scope.user = response.data;
   });
 
-  // UserFactory.getAllUsers().then(function(response) {
+  // Get an artists artworks to render on show template
+  UserFactory.getArtistArtworks($routeParams).then(function(response) {
+    $scope.artistArtworks = response.data;
+  });
 
-  //   // Store all user data in '$scope.allUsers'
-  //   $scope.allUsers = response.data;
+  // Get the user's likes to render on show template
+  UserFactory.getUserLikes($routeParams).then(function(response) {
+    $scope.userLikes = response.data;
+  });
 
-
-  //   // Get user from params
-  //   function getUserFromParams(allUsers, routeParams) {
-  //     for(var i = 0; i < allUsers.length; i++) {
-  //       if(allUsers[i].id === JSON.parse(routeParams.id)) {
-  //         var user = allUsers[i];
-  //       };
-  //     };
-  //     return user;
-  //   }
-  //   $scope.user = getUserFromParams($scope.allUsers, $routeParams);
+  // Get the user's active relationships
+  UserFactory.getUserFollowedArtists($routeParams).then(function(response) {
+    $scope.userRelationships = response.data;
+  });
 
 
-  //   // Function to get the artwork objects from each like
-  //   function getLikedArtworks(userLikes) {
-  //     var likedArtworks = [];
-  //     for(var i = 0; i < userLikes.length; i++) {
-  //       likedArtworks.push(userLikes[i].artwork);
-  //     };
-  //     return likedArtworks;
-  //   }
-  //   $scope.likedArtworks = getLikedArtworks($scope.user.likes);
+  // NAVIGATION TABS
+  // Set initial tab
+  $scope.tab = 1;
 
+  // Select tab on click and set 'tab' value
+  $scope.selectTab = function(setTab) {
+    $scope.tab = setTab;
+  };
 
-  //   // Get artists followed by user
-  //   function getFollowedArtists(activeRelationships) {
-  //     var followedArtists = [];
-  //     for(var i = 0; i < activeRelationships.length; i++) {
-  //       followedArtists.push(activeRelationships[i].followed);
-  //     };
-  //     return followedArtists;
-  //   }
-  //   $scope.followedArtists = getFollowedArtists($scope.user.active_relationships);
-
-
-  //   // Get user artworks
-  //   $scope.userArtworks = $scope.user.artworks;
-  // });
-
-  
-
-  // UserFactory.getCurrentUser().then(function(response) {
-
-  //   // Store current user data in '$scope.currentUser'
-  //   $scope.currentUser = response.data;
-
-  // });
+  // Show content based on which tab is selected
+  $scope.isSelected = function(checkTab) {
+    return $scope.tab === checkTab;
+  };
 
 }]);

@@ -1,13 +1,13 @@
 app.controller('IndexController', ['$scope', '$http', 'UserFactory', 'ArtworkFactory', function($scope, $http, UserFactory, ArtworkFactory){
 
   // Get all artists
-  UserFactory.getArtists().then(function(response) {
-    $scope.artists = response.data;
+  UserFactory.getPopularArtists().then(function(response) {
+    $scope.popularArtists = response.data;
   });
 
   // Get all artworks for main map
-  ArtworkFactory.getMainMapArtworks().then(function(response) {
-    $scope.mainMapArtworks = response.data;
+  ArtworkFactory.getMapArtwork().then(function(response) {
+    $scope.mapArtwork = response.data;
   });
 
   // Get latest 3 artworks
