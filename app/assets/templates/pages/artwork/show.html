@@ -22,11 +22,12 @@
         <p id="artwork-description">{{ artwork.description }}</p>
       </div>
       
-      <div ng-controller="LikeController">
+      <div ng-controller="LikeController"><!-- Likes -->
         <button class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork(currentUser.id, artwork.id)">Like</button>
         <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork(currentUser.id)">Unlike</button>
-        <p>Likes: {{ artwork.likes.length }}</p>
+        <p>Likes: {{ artworkLikes.length }}</p>
       </div>
+
       <div class="comment-area"><!-- Comments -->
         <h3>Comments: ({{ artworkComments.length }})</h3>
         <div><!-- Comment field -->

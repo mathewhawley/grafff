@@ -1,4 +1,4 @@
-app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'ArtworkFactory', 'CommentFactory', function($scope, $http, $routeParams, UserFactory, ArtworkFactory, CommentFactory) {
+app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'ArtworkFactory', 'CommentFactory', 'LikeFactory', function($scope, $http, $routeParams, UserFactory, ArtworkFactory, CommentFactory, LikeFactory) {
 
   // Get artwork object from params to render on show template
   ArtworkFactory.getThisArtwork($routeParams).then(function(response) {
@@ -8,6 +8,11 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
   // Get all comments for this artwork
   CommentFactory.getThisArtworkComments($routeParams).then(function(response) {
     $scope.artworkComments = response.data;
+  });
+
+  // Get all likes for this artwork
+  LikeFactory.getThisArtworkLikes($routeParams).then(function(response) {
+    $scope.artworkLikes = response.data;
   });
 
   // On submission of comment form, create new comment object to be sent to database

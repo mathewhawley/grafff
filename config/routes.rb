@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   # Artwork show page
   get '/artworks/show' => 'artworks#show'
   get '/artworks/comments' => 'comments#artwork_comments'
+  get '/artworks/likes' => 'likes#artwork_likes'
 
   # User show page
   get '/users/show' => 'users#show'

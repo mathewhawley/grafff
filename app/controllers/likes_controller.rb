@@ -1,7 +1,8 @@
 class LikesController < ApplicationController
 
-  def get_all_likes
-    likes = Like.all.to_json(include: [ :user ])
+  # Artwork show page – get artwork's likes
+  def artwork_likes
+    likes = Like.where(artwork_id: params[:id])
     render json: likes
   end
 
