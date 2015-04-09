@@ -4,7 +4,7 @@ app.factory('UserFactory', ['$http', function($http) {
     getCurrentUser: function() {
       return $http.get('/users/current_user');
     },
-    getUser: function(userId) {
+    getThisUser: function(userId) {
       return $http.get('/users/show', { params: userId });
     },
     getUserLikes: function(userId) {

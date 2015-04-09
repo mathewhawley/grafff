@@ -6,7 +6,7 @@ app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFa
   });
 
   // Get user object from params to render on show template
-  UserFactory.getUser($routeParams).then(function(response) {
+  UserFactory.getThisUser($routeParams).then(function(response) {
     $scope.user = response.data;
   });
 
