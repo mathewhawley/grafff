@@ -15,9 +15,8 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
     $scope.artworkLikes = response.data;
   });
 
-  // On submission of comment form, create new comment object to be sent to database
+  // Create new comment – on submission of comment form, create new comment object to be sent to database
   $scope.postComment = function(commentContent, artworkId) {
-
     UserFactory.getCurrentUser().then(function(response) {
       var currentUser = response.data;
 
@@ -35,6 +34,26 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
         $scope.commentContent = '';
         var commentField = document.getElementById('comment-field');
         commentField.blur();
+      });
+    });
+  };
+
+  // Like artwork – on 'like' button click
+  $scope.likeArtwork = function() {
+    UserFactory.getCurrentUser().then(function(response) {
+      var currentUser = response.data;
+
+      var like = {};
+      like['user_id'] = currentUser.id;
+      like['artwork_id'] = $scope.artwork.id;
+
+      // Post new like to database
+      LikeFactory.likeThisArtwork(like).then(function(response) {
+        // Update artwork likes on the view
+        $scope.artworkLikes.push(response.data);
+
+        // Set variable to true – this will switch 'like' button to 'unlike'
+        $scope.likeThisArtwork = true;
       });
     });
   };

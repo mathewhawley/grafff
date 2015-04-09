@@ -4,7 +4,7 @@ app.factory('LikeFactory', ['$http', function($http) {
     getThisArtworkLikes: function(artworkId) {
       return $http.get('/artworks/likes', { params: artworkId })
     },
-    likeArtwork: function(like) {
+    likeThisArtwork: function(like) {
       return $http.post('/likes/like_artwork', like);
     },
     unlikeArtwork: function(like) {

@@ -22,9 +22,9 @@
         <p id="artwork-description">{{ artwork.description }}</p>
       </div>
       
-      <div ng-controller="LikeController"><!-- Likes -->
-        <button class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork(currentUser.id, artwork.id)">Like</button>
-        <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork(currentUser.id)">Unlike</button>
+      <div><!-- Likes -->
+        <button class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork()">Like</button>
+        <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork()">Unlike</button>
         <p>Likes: {{ artworkLikes.length }}</p>
       </div>
 
