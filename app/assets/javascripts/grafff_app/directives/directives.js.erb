@@ -16,36 +16,6 @@ app.directive('file', function() {
   };
 });
 
-app.directive('artistArtworkMap', function() {
-  
-  return {
-    restrict: 'E',
-    templateUrl: "<%= asset_path('directives/artist-artwork-map.html') %>",
-    controller: 'UserController'
-  };
-
-});
-
-app.directive('newArtworkForm', function() {
-
-  return {
-    restrict: 'E',
-    templateUrl: "<%= asset_path('directives/new-artwork-form.html') %>",
-    controller: 'ProfileController'
-  }
-
-});
-
-app.directive('siteFooter', function() {
-
-  return {
-    restrict: 'E',
-    templateUrl: "<%= asset_path('directives/site-footer.html') %>",
-    controller: 'HomeController'
-  }
-
-});
-
 app.directive('validFile',function() {
   return {
     require: 'ngModel',
@@ -58,4 +28,24 @@ app.directive('validFile',function() {
       });
     }
   }
+});
+
+app.directive('artistArtworkMap', function() {
+  
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('directives/artist-artwork-map.html') %>",
+    controller: 'UserShowController'
+  };
+
+});
+
+app.directive('newArtworkForm', function() {
+
+  return {
+    restrict: 'E',
+    templateUrl: "<%= asset_path('directives/new-artwork-form.html') %>",
+    controller: 'UserShowController'
+  }
+
 });
