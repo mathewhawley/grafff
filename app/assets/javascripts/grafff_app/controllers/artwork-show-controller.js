@@ -70,12 +70,12 @@ app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'Use
     like['user_id'] = $scope.currentUser.id;
     like['artwork_id'] = $scope.artwork.id;
 
-    // Post new like to database
+    // Post like to database
     LikeFactory.unlikeThisArtwork(like).then(function(response) {
       // Update artwork likes on the view
       $scope.artworkLikes = response.data;
 
-      // Set variable to true – this will switch 'like' button to 'unlike'
+      // Set variable to false – this will switch 'unlike' button to 'like'
       $scope.likeThisArtwork = false;
     });
   };
