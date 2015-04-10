@@ -8,7 +8,6 @@ app.factory('RelationshipFactory', ['$http', function($http) {
       return $http.post('/relationships/unfollow_artist', relationship);
     },
     checkIfFollowing: function(relationship) {
-      console.log(relationship);
       return $http.get('/users/check_if_following', { params: relationship });
     }
   };
