@@ -1,4 +1,4 @@
-app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFactory', function($scope, $http, $routeParams, UserFactory) {
+app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'RelationshipFactory', function($scope, $http, $routeParams, UserFactory, RelationshipFactory) {
 
   // Get user object from params to render on show template
   UserFactory.getThisUser($routeParams).then(function(response) {
@@ -34,5 +34,22 @@ app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFa
   $scope.isSelected = function(checkTab) {
     return $scope.tab === checkTab;
   };
+
+  // Follow artist – on 'follow' button click
+  $scope.followUser = function() {
+    var relationship = {};
+    relationship['followed_id'] = $scope.user.id;
+    relationship['follower_id'] = $scope.currentUser.id;
+
+    // Post new relationship to database
+    RelationshipFactory.followUser(relationship).then(function(response) {
+      // Update this user's passive relationships on the view
+      $scope.user.passive_relationships.push(response.data);
+
+      // Set variable to true – this will switch 'follow' button to 'unfollow'
+      $scope.followingThisUser = true;
+    });
+  };
+
 
 }]);

@@ -15,7 +15,7 @@
 
         <div ng-controller="RelationshipController" ng-if="user.is_artist && !currentUser.is_artist">
 
-          <form ng-submit="followUser(currentUser.id, user.id)" novalidate>
+          <form ng-submit="followUser()" novalidate>
             <button ng-hide="followingThisUser">Follow</button>
           </form>
 
@@ -89,7 +89,7 @@
           </div>
         </div>
       </div>
-      <div ng-if="isSelected(3)"><!-- Artists -->
+      <div ng-if="isSelected(3)"><!-- Artists being followed by this user -->
           <div ng-repeat="artist in userRelationships | orderBy: '-created_at'"><!-- Artist card -->
             <a ng-href="#/users/{{ artist.followed.id }}">
               <div><!-- Card wrapper -->
@@ -101,7 +101,7 @@
           </div>
       </div>
 
-      <div ng-show="isSelected(4)"><!-- Artworks -->
+      <div ng-show="isSelected(4)"><!-- Artworks by this artist -->
         <div class="card-container">
           <div class="row">
             <div ng-repeat="artwork in artistArtworks | orderBy: '-created_at'" class="col-md-3">
