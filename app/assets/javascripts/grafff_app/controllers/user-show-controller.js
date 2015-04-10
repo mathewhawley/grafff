@@ -36,20 +36,35 @@ app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFa
   };
 
   // Follow artist – on 'follow' button click
-  $scope.followUser = function() {
+  $scope.followArtist = function() {
     var relationship = {};
     relationship['followed_id'] = $scope.user.id;
     relationship['follower_id'] = $scope.currentUser.id;
 
     // Post new relationship to database
-    RelationshipFactory.followUser(relationship).then(function(response) {
+    RelationshipFactory.followArtist(relationship).then(function(response) {
       // Update this user's passive relationships on the view
       $scope.user.passive_relationships.push(response.data);
 
       // Set variable to true – this will switch 'follow' button to 'unfollow'
-      $scope.followingThisUser = true;
+      $scope.followingThisArtist = true;
     });
   };
 
+  // Unfollow artist – on 'unfollow' button click
+  $scope.unfollowArtist = function() {
+    var relationship = {};
+    relationship['followed_id'] = $scope.user.id;
+    relationship['follower_id'] = $scope.currentUser.id;
+
+    // Post relationship to database
+    RelationshipFactory.unfollowArtist(relationship).then(function(response) {
+      // Update this user's passive relationships on the view
+      $scope.user.passive_relationships = response.data;
+
+      // Set variable to false – this will switch 'unfollow' button to 'follow'
+      $scope.followingThisArtist = false;
+    });
+  };
 
 }]);

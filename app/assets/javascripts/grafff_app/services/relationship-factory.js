@@ -4,15 +4,11 @@ app.factory('RelationshipFactory', ['$http', function($http) {
     getAllRelationships: function() {
       return $http.get('relationships/get_all_relationships');
     },
-    followUser: function(relationship) {
-      return $http.post('relationships/follow_user', relationship);
+    followArtist: function(relationship) {
+      return $http.post('relationships/follow_artist', relationship);
     },
-    unfollowUser: function(relationship) {
-      return $http({
-        method: 'POST',
-        url: 'relationships/unfollow_user',
-        data: { id: relationship }
-      });
+    unfollowArtist: function(relationship) {
+      return $http.post('/relationships/unfollow_artist', relationship);
     }
   };
 

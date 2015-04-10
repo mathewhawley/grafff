@@ -41,8 +41,8 @@ Rails.application.routes.draw do
 
   # User show page
   post '/artworks/new_artwork' => 'artworks#new_artwork'
-  post '/relationships/follow_user' => 'relationships#follow_user'
-  post '/relationships/unfollow_user' => 'relationships#unfollow_user'
+  post '/relationships/follow_artist' => 'relationships#follow_artist'
+  post '/relationships/unfollow_artist' => 'relationships#unfollow_artist'
 
   # Artwork show page
   post '/comments/new_comment' => 'comments#new_comment'

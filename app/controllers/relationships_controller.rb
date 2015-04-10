@@ -1,16 +1,17 @@
 class RelationshipsController < ApplicationController
   
   # User profile page - 'Follow' an artist
-  def follow_user
+  def follow_artist
     relationship = Relationship.create(params.require(:relationship).permit(:follower_id, :followed_id))
     render json: relationship
   end
 
-  # 'Unfollow' an artist
-  def unfollow_user
-    relationship_to_delete = Relationship.find(params[:id])
-    relationship_to_delete.destroy
-    render json: relationship_to_delete
+  # User profile page - 'Unfollow' an artist
+  def unfollow_artist
+    relationship_to_delete = Relationship.where(follower_id: params[:follower_id], followed_id: params[:followed_id])
+    relationship_to_delete[0].destroy
+    relationships = Relationship.where(followed_id: params[:followed_id])
+    render json: relationships
   end
 
   # User profile page – gets all of the artist that the user is following to be displayed under the 'Artists' tab

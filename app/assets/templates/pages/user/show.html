@@ -15,12 +15,12 @@
 
         <div ng-controller="RelationshipController" ng-if="user.is_artist && !currentUser.is_artist">
 
-          <form ng-submit="followUser()" novalidate>
-            <button ng-hide="followingThisUser">Follow</button>
+          <form ng-submit="followArtist()" novalidate>
+            <button ng-hide="followingThisArtist">Follow</button>
           </form>
 
-          <form ng-submit="unfollowUser(currentUser.id)" novalidate>
-            <button ng-show="followingThisUser">Unfollow</button>
+          <form ng-submit="unfollowArtist()" novalidate>
+            <button ng-show="followingThisArtist">Unfollow</button>
           </form>
 
         </div>
