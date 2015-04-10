@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get '/users/likes' => 'likes#user_likes'
   get '/users/followed_artists' => 'relationships#followed_artists'
   get '/users/artworks' => 'artworks#user_artworks'
+  get '/users/check_if_following' => 'relationships#check_if_following'
 
   # Artist index page
   get '/artists' => 'users#all_artists'

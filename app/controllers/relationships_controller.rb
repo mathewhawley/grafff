@@ -1,4 +1,15 @@
 class RelationshipsController < ApplicationController
+
+  # User profile page – check if current user already follows this user
+  def check_if_following
+    if Relationship.where(follower_id: params[:follower_id].to_i, followed_id: params[:followed_id].to_i) != []
+      does_follow = true
+      render json: does_follow
+    else
+      does_follow = false
+      render json: does_follow
+    end
+  end
   
   # User profile page - 'Follow' an artist
   def follow_artist

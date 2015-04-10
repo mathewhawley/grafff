@@ -1,8 +1,22 @@
 app.controller('UserShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'RelationshipFactory', function($scope, $http, $routeParams, UserFactory, RelationshipFactory) {
 
+  // Function to check if current user already likes 'this' artwork – called on page load
+  function checkIfFollowing(currentUserId, followedId) {
+    var relationship = {};
+    relationship['follower_id'] = currentUserId;
+    relationship['followed_id'] = followedId;
+
+    RelationshipFactory.checkIfFollowing(relationship).then(function(response) {
+      $scope.followingThisArtist = response.data;
+    });
+  }
+
   // Get user object from params to render on show template
   UserFactory.getThisUser($routeParams).then(function(response) {
     $scope.user = response.data;
+
+    // Check if the 'current user' is already following 'this' user and show the appropriate follow/unfollow button
+    checkIfFollowing($scope.currentUser.id, $scope.user.id);
   });
 
   // Get an artists artworks to render on show template

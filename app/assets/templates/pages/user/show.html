@@ -13,7 +13,7 @@
         <p ng-if="!user.is_artist"><strong>{{ user.active_relationships.length }}</strong> Following</p>
         <p>{{ user.bio }}</p>
 
-        <div ng-controller="RelationshipController" ng-if="user.is_artist && !currentUser.is_artist">
+        <div ng-if="user.is_artist && !currentUser.is_artist">
 
           <form ng-submit="followArtist()" novalidate>
             <button ng-hide="followingThisArtist">Follow</button>
