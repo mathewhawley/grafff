@@ -22,7 +22,7 @@
         <p id="artwork-description">{{ artwork.description }}</p>
       </div>
       
-      <div><!-- Likes -->
+      <div ng-if="(artwork.user.id !== currentUser.id) && !currentUser.is_artist"><!-- Likes -->
         <button class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork()">Like</button>
         <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork()">Unlike</button>
         <p>Likes: {{ artworkLikes.length }}</p>

@@ -1,8 +1,22 @@
 app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'ArtworkFactory', 'CommentFactory', 'LikeFactory', function($scope, $http, $routeParams, UserFactory, ArtworkFactory, CommentFactory, LikeFactory) {
 
+  // Function to check if current user already likes 'this' artwork – called on page load
+  function checkForLike(userId, artworkId) {
+    var like = {};
+    like['user_id'] = userId;
+    like['artwork_id'] = artworkId;
+
+    LikeFactory.checkForLike(like).then(function(response) {
+      $scope.likeThisArtwork = response.data;
+    });
+  }
+
   // Get artwork object from params to render on show template
   ArtworkFactory.getThisArtwork($routeParams).then(function(response) {
     $scope.artwork = response.data;
+  }).then(function(response) {
+    // Once we have 'this' artwork, use it to check if the 'current user' already likes it and show the appropriate like/unlike button
+    checkForLike($scope.currentUser.id, $scope.artwork.id);
   });
 
   // Get all comments for this artwork

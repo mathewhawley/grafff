@@ -6,6 +6,17 @@ class LikesController < ApplicationController
     render json: likes
   end
 
+  # Artwork show page – check if current user already likes this artwork
+  def check_for_like
+    if Like.where(user_id: params[:user_id].to_i, artwork_id: params[:artwork_id].to_i) != []
+      does_like = true
+      render json: does_like
+    else
+      does_like = false
+      render json: does_like
+    end
+  end
+
   # 'Like' an artwork
   def like_artwork
     like = Like.create(params.require(:like).permit(:user_id, :artwork_id))
