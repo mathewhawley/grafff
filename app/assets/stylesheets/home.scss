@@ -1,5 +1,47 @@
 @import 'colors';
 
+/* Not logged in landing page */
+
+.landing-page-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://s3-eu-west-1.amazonaws.com/grafff/landing_page_v1.jpg');
+  background-size: cover;
+
+  .welcome-message {
+    position: absolute;
+    top: 32.5%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+
+    .welcome-text {
+      margin-bottom: 3em;
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 5em;
+        letter-spacing: -1px;
+      }
+    }
+    
+    a.btn {
+      width: 250px;
+    }
+  }
+}
+
+
+
+/* Logged-in home page */
+
 /* Main map */
 
 #main-map {

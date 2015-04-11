@@ -8,6 +8,10 @@ a:hover {
   text-decoration: none;
 }
 
+body {
+  height: 100%;
+}
+
 #main-content, footer {
   p, i, li {
     font-size: 13px;
@@ -21,19 +25,4 @@ a:hover {
 
 .page-title {
   margin: 50px 0;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  padding: 40px 0;
-  background: $light-grey;
-  border-top: 1px solid $mid-grey;
-
-  .footer-wrapper {
-    width: 1040px;
-    margin: 0 auto;
-  }
 }

@@ -11,24 +11,26 @@
 </head>
 
 <body ng-controller="MainController">
-  <nav>
-    <%= link_to image_tag('grafff_spray_logo.png'), root_path, target: "_self", id: "logo" %>
-    <form ng-submit="searchUsers()" ng-if="currentUser">
-      <i class="fa fa-search"></i>
-      <input id="search-input" placeholder="Search users and artists">
-    </form>
-    <% if user_signed_in? %>
-      <ul>
-        <li class="signed-in"><a ng-href="#/users/{{ ::currentUser.id }}" ng-if="currentUser"><img ng-src="{{ ::currentUser.profile_pic.url }}" class="nav-profile-pic"> {{ ::currentUser.username }}</a></li>
-        <li class="signed-in"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      </ul>
-    <% else %>
-      <ul>
-        <li><%= link_to "Log in", new_user_session_path %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-      </ul>
-    <% end %>
-  </nav>
+  <% if user_signed_in? %>
+    <nav>
+      <%= link_to image_tag('grafff_spray_logo.png'), root_path, target: "_self", id: "logo" %>
+      <form ng-submit="searchUsers()" ng-if="currentUser">
+        <i class="fa fa-search"></i>
+        <input id="search-input" placeholder="Search users and artists">
+      </form>
+      <% if user_signed_in? %>
+        <ul>
+          <li class="signed-in"><a ng-href="#/users/{{ ::currentUser.id }}" ng-if="currentUser"><img ng-src="{{ ::currentUser.profile_pic.url }}" class="nav-profile-pic"> {{ ::currentUser.username }}</a></li>
+          <li class="signed-in"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "Log in", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        </ul>
+      <% end %>
+    </nav>
+  <% end %>
   
   <div id="main-content">
     <% if !user_signed_in? %>

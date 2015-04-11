@@ -1,1 +1,10 @@
-<p>Welcome to Grafff! Please log in or register to continue.</p>
+<div class="landing-page-image">
+  <div class="welcome-message">
+    <div class="welcome-text">
+      <%= image_tag 'https://s3-eu-west-1.amazonaws.com/grafff/grafff_logo.svg' %>
+      <h4>Please log in or sign up to continue.</h4>
+    </div>
+    <p><%= link_to "Log in", new_user_session_path, class: 'btn btn-primary' %></p>
+    <p><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %></p>
+  </div>
+</div>
