@@ -15,7 +15,6 @@ app.controller('SearchController', ['$scope','$http', 'SearchFactory', function(
 
         // Check the response, if no response display 'no results' message to viewer, otherwise display results on the view.
         if(response.data.length === 0) {
-          console.log('no results!');
           $scope.ifResults = true;
         } else {
           $scope.searchResults = response.data;
