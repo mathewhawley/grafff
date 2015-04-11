@@ -8,6 +8,7 @@
     </div>
 
     <div class="row">
+      <p class="col-md-12" ng-show="ifResults">No results to display.</p>
       <div ng-repeat="user in searchResults" class="col-md-2">
         <a ng-href="#/users/{{ user.id }}">
           <div class="user-thumbnail">

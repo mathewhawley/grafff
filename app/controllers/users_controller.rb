@@ -24,4 +24,11 @@ class UsersController < ApplicationController
     render json: user
   end
 
+  # Perform user search
+  def search_users
+    query = "%#{params[:query]}%"
+    result = User.where("first_name ILIKE ? OR last_name ILIKE ? OR username ILIKE ?", query, query, query)
+    render json: result
+  end
+
 end

@@ -49,5 +49,8 @@ Rails.application.routes.draw do
   post '/comments/new_comment' => 'comments#new_comment'
   post '/likes/like_artwork' => 'likes#like_artwork'
   post '/likes/unlike_artwork' => 'likes#unlike_artwork'
+
+  # Search
+  post '/users/search' => 'users#search_users'
   
 end
