@@ -1,5 +1,7 @@
 app.controller('SearchController', ['$scope','$http', 'SearchFactory', function($scope, $http, SearchFactory) {
 
+  $scope.ifResults = true;
+
   // Find users from database and render on page
   function performSearch() {
     var searchField = document.getElementById('search-input');
@@ -10,12 +12,22 @@ app.controller('SearchController', ['$scope','$http', 'SearchFactory', function(
 
       // Search database
       SearchFactory.searchUsers(searchTerm).then(function(response) {
-        // Update results on the view
-        $scope.searchResults = response.data;
+
+        // Check the response, if no response display 'no results' message to viewer, otherwise display results on the view.
+        if(response.data.length === 0) {
+          console.log('no results!');
+          $scope.ifResults = true;
+        } else {
+          $scope.searchResults = response.data;
+          $scope.ifResults = false;
+        }
+
         // Reset input field
         searchField.blur();
         searchField.value = '';
       });
+    } else {
+      $scope.ifResults = true;
     }
   }
   performSearch();
