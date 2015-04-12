@@ -137,7 +137,7 @@ app.controller('UserShowController', [
         if(err) {
           // There Was An Error With Your S3 Config
           console.log(err)
-          alert(err.message);
+          // alert(err.message);
           return false;
         } else {
           // Success!
