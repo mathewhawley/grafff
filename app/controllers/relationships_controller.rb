@@ -27,7 +27,7 @@ class RelationshipsController < ApplicationController
 
   # User profile page – gets all of the artist that the user is following to be displayed under the 'Artists' tab
   def followed_artists
-    followed_artists = Relationship.where(follower_id: params[:id]).to_json(include: [:followed])
+    followed_artists = Relationship.where(follower_id: params[:id]).to_json(include: [{ followed: { include: [ :passive_relationships ]}}])
     render json: followed_artists
   end
 

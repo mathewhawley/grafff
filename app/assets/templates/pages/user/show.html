@@ -90,15 +90,24 @@
         </div>
       </div>
       <div ng-if="isSelected(3)"><!-- Artists being followed by this user -->
-          <div ng-repeat="artist in userRelationships | orderBy: '-created_at'"><!-- Artist card -->
-            <a ng-href="#/users/{{ artist.followed.id }}">
-              <div><!-- Card wrapper -->
-                <img ng-src="http://lorempixel.com/150/100/abstract">
-                <h4>{{ artist.followed.username }}</h4>
-                <p>{{ artist.followed.bio }}</p>
-              </div>
-            </a>
+        <div class="card-container">
+          <div class="row">
+            <div ng-repeat="artist in userRelationships | orderBy: '-created_at'" class="col-md-2"><!-- Artist card -->
+              <a ng-href="#/users/{{ artist.followed.id }}">
+                <div class="artist-thumbnail">
+                  <div class="artist-profile-pic">
+                    <img ng-src="{{ artist.followed.profile_pic.url }}">
+                  </div>
+                  <p class="artist-name"><strong>{{ artist.followed.username }}</strong></p>
+                  <p>Artist</p>
+                  <div class="artist-thumbnail-stats">
+                    <p><strong>{{ artist.followed.passive_relationships.length }}</strong> Followers</p>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
+        </div>
       </div>
 
       <div ng-show="isSelected(4)"><!-- Artworks by this artist -->

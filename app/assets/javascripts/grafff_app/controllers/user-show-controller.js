@@ -42,13 +42,13 @@ app.controller('UserShowController', [
     $scope.artistArtworks = response.data;
   });
 
-  // Get the user's likes to render on show template
+  // Get this user's likes to render on show template
   UserFactory.getThisUserLikes($routeParams)
   .then(function(response) {
     $scope.userLikes = response.data;
   });
 
-  // Get the user's active relationships
+  // Get this user's active relationships
   UserFactory.getThisUserFollowedArtists($routeParams)
   .then(function(response) {
     $scope.userRelationships = response.data;
