@@ -1,26 +1,40 @@
 <form name="newArtworkForm" ng-submit="newArtworkForm.$valid && upload(nearestAddress)" novalidate>
 
-  <label>Title</label>
-  <input type="text" ng-model="newArtwork.title" required>
+  <div class="row">
+    <div class="new-artwork-left col-md-4">
+      <div class="field">
+        <label>Title</label>
+        <input class="form-control" type="text" ng-model="newArtwork.title" required>
+      </div>
+      
+      <div class="field">
+        <label>Description</label>
+        <textarea class="form-control" ng-model="newArtwork.description" rows="10" required></textarea>
+      </div>
+    
+      <div class="field">
+        <label>Add an image</label>
+        <input type="file" valid-file file ng-model="newArtwork.image" required />
+      </div>
 
-  <label>Description</label>
-  <textarea ng-model="newArtwork.description" required></textarea>
+      <div class="actions">
+        <button class="btn btn-primary">Add Artwork</button>
+      </div>
+    </div>
 
-  <label>Location</label>
-  <map id="artwork-form-map"
-    zoom="12"
-    center="51.508800, -0.127477"
-    scrollwheel="false"
-    styles="[{'featureType':'landscape','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'poi','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'road','elementType':'geometry','stylers':[{'lightness':57}]},{'featureType':'road','elementType':'labels.text.fill','stylers':[{'visibility':'on'},{'lightness':24}]},{'featureType':'road','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'transit','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'off'}]}]">
-    <marker id="artwork-location-marker" on-mouseup="getPosition(position)"
-      position="51.508800, -0.127477"
-      draggable="true"></marker>
-  </map>
-  <p ng-if="nearestAddress"><i class="fa fa-map-marker"></i> {{ nearestAddress }}</p>
-
-  <label>Add an image</label>
-  <input type="file" valid-file file ng-model="newArtwork.image" required />
-
-  <button>Submit</button>
+    <div class="new-artwork-right col-md-8">
+      <label>Set Location </label>
+      <span class="new-artwork-form-address" ng-if="nearestAddress"><i class="fa fa-map-marker"></i> {{ nearestAddress }}</span>
+      <map id="artwork-form-map"
+        zoom="12"
+        center="51.508800, -0.127477"
+        scrollwheel="false"
+        styles="[{'featureType':'landscape','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'poi','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'road','elementType':'geometry','stylers':[{'lightness':57}]},{'featureType':'road','elementType':'labels.text.fill','stylers':[{'visibility':'on'},{'lightness':24}]},{'featureType':'road','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'transit','elementType':'labels','stylers':[{'visibility':'off'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'off'}]}]">
+        <marker id="artwork-location-marker" on-mouseup="getPosition(position)"
+          position="51.508800, -0.127477"
+          draggable="true"></marker>
+      </map>
+    </div>
+  </div>
 
 </form>
