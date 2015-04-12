@@ -23,18 +23,54 @@
       img {
         margin-bottom: 10px;
       }
-
-      h2 {
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 5em;
-        letter-spacing: -1px;
-      }
     }
     
-    a.btn {
+    button {
+      display: block;
+      margin: 0 auto;
       width: 250px;
     }
+
+    .welcome-text + button {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Sign in/up modals */
+
+  .modal.custom-log-in .modal-dialog {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+  }
+
+  .modal.custom-sign-in .modal-dialog {
+    position: absolute;
+    
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 450px;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+}
+
+#modal-form-wrapper {
+  width: 350px;
+  margin: 30px auto 20px;
+
+  .field {
+    margin-bottom: 20px;
+  }
+
+  #auth-checkbox {
+    margin-right: 5px;
+  }
+
+  .actions input {
+    width: 100%;
   }
 }
 
