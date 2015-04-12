@@ -1,4 +1,12 @@
-app.controller('IndexController', ['$scope', '$http', 'UserFactory', 'ArtworkFactory', function($scope, $http, UserFactory, ArtworkFactory){
+app.controller('IndexController', [
+  '$scope',
+  '$http',
+  'UserFactory',
+  'ArtworkFactory',
+  function($scope,
+    $http,
+    UserFactory,
+    ArtworkFactory) {
 
   // Get all artists
   UserFactory.getPopularArtists().then(function(response) {

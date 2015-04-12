@@ -1,4 +1,19 @@
-app.controller('ArtworkShowController', ['$scope', '$http', '$routeParams', 'UserFactory', 'ArtworkFactory', 'CommentFactory', 'LikeFactory', function($scope, $http, $routeParams, UserFactory, ArtworkFactory, CommentFactory, LikeFactory) {
+app.controller('ArtworkShowController', [
+  '$scope',
+  '$http',
+  '$routeParams',
+  'UserFactory',
+  'ArtworkFactory',
+  'CommentFactory',
+  'LikeFactory',
+  function(
+    $scope,
+    $http,
+    $routeParams,
+    UserFactory,
+    ArtworkFactory,
+    CommentFactory,
+    LikeFactory) {
 
   // Function to check if current user already likes 'this' artwork – called on page load
   function checkForLike(userId, artworkId) {

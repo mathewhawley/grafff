@@ -1,4 +1,11 @@
-app.controller('SearchController', ['$scope','$http', 'SearchFactory', function($scope, $http, SearchFactory) {
+app.controller('SearchController', [
+  '$scope',
+  '$http',
+  'SearchFactory',
+  function(
+    $scope,
+    $http,
+    SearchFactory) {
 
   $scope.ifResults = true;
 

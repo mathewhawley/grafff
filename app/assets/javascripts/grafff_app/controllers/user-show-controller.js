@@ -1,4 +1,19 @@
-app.controller('UserShowController', ['$scope', '$http', '$routeParams', '$route', 'UserFactory', 'RelationshipFactory', 'ArtworkFactory', function($scope, $http, $routeParams, $route, UserFactory, RelationshipFactory, ArtworkFactory) {
+app.controller('UserShowController', [
+  '$scope',
+  '$http',
+  '$routeParams',
+  '$route',
+  'UserFactory',
+  'RelationshipFactory',
+  'ArtworkFactory', 
+  function(
+    $scope,
+    $http,
+    $routeParams,
+    $route,
+    UserFactory,
+    RelationshipFactory,
+    ArtworkFactory) {
 
   // Function to check if current user already likes 'this' artwork – called on page load
   function checkIfFollowing(currentUserId, followedId) {
