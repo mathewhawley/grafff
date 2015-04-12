@@ -21,13 +21,15 @@ app.controller('UserShowController', [
     relationship['follower_id'] = currentUserId;
     relationship['followed_id'] = followedId;
 
-    RelationshipFactory.checkIfFollowing(relationship).then(function(response) {
+    RelationshipFactory.checkIfFollowing(relationship)
+    .then(function(response) {
       $scope.followingThisArtist = response.data;
     });
   }
 
   // Get user object from params to render on show template
-  UserFactory.getThisUser($routeParams).then(function(response) {
+  UserFactory.getThisUser($routeParams)
+  .then(function(response) {
     $scope.user = response.data;
 
     // Check if the 'current user' is already following 'this' user and show the appropriate follow/unfollow button
@@ -35,17 +37,20 @@ app.controller('UserShowController', [
   });
 
   // Get an artists artworks to render on show template
-  UserFactory.getThisArtistArtworks($routeParams).then(function(response) {
+  UserFactory.getThisArtistArtworks($routeParams)
+  .then(function(response) {
     $scope.artistArtworks = response.data;
   });
 
   // Get the user's likes to render on show template
-  UserFactory.getThisUserLikes($routeParams).then(function(response) {
+  UserFactory.getThisUserLikes($routeParams)
+  .then(function(response) {
     $scope.userLikes = response.data;
   });
 
   // Get the user's active relationships
-  UserFactory.getThisUserFollowedArtists($routeParams).then(function(response) {
+  UserFactory.getThisUserFollowedArtists($routeParams)
+  .then(function(response) {
     $scope.userRelationships = response.data;
   });
 
@@ -71,7 +76,8 @@ app.controller('UserShowController', [
     relationship['follower_id'] = $scope.currentUser.id;
 
     // Post new relationship to database
-    RelationshipFactory.followArtist(relationship).then(function(response) {
+    RelationshipFactory.followArtist(relationship)
+    .then(function(response) {
       // Update this user's passive relationships on the view
       $scope.user.passive_relationships.push(response.data);
 
@@ -87,7 +93,8 @@ app.controller('UserShowController', [
     relationship['follower_id'] = $scope.currentUser.id;
 
     // Post relationship to database
-    RelationshipFactory.unfollowArtist(relationship).then(function(response) {
+    RelationshipFactory.unfollowArtist(relationship)
+    .then(function(response) {
       // Update this user's passive relationships on the view
       $scope.user.passive_relationships = response.data;
 
@@ -103,7 +110,8 @@ app.controller('UserShowController', [
     longitude = position.latLng.D;
     latitude = position.latLng.k;
 
-    $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true').then(function(response) {
+    $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true')
+    .then(function(response) {
       $scope.nearestAddress = response.data.results[0].formatted_address;
     });
 
@@ -153,7 +161,8 @@ app.controller('UserShowController', [
     $scope.newArtwork['user_id'] = $scope.user.id;
     $scope.newArtwork['image'] = $scope.imageUrl;
 
-    ArtworkFactory.addArtwork($scope.newArtwork).then(function(response) {
+    ArtworkFactory.addArtwork($scope.newArtwork)
+    .then(function(response) {
       $scope.artistArtworks.push(response.data);
       $route.reload();
     });

@@ -7,7 +7,8 @@ app.controller('ArtworkIndexController', [
     $http,
     ArtworkFactory) {
 
-  ArtworkFactory.getAllArtworks().then(function(response) {
+  ArtworkFactory.getAllArtworks()
+  .then(function(response) {
     $scope.allArtworks = response.data;
   });
 

@@ -18,7 +18,8 @@ app.controller('SearchController', [
       searchTerm['query'] = searchField.value;
 
       // Search database
-      SearchFactory.searchUsers(searchTerm).then(function(response) {
+      SearchFactory.searchUsers(searchTerm)
+      .then(function(response) {
 
         // Check the response, if no response display 'no results' message to viewer, otherwise display results on the view.
         if(response.data.length === 0) {

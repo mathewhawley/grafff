@@ -21,26 +21,30 @@ app.controller('ArtworkShowController', [
     like['user_id'] = userId;
     like['artwork_id'] = artworkId;
 
-    LikeFactory.checkForLike(like).then(function(response) {
+    LikeFactory.checkForLike(like)
+    .then(function(response) {
       $scope.likeThisArtwork = response.data;
     });
   }
 
   // Get artwork object from params to render on show template
-  ArtworkFactory.getThisArtwork($routeParams).then(function(response) {
+  ArtworkFactory.getThisArtwork($routeParams)
+  .then(function(response) {
     $scope.artwork = response.data;
-  }).then(function(response) {
+
     // Once we have 'this' artwork, use it to check if the 'current user' already likes it and show the appropriate like/unlike button
     checkForLike($scope.currentUser.id, $scope.artwork.id);
   });
 
   // Get all comments for this artwork
-  CommentFactory.getThisArtworkComments($routeParams).then(function(response) {
+  CommentFactory.getThisArtworkComments($routeParams)
+  .then(function(response) {
     $scope.artworkComments = response.data;
   });
 
   // Get all likes for this artwork
-  LikeFactory.getThisArtworkLikes($routeParams).then(function(response) {
+  LikeFactory.getThisArtworkLikes($routeParams)
+  .then(function(response) {
     $scope.artworkLikes = response.data;
   });
 
@@ -52,7 +56,8 @@ app.controller('ArtworkShowController', [
     newComment['artwork_id'] = artworkId;
 
     // Post new comment to database
-    CommentFactory.newComment(newComment).then(function(response) {
+    CommentFactory.newComment(newComment)
+    .then(function(response) {
       // Update artwork comments on the view
       $scope.artworkComments.push(response.data);
 
@@ -70,7 +75,8 @@ app.controller('ArtworkShowController', [
     like['artwork_id'] = $scope.artwork.id;
 
     // Post new like to database
-    LikeFactory.likeThisArtwork(like).then(function(response) {
+    LikeFactory.likeThisArtwork(like)
+    .then(function(response) {
       // Update artwork likes on the view
       $scope.artworkLikes.push(response.data);
 
@@ -86,7 +92,8 @@ app.controller('ArtworkShowController', [
     like['artwork_id'] = $scope.artwork.id;
 
     // Post like to database
-    LikeFactory.unlikeThisArtwork(like).then(function(response) {
+    LikeFactory.unlikeThisArtwork(like)
+    .then(function(response) {
       // Update artwork likes on the view
       $scope.artworkLikes = response.data;
 

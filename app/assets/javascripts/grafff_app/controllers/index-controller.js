@@ -9,17 +9,20 @@ app.controller('IndexController', [
     ArtworkFactory) {
 
   // Get all artists
-  UserFactory.getPopularArtists().then(function(response) {
+  UserFactory.getPopularArtists()
+  .then(function(response) {
     $scope.popularArtists = response.data;
   });
 
   // Get all artworks for main map
-  ArtworkFactory.getMainMapArtwork().then(function(response) {
+  ArtworkFactory.getMainMapArtwork()
+  .then(function(response) {
     $scope.mapArtwork = response.data;
   });
 
   // Get latest 3 artworks
-  ArtworkFactory.getLatestArtworks().then(function(response) {
+  ArtworkFactory.getLatestArtworks()
+  .then(function(response) {
     $scope.latestArtworks = response.data;
   });
 

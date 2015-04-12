@@ -12,7 +12,8 @@ app.controller('MainController', [
     UserFactory) {
 
   // Get current user object
-  UserFactory.getCurrentUser().then(function(response) {
+  UserFactory.getCurrentUser()
+  .then(function(response) {
     $scope.currentUser = response.data;
   });
 
