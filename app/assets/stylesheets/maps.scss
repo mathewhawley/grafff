@@ -1,7 +1,48 @@
 @import 'colors';
 
 #main-map {
+  position: relative;
   height: 700px;
+
+  .date-search {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid $mid-grey;
+
+    h4 {
+      margin: 17px;
+    }
+
+    .map-date-picker {
+      margin: 0 auto;
+      width: 285px;
+
+      .input-group {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 387px !important;
+
+  li .pull-left button {
+    margin: -5px 0 10px;
+  }
+
+  li .close {
+    margin: -3px 5px 10px 0;
+  }
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  margin-top: 4px;
 }
 
 #artist-artwork-map {
@@ -69,10 +110,6 @@
           margin-right: 5px;
         }
       }
-    }
-
-    h4 {
-      
     }
   }
 }

@@ -3,7 +3,8 @@ app.controller('IndexController', [
   '$http',
   'UserFactory',
   'ArtworkFactory',
-  function($scope,
+  function(
+    $scope,
     $http,
     UserFactory,
     ArtworkFactory) {

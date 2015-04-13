@@ -30,6 +30,29 @@ app.directive('validFile',function() {
   }
 });
 
+app.directive('datepickerPopup', function() {
+  return {
+    restrict: 'EAC',
+    require: 'ngModel',
+    link: function(scope, element, attrs, controller) {
+      controller.$formatters.shift();
+    }
+  }
+});
+
+app.directive('datepickerPopup', function () {
+  return {
+    require: 'ngModel',
+    link: function(scope, element, attrs, ngModel) {
+      scope.$watch(function () {
+        return ngModel.$modelValue;
+      }, function(newValue) {
+        console.log(newValue);
+      });
+    }
+  }
+});
+
 app.directive('artistArtworkMap', function() {
   
   return {
