@@ -26,3 +26,7 @@ body {
 .page-title {
   margin: 50px 0;
 }
+
+.btn:focus {
+  outline: 0 !important;
+}

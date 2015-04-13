@@ -6,24 +6,21 @@
       </div>
 
       <div class="profile-info col-md-9"><!-- Profile information -->
-        <h2>{{ user.username }}</h2>
-        <p class="role" ng-if="user.is_artist"><strong>Artist</strong></p>
-        <a ng-if="currentUser.id === user.id" ng-href="/users/edit" class="btn btn-default btn-xs registration-button">Edit registration</a>
-        <p ng-if="user.is_artist"><strong>{{ user.passive_relationships.length }}</strong> Followers</p>
-        <p ng-if="!user.is_artist"><strong>{{ user.active_relationships.length }}</strong> Following</p>
-        <p>{{ user.bio }}</p>
-
-        <div ng-if="user.is_artist && !currentUser.is_artist">
-
+        <h2>{{ user.username }} <span class="role" ng-if="user.is_artist"><strong>Artist</strong></span></h2>
+        <a ng-href="/users/edit">
+          <button ng-if="currentUser.id === user.id"  class="btn btn-default btn-xs registration-button">Edit account</button>
+        </a>
+        <div class="follow-unfollow-button" ng-if="user.is_artist && !currentUser.is_artist">
           <form ng-submit="followArtist()" novalidate>
-            <button ng-hide="followingThisArtist">Follow</button>
+            <button class="btn btn-success btn-xs" ng-hide="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Follow</button>
           </form>
 
           <form ng-submit="unfollowArtist()" novalidate>
-            <button ng-show="followingThisArtist">Unfollow</button>
+            <button class="btn btn-success btn-xs" ng-show="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Unfollow</button>
           </form>
-
         </div>
+        <p id="profile-about">{{ user.bio }}</p>
+
       </div>
     </div>
   </div>
@@ -37,18 +34,18 @@
           <a href ng-click="$parent.selectTab(1)">Activity Feed</a>
         </li>
         <li ng-class="{ active:isSelected(2) }">
-          <a href ng-click="$parent.selectTab(2)">Likes</a>
+          <a href ng-click="$parent.selectTab(2)"><strong>{{ userLikes.length }}</strong> Likes</a>
         </li>
         <li ng-class="{ active:isSelected(3) }">
-          <a href ng-click="$parent.selectTab(3)">Artists</a>
+          <a href ng-click="$parent.selectTab(3)"><strong>{{ userRelationships.length }}</strong> Following</a>
         </li>
       </ul>
       <ul class="nav nav-pills" ng-if="user.is_artist" ng-init="$parent.tab = 4"><!-- Nav pills -->
         <li ng-class="{ active:isSelected(4) }">
-          <a href ng-click="$parent.selectTab(4)">Artworks</a>
+          <a href ng-click="$parent.selectTab(4)">Map</a>
         </li>
         <li ng-class="{ active:isSelected(5) }">
-          <a href ng-click="$parent.selectTab(5)">Map</a>
+          <a href ng-click="$parent.selectTab(5)"><strong>{{ artistArtworks.length }}</strong> Artworks</a>
         </li>
         <li ng-if="currentUser.id === user.id" ng-class="{ active:isSelected(6) }">
           <a href ng-click="$parent.selectTab(6)">Add Artwork</a>
@@ -110,7 +107,11 @@
         </div>
       </div>
 
-      <div ng-show="isSelected(4)"><!-- Artworks by this artist -->
+      <div ng-if="isSelected(4)"><!-- Map -->
+        <artist-artwork-map></artist-artwork-map>
+      </div>
+
+      <div ng-show="isSelected(5)"><!-- Artworks by this artist -->
         <div class="card-container">
           <div class="row">
             <div ng-repeat="artwork in artistArtworks | orderBy: '-created_at'" class="col-md-3">
@@ -134,10 +135,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div ng-if="isSelected(5)"><!-- Map -->
-        <artist-artwork-map></artist-artwork-map>
       </div>
       <div ng-if="isSelected(6)"><!-- Add artwork form -->
         <new-artwork-form></new-artwork-form>

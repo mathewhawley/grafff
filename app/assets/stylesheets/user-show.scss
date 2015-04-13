@@ -16,25 +16,35 @@
       margin: 10px 7px 10px 0;
     }
 
-    .profile-info {
-      p {
-        font-size: 50px;
-      }
-    }
-
     .role {
-      display: inline-block;
       color: $dark-grey;
-
-      strong {
-        font-size: 15px;
-      }
+      font-size: 15px;
     }
 
     .registration-button {
       display: block;
-      width: 97px;
       margin-bottom: 15px;
+    }
+
+    .profile-info {
+
+      .follow-unfollow-button {
+        margin-bottom: 20px;
+      }
+
+      i {
+        margin-right: 4px;
+      }
+
+      strong {
+        margin-right: 5px;
+      }
+
+      #profile-about {
+        font-size: 15px;
+        line-height: 1.5;
+        width: 600px;
+      }
     }
   }
 
