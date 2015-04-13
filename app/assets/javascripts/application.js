@@ -21,4 +21,5 @@
 //= require angular-moment.min
 //= require ng-map.min
 //= require bootstrap
+//= require ui-bootstrap-tpls-0.12.1
 //= require_tree .
