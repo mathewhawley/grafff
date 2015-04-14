@@ -18,10 +18,27 @@ class ArtworksController < ApplicationController
     render json: artwork
   end
 
-  # Homepage – gets all artwork to be rendered as markers on the main map
+  # Homepage – gets all artwork from past 30 days to be rendered as markers on the main map
   def main_map_artwork
-    main_map_artwork = Artwork.all.to_json(include: [ :comments, :likes, :user ])
+    main_map_artwork = Artwork.where(created_at: (Time.now.midnight - 30.day)..Time.now.midnight).to_json(include: [ :comments, :likes, :user ])
     render json: main_map_artwork
+  end
+
+  # Homepage – get artworks from selected date
+  def filter_by_date
+    date = params[:_json]
+    year = date.split(/-/)[0].to_i
+    month = date.split(/-/)[1].split(//)[1].to_i
+    artworks = Artwork.all
+    results = []
+    artworks.each do |artwork|
+      if (artwork.created_at.year && artwork.created_at.month) == (year && month)
+        results << artwork
+      else
+        results
+      end
+    end
+    render json: results
   end
 
   # Homepage - gets the 3 most recent artworks to display on the homepage
