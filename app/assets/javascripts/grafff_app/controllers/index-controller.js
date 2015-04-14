@@ -1,11 +1,13 @@
 app.controller('IndexController', [
   '$scope',
   '$http',
+  '$timeout',
   'UserFactory',
   'ArtworkFactory',
   function(
     $scope,
     $http,
+    $timeout,
     UserFactory,
     ArtworkFactory) {
 
@@ -18,7 +20,13 @@ app.controller('IndexController', [
   // Get all artworks for main map
   ArtworkFactory.getMainMapArtwork()
   .then(function(response) {
-    $scope.mapArtwork = response.data;
+    $scope.mapArtwork = [];
+    var iterator = 0;
+    for (var i = 0; i < response.data.length; i++) {
+      $timeout(function() {
+        $scope.mapArtwork.push(response.data[iterator++]);
+      }, i * 200);
+    }
   });
 
   // Get latest 3 artworks
@@ -31,7 +39,7 @@ app.controller('IndexController', [
   // ===========
 
   $scope.today = function() {
-    $scope.dt = new Date();
+    $scope.dt = null;
   };
   $scope.today();
 

@@ -224,9 +224,9 @@ artwork_19 = Artwork.create(
   title: 'Nunc molestie finibus', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
   user_id: artist_5.id, 
-  lat: 51.51756012663668, 
-  lng: -0.1614659526367177, 
-  address: '34 Bryanston Square, Marylebone, London W1H 2DY, UK', 
+  lat: 51.49875583109659, 
+  lng: -0.12885029101562395, 
+  address: '16 Deans Yd, Westminster, London SW1P 3PA, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/street-art-east-london.jpg', 
   created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_20 = Artwork.create(

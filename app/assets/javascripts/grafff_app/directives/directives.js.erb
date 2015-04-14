@@ -30,7 +30,7 @@ app.directive('validFile', function() {
   }
 });
 
-app.directive('datepickerPopup', function(SearchFactory) {
+app.directive('datepickerPopup', function(SearchFactory, $timeout) {
 
   return {
     require: 'ngModel',
@@ -42,9 +42,17 @@ app.directive('datepickerPopup', function(SearchFactory) {
         return ngModel.$modelValue;
       }, function(newValue) {
         // Get artworks with corresponding date from database, repopulate map
-        SearchFactory.filterArtwork(newValue).then(function(response) {
-          scope.mapArtwork = response.data;
-        });
+        if(newValue) {
+          SearchFactory.filterArtwork(newValue).then(function(response) {
+            scope.mapArtwork = [];
+            var iterator = 0;
+            for (var i = 0; i < response.data.length; i++) {
+              $timeout(function() {
+                scope.mapArtwork.push(response.data[iterator++]);
+              }, i * 200);
+            }
+          });
+        }
       });
     }
   }
