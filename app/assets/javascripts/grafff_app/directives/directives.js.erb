@@ -49,7 +49,7 @@ app.directive('datepickerPopup', function(SearchFactory, $timeout) {
             for (var i = 0; i < response.data.length; i++) {
               $timeout(function() {
                 scope.mapArtwork.push(response.data[iterator++]);
-              }, i * 200);
+              }, i * 100);
             }
           });
         }

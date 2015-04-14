@@ -25,7 +25,7 @@ app.controller('IndexController', [
     for (var i = 0; i < response.data.length; i++) {
       $timeout(function() {
         $scope.mapArtwork.push(response.data[iterator++]);
-      }, i * 200);
+      }, i * 100);
     }
   });
 
