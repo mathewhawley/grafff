@@ -63,7 +63,7 @@ artwork_1 = Artwork.create(
   lng: -0.10001117968749895, 
   address: '14 Charterhouse Square, London EC1M 6AX, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/23-Street-Art-London-Street-Art-Tour.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_2 = Artwork.create(
   title: 'Mauris efficitur vel tincident', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -72,7 +72,7 @@ artwork_2 = Artwork.create(
   lng: -0.1202672221679677, 
   address: '106 Argyle Street, Kings Cross, London WC1H 8EB, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Cranio_issa_16.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_3 = Artwork.create(
   title: 'Sed congue vulputate', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -81,7 +81,7 @@ artwork_3 = Artwork.create(
   lng: -0.1518529155273427, 
   address: 'Cundy Street, Belgravia, London SW1W, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Loft-2-sml.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 2
@@ -93,7 +93,7 @@ artwork_4 = Artwork.create(
   lng: -0.10893757128906145, 
   address: '1 Dibdin Row, London SE1 7BS, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/London-Street-Art-photos-20.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_5 = Artwork.create(
   title: 'Sem at malesuada rhoncus', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -102,7 +102,7 @@ artwork_5 = Artwork.create(
   lng: -0.07803852343749895, 
   address: '9 Cutler Street, London E1 7DJ, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Street-Art-London-UK-TMagicworld.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_6 = Artwork.create(
   title: 'Phasellus tempus', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -111,7 +111,7 @@ artwork_6 = Artwork.create(
   lng: -0.08902485156249895, 
   address: '1 Provost Street, London N1, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Streetart-London-uk-blog-tmagicworld-nuart-festival-1.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_7 = Artwork.create(
   title: 'Sed sed placerat mauris', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -120,7 +120,7 @@ artwork_7 = Artwork.create(
   lng: -0.11786396289062395, 
   address: '21 Cowdenbeath Path, London N1 0LE, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/article-2354486-1A9EC6EE000005DC-226_964x658.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_8 = Artwork.create(
   title: 'Justo euismod sit', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -129,7 +129,7 @@ artwork_8 = Artwork.create(
   lng: -0.12747699999999895, 
   address: '16 Great College Street, Westminster, London SW1P 3RX, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_6281bfe517bc3503f96f464fad1d1537.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_9 = Artwork.create(
   title: 'Vitae luctus justo', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -138,7 +138,7 @@ artwork_9 = Artwork.create(
   lng: -0.1628392436523427, 
   address: '23 Brown Street, Marylebone, London W1H 5YY, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_93d11cfde35a1c6113894a572f02e8d1.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 3
@@ -150,7 +150,7 @@ artwork_10 = Artwork.create(
   lng: -0.15150959277343645, 
   address: '17A Gerald Road, Belgravia, London SW1W 9EH, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a0c020d2e5f21519fefd8a8bd650fbf9.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_11 = Artwork.create(
   title: 'Luctus justo euismod', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -159,7 +159,7 @@ artwork_11 = Artwork.create(
   lng: -0.0845616557617177, 
   address: '38A Snowsfields, London SE1 3SU, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a8e86535750520d540353c2ff507aa37.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_12 = Artwork.create(
   title: 'Vel aliquet', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -168,7 +168,7 @@ artwork_12 = Artwork.create(
   lng: -0.0845616557617177, 
   address: '3 Finsbury Avenue, London EC2M, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a8e86535750520d540353c2ff507aa37.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_13 = Artwork.create(
   title: 'Bibendum tellus at', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -177,7 +177,7 @@ artwork_13 = Artwork.create(
   lng: -0.09726459765624895, 
   address: '3-5 Goswell Road, London EC1M 7AH, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_dcf01cbf8d4ce7a9937ddeda6e3ae710.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_14 = Artwork.create(
   title: 'Bibendum tellus at', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -186,7 +186,7 @@ artwork_14 = Artwork.create(
   lng: -0.10619098925781145, 
   address: '30-31 Royal Road, London SE17, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/brooklyn-street-art-roa-jaime-rojo-atlanta-12-13-web-6.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_15 = Artwork.create(
   title: 'Cursus leo', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -195,7 +195,7 @@ artwork_15 = Artwork.create(
   lng: -0.13709003710937395, 
   address: '30 Lupus Street, Pimlico, London SW1V 3DZ, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/fauxreel_joe_1000.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 4
@@ -207,7 +207,7 @@ artwork_17 = Artwork.create(
   lng: -0.1031010844726552, 
   address: '8-20 Pocock Street, London SE1 0BW, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/london-street-art-tour-daniel-rolnik-insa-ungnilish-broken-fingaz-sunglasses-mustache.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_18 = Artwork.create(
   title: 'Ut sollicitudin', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -216,7 +216,7 @@ artwork_18 = Artwork.create(
   lng: -0.0701421000976552, 
   address: '86 Queensbridge Road, London E2 8PA, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a0c020d2e5f21519fefd8a8bd650fbf9.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 5
@@ -228,7 +228,7 @@ artwork_19 = Artwork.create(
   lng: -0.1614659526367177, 
   address: '34 Bryanston Square, Marylebone, London W1H 2DY, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/street-art-east-london.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_20 = Artwork.create(
   title: 'Justo euismod sit', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -237,7 +237,7 @@ artwork_20 = Artwork.create(
   lng: -0.06911213183593645, 
   address: '9 Hanbury Street, London E1 5JJ, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/23-Street-Art-London-Street-Art-Tour.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_21 = Artwork.create(
   title: 'Auctor tristique', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -246,7 +246,7 @@ artwork_21 = Artwork.create(
   lng: -0.0653355815429677, 
   address: '42 Fieldgate Street, London E1 1ES, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Cranio_issa_16.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_22 = Artwork.create(
   title: 'Suscipit purus', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -255,7 +255,7 @@ artwork_22 = Artwork.create(
   lng: -0.08696491503906145, 
   address: '68 Bridport Place, London N1 5DS, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Cranio_issa_16.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 6
@@ -267,7 +267,7 @@ artwork_23 = Artwork.create(
   lng: -0.1614659526367177, 
   address: '36 King Street, London EC2V 8BB, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/street-art-east-london.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_24 = Artwork.create(
   title: 'Tristique non', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -276,7 +276,7 @@ artwork_24 = Artwork.create(
   lng: -0.0598424174804677, 
   address: '63 Westgate Street, London E8 3RL, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Loft-2-sml.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 7
@@ -288,7 +288,7 @@ artwork_25 = Artwork.create(
   lng: -0.0866215922851552, 
   address: 'Catesby Street, London SE17, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/London-Street-Art-photos-20.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_26 = Artwork.create(
   title: 'Nunc molestie finibus', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -297,7 +297,7 @@ artwork_26 = Artwork.create(
   lng: -0.0612157084960927, 
   address: 'Tench Street, St Katharine\'s & Wapping, London E1W, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Street-Art-London-UK-TMagicworld.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_27 = Artwork.create(
   title: 'Nullam at diam', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -306,7 +306,7 @@ artwork_27 = Artwork.create(
   lng: -0.0584691264648427, 
   address: '31 Brady Street, London E1, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/Streetart-London-uk-blog-tmagicworld-nuart-festival-1.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_28 = Artwork.create(
   title: 'Euismod sit', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -315,7 +315,7 @@ artwork_28 = Artwork.create(
   lng: -0.0673955180664052, 
   address: '37E Baxendale Street, London E2 7BY, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/article-2354486-1A9EC6EE000005DC-226_964x658.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_29 = Artwork.create(
   title: 'Vulputate convallis', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -324,7 +324,7 @@ artwork_29 = Artwork.create(
   lng: -0.04439289355468645, 
   address: '86 Grantley Street, London E1 4BT, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_6281bfe517bc3503f96f464fad1d1537.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 # Artist 8
@@ -336,7 +336,7 @@ artwork_30 = Artwork.create(
   lng: -0.0413029887695302, 
   address: '238 Roman Road, London E2 0RY, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a0c020d2e5f21519fefd8a8bd650fbf9.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_31 = Artwork.create(
   title: 'Imperdiet', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -345,7 +345,7 @@ artwork_31 = Artwork.create(
   lng: -0.0371831157226552, 
   address: '20 White Tower Way, London E1 4RN, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_a8e86535750520d540353c2ff507aa37.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_32 = Artwork.create(
   title: 'Donec id eros', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -354,7 +354,7 @@ artwork_32 = Artwork.create(
   lng: -0.05949909472656145, 
   address: 'Prospect Street, London SE16 2EQ, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/big_thumb_dcf01cbf8d4ce7a9937ddeda6e3ae710.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 artwork_33 = Artwork.create(
   title: 'Lacus mauris', 
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis massa sit amet mattis aliquam. Curabitur ac leo ac enim dictum finibus. Morbi et venenatis augue, eget tincidunt neque. Suspendisse faucibus gravida ante vitae volutpat. Nunc facilisis quam quis nunc molestie finibus. Aliquam sit amet urna nulla. Nunc eget lorem facilisis, bibendum tellus at, bibendum neque. Sed congue vulputate convallis. Donec id eros ut ex auctor tristique non sit amet felis. Cras bibendum nec lacus vitae consequat. Nunc aliquam velit metus, vitae luctus justo euismod sit amet. Mauris efficitur vel velit et tincidunt. Sed sed placerat mauris. Nullam at diam vitae arcu mattis interdum. Phasellus tempus, felis vel euismod fermentum, dolor lacus mattis tellus, vel aliquet lacus mauris vel urna. Sed quis nibh imperdiet, cursus leo in, suscipit purus. Ut sollicitudin, sem at malesuada rhoncus, dolor ipsum dapibus quam, id commodo tellus urna id turpis.', 
@@ -363,7 +363,7 @@ artwork_33 = Artwork.create(
   lng: -0.1264470317382802, 
   address: '48 Wilcox Road, London SW8 2UX, UK', 
   image: 'https://s3-eu-west-1.amazonaws.com/grafff/artwork_pics/brooklyn-street-art-roa-jaime-rojo-atlanta-12-13-web-6.jpg', 
-  created_at: Faker::Time.between(14.days.ago, Time.now, :day))
+  created_at: Faker::Time.between(100.days.ago, Time.now, :day))
 
 
 

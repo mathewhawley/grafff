@@ -52,5 +52,6 @@ Rails.application.routes.draw do
 
   # Search
   post '/users/search' => 'users#search_users'
+  post '/artworks/filter_by_date' => 'artworks#filter_by_date'
   
 end
