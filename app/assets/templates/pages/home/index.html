@@ -9,7 +9,16 @@
     <h4>Filter by date</h4>
     <div class="map-date-picker">
       <p class="input-group">
-        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+        <input
+        type="text"
+        class="form-control" 
+        datepicker-popup="MMMM-yyyy"
+        ng-model="dt"
+        is-open="opened"
+        datepicker-options="dateOptions"
+        date-disabled="disabled(date, mode)"
+        ng-required="true"
+        close-text="Close" />
         <span class="input-group-btn">
           <button type="button" class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
         </span>

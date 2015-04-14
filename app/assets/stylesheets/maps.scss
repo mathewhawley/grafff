@@ -30,7 +30,8 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 387px !important;
+  top: 455px !important;
+  width: 284px;
 
   li .pull-left button {
     margin: -5px 0 10px;
@@ -42,6 +43,7 @@
 
   .ng-isolate-scope table {
     outline: 0;
+    margin: 0 auto 3px;
   }
 }
 
