@@ -2,59 +2,59 @@
 
 /* Not logged in landing page */
 
-.landing-page-image {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://s3-eu-west-1.amazonaws.com/grafff/landing_page_v1.jpg');
-  background-size: cover;
+// .landing-page-image {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-image: url('https://s3-eu-west-1.amazonaws.com/grafff/landing_page_v1.jpg');
+//   background-size: cover;
 
-  .welcome-message {
-    position: absolute;
-    top: 32.5%;
-    width: 100%;
-    color: #fff;
-    text-align: center;
+//   .welcome-message {
+//     position: absolute;
+//     top: 32.5%;
+//     width: 100%;
+//     color: #fff;
+//     text-align: center;
 
-    .welcome-text {
-      margin-bottom: 3em;
+//     .welcome-text {
+//       margin-bottom: 3em;
 
-      img {
-        margin-bottom: 10px;
-      }
-    }
+//       img {
+//         margin-bottom: 10px;
+//       }
+//     }
     
-    button {
-      display: block;
-      margin: 0 auto;
-      width: 250px;
-    }
+//     button {
+//       display: block;
+//       margin: 0 auto;
+//       width: 250px;
+//     }
 
-    .welcome-text + button {
-      margin-bottom: 10px;
-    }
-  }
+//     .welcome-text + button {
+//       margin-bottom: 10px;
+//     }
+//   }
 
-  /* Sign in/up modals */
+//   /* Sign in/up modals */
 
-  .modal.custom-log-in .modal-dialog {
-    position: absolute;
-    top: 20%;
-    width: 100%;
-  }
+//   .modal.custom-log-in .modal-dialog {
+//     position: absolute;
+//     top: 20%;
+//     width: 100%;
+//   }
 
-  .modal.custom-sign-in .modal-dialog {
-    position: absolute;
-    width: 100%;
-  }
+//   .modal.custom-sign-in .modal-dialog {
+//     position: absolute;
+//     width: 100%;
+//   }
 
-  .modal-content {
-    width: 450px;
-    margin: 0 auto;
-    box-shadow: none;
-  }
-}
+//   .modal-content {
+//     width: 450px;
+//     margin: 0 auto;
+//     box-shadow: none;
+//   }
+// }
 
 #modal-form-wrapper {
   width: 350px;
