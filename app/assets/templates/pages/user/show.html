@@ -12,7 +12,7 @@
         </a>
         <div class="follow-unfollow-button" ng-if="user.is_artist && !currentUser.is_artist">
           <form ng-submit="followArtist()" novalidate>
-            <button class="btn btn-success btn-xs" ng-hide="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Follow</button>
+            <button ng-disabled="!currentUser" class="btn btn-success btn-xs" ng-hide="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Follow</button>
           </form>
 
           <form ng-submit="unfollowArtist()" novalidate>

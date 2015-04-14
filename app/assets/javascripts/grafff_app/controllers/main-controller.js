@@ -22,4 +22,8 @@ app.controller('MainController', [
     $route.reload();
   };
 
+  $scope.redirect = function() {
+    $location.path('/users/sign_in/#');
+  }
+
 }]);

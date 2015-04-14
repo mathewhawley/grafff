@@ -2,6 +2,7 @@ app.controller('ArtworkShowController', [
   '$scope',
   '$http',
   '$routeParams',
+  '$location',
   'UserFactory',
   'ArtworkFactory',
   'CommentFactory',
@@ -10,6 +11,7 @@ app.controller('ArtworkShowController', [
     $scope,
     $http,
     $routeParams,
+    $location,
     UserFactory,
     ArtworkFactory,
     CommentFactory,
@@ -33,7 +35,9 @@ app.controller('ArtworkShowController', [
     $scope.artwork = response.data;
 
     // Once we have 'this' artwork, use it to check if the 'current user' already likes it and show the appropriate like/unlike button
-    checkForLike($scope.currentUser.id, $scope.artwork.id);
+    if($scope.currentUser) {
+      checkForLike($scope.currentUser.id, $scope.artwork.id);
+    }
   });
 
   // Get all comments for this artwork
