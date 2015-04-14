@@ -13,7 +13,8 @@ app.controller('ArtworkShowController', [
     UserFactory,
     ArtworkFactory,
     CommentFactory,
-    LikeFactory) {
+    LikeFactory
+  ) {
 
   // Function to check if current user already likes 'this' artwork – called on page load
   function checkForLike(userId, artworkId) {

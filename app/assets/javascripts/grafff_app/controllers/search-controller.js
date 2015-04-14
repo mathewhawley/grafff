@@ -5,7 +5,8 @@ app.controller('SearchController', [
   function(
     $scope,
     $http,
-    SearchFactory) {
+    SearchFactory
+  ) {
 
   $scope.ifResults = true;
 

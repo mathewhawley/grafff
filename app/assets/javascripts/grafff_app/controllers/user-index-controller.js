@@ -5,7 +5,8 @@ app.controller('UserIndexController', [
   function(
     $http,
     $scope,
-    UserFactory) {
+    UserFactory
+  ) {
 
   UserFactory.getAllArtists()
   .then(function(response) {

@@ -9,7 +9,8 @@ app.controller('MainController', [
     $http,
     $location,
     $route,
-    UserFactory) {
+    UserFactory
+  ) {
 
   // Get current user object
   UserFactory.getCurrentUser()
