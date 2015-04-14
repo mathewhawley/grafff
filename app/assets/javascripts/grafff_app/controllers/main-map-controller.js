@@ -28,10 +28,6 @@ app.controller('MainMapController', [
   };
   $scope.today();
 
-  $scope.clear = function () {
-    $scope.dt = null;
-  };
-
   // Disable weekend selection
   $scope.disabled = function(date, mode) {
     return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
