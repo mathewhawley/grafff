@@ -24,14 +24,13 @@ class ArtworksController < ApplicationController
     render json: main_map_artwork
   end
 
-  # Homepage – get artworks from selected date
+  # Homepage – get artworks based on datepicker selection
   def filter_by_date
     date = params[:_json]
     year = date.split(/-/)[0].to_i
     month = date.split(/-/)[1].to_i
-    artworks = Artwork.all
     results = []
-    artworks.each do |artwork|
+    Artwork.all.each do |artwork|
       if (artwork.created_at.year && artwork.created_at.month) == (year && month)
         results << artwork
       else

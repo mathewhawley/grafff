@@ -13,15 +13,16 @@
     border-radius: 5px;
     border: 1px solid $mid-grey;
 
-    h4 {
-      margin: 17px;
+    p {
+      margin: 12px 17px 10px;
     }
 
     .map-date-picker {
       margin: 0 auto;
-      width: 285px;
+      width: 320px;
 
       .input-group {
+        margin-top: 0;
         margin-bottom: 16px;
       }
     }
