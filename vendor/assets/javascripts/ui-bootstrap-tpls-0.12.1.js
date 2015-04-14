@@ -1003,7 +1003,7 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
   showWeeks: true,
   startingDay: 0,
   yearRange: 20,
-  minDate: null,
+  minDate: '01-01-2015',
   maxDate: Date.now()
 })
 
