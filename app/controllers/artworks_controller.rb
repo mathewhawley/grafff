@@ -28,7 +28,7 @@ class ArtworksController < ApplicationController
   def filter_by_date
     date = params[:_json]
     year = date.split(/-/)[0].to_i
-    month = date.split(/-/)[1].split(//)[1].to_i
+    month = date.split(/-/)[1].to_i
     artworks = Artwork.all
     results = []
     artworks.each do |artwork|
