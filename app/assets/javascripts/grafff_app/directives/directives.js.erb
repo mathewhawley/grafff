@@ -4,8 +4,8 @@ app.directive('file', function() {
     scope: {
       file: '@'
     },
-    link: function(scope, el, attrs){
-      el.bind('change', function(event){
+    link: function(scope, el, attrs) {
+      el.bind('change', function(event) {
         var files = event.target.files;
         var file = files[0];
         scope.file = file;
@@ -16,7 +16,7 @@ app.directive('file', function() {
   };
 });
 
-app.directive('validFile',function() {
+app.directive('validFile', function() {
   return {
     require: 'ngModel',
     link: function(scope, element, attrs, ngModel) {
@@ -30,27 +30,25 @@ app.directive('validFile',function() {
   }
 });
 
-app.directive('datepickerPopup', function() {
-  return {
-    restrict: 'EAC',
-    require: 'ngModel',
-    link: function(scope, element, attrs, controller) {
-      controller.$formatters.shift();
-    }
-  }
-});
+app.directive('datepickerPopup', function(SearchFactory) {
 
-app.directive('datepickerPopup', function () {
   return {
     require: 'ngModel',
     link: function(scope, element, attrs, ngModel) {
-      scope.$watch(function () {
+      // Add nicer formatting to initial date/time display
+      ngModel.$formatters.shift();
+      // Watch for a date change on the datepicker
+      scope.$watch(function() {
         return ngModel.$modelValue;
       }, function(newValue) {
-        console.log(newValue);
+        // Get artworks with corresponding date from database, repopulate map
+        SearchFactory.filterArtwork(newValue).then(function(response) {
+          scope.mapArtwork = response.data;
+        });
       });
     }
   }
+
 });
 
 app.directive('artistArtworkMap', function() {
