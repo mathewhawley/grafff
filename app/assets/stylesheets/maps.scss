@@ -29,8 +29,11 @@
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 505px !important;
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  margin-top: -108px;
+  margin-left: -142px;
   width: 284px;
 
   li .pull-left p {
