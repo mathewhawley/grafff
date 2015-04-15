@@ -4018,7 +4018,7 @@ angular.module("template/datepicker/popup.html", []).run(["$templateCache", func
     "<ul class=\"dropdown-menu\" ng-style=\"{display: (isOpen && 'block') || 'none', top: position.top+'px', left: position.left+'px'}\" ng-keydown=\"keydown($event)\">\n" +
     " <li ng-if=\"showButtonBar\" style=\"padding:10px 9px 2px\">\n" +
     "   <span class=\"pull-left\">\n" +
-    "     <button type=\"button\" class=\"btn btn-sm btn-primary\" ng-click=\"select('today')\">Current Month</button>\n" +
+    "     <p><strong>Select month:</strong></p>\n" +
     "   </span>\n" +
     "   <button type=\"button\" class=\"close\" ng-click=\"close()\"><span>&times;</span></button>\n" +
     " </li>\n" +

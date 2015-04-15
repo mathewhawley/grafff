@@ -5,7 +5,8 @@ app.factory('SearchFactory', ['$http', function($http) {
       return $http.post('/users/search', query);
     },
     filterArtwork: function(date) {
-      return $http.post('/artworks/filter_by_date', date);
+      unixtime = Date.parse(date) / 1000;
+      return $http.post('/artworks/filter_by_date', unixtime);
     }
   };
 

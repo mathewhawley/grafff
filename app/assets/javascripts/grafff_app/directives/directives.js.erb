@@ -35,8 +35,6 @@ app.directive('datepickerPopup', function(SearchFactory, $timeout) {
   return {
     require: 'ngModel',
     link: function(scope, element, attrs, ngModel) {
-      // Add nicer formatting to initial date/time display
-      ngModel.$formatters.shift();
       // Watch for a date change on the datepicker
       scope.$watch(function() {
         return ngModel.$modelValue;
