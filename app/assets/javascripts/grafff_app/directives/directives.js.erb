@@ -58,24 +58,6 @@ app.directive('datepickerPopupCustom', ['SearchFactory', '$timeout', function(Se
 
 }]);
 
-// scope.$watch(function($parent) {
-//   return ngModel.$modelValue;
-// }, function(newValue) {
-//   // Get artworks with corresponding date from database, repopulate map
-//   if(newValue) {
-//     SearchFactory.filterArtwork(newValue).then(function(response) {
-//       scope.mapArtwork = [];
-//       var iterator = 0;
-//       for (var i = 0; i < response.data.length; i++) {
-//         $timeout(function() {
-//             scope.mapArtwork.push(response.data[iterator++]);
-//             console.log(scope.mapArtwork);
-//         }, i * 100);
-//       }
-//     });
-//   }
-// });
-
 app.directive('artistArtworkMap', function() {
   
   return {
