@@ -1,5 +1,17 @@
 @import 'colors';
 
+/* Header section */
+
+.index-header {
+  height: 600px;
+  background-image: url('https://s3-eu-west-1.amazonaws.com/grafff/landing_page_v1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 65px;
+}
+
+
 /* What's new section */
 
 .card-container {
