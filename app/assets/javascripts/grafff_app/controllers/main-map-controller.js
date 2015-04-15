@@ -16,7 +16,7 @@ app.controller('MainMapController', [
     for (var i = 0; i < response.data.length; i++) {
       $timeout(function() {
         $scope.mapArtwork.push(response.data[iterator++]);
-      }, i * 100);
+      }, i * 50);
     }
   });
 
