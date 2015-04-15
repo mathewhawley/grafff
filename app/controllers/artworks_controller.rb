@@ -20,7 +20,8 @@ class ArtworksController < ApplicationController
 
   # Homepage – gets all artwork from past 30 days to be rendered as markers on the main map
   def main_map_artwork
-    main_map_artwork = Artwork.where(created_at: (Time.now.midnight - 30.day)..Time.now.midnight).to_json(include: [ :comments, :likes, :user ])
+    # main_map_artwork = Artwork.where(created_at: (Time.now.midnight - 30.day)..Time.now.midnight).to_json(include: [ :comments, :likes, :user ])
+    main_map_artwork = Artwork.all.to_json(include: [ :comments, :likes, :user ])
     render json: main_map_artwork
   end
 

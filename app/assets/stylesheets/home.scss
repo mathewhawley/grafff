@@ -3,23 +3,23 @@
 /* Header section */
 
 .index-header {
-  height: 600px;
+  height: 650px;
   background-image: url('https://s3-eu-west-1.amazonaws.com/grafff/landing_page_v1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-bottom: 65px;
-  padding-top: 170px;
+  margin-bottom: 100px;
+  padding-top: 180px;
   text-align: center;
 }
 
-.intro {
+.index-intro-wrapper {
   width: 60%;
   margin: 0 auto;
 }
 
 #index-welcome {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   color: #fff;
   font-size: 50px;
   line-height: 1.15;
@@ -27,7 +27,7 @@
 }
 
 .index-map-btn {
-  padding: 18px 38px;
+  padding: 18px 40px;
   border: 1px solid #fff;
   border-radius: 30px;
   font-size: 16px;
@@ -41,6 +41,19 @@
   transition: .3s;
 }
 
+/* Intro section */
+
+#index-intro {
+  width: 700px;
+  margin: 0 auto 90px;
+  text-align: center;
+
+  .index-intro-section-copy {
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: $dark-grey;
+  }
+}
 
 /* What's new section */
 
