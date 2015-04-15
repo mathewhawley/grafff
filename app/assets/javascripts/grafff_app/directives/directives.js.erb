@@ -30,7 +30,7 @@ app.directive('validFile', function() {
   }
 });
 
-app.directive('datepickerPopup', function(SearchFactory, $timeout) {
+app.directive('datepickerPopupCustom', function(SearchFactory, $timeout) {
 
   return {
     require: 'ngModel',
@@ -41,6 +41,7 @@ app.directive('datepickerPopup', function(SearchFactory, $timeout) {
       }, function(newValue) {
         // Get artworks with corresponding date from database, repopulate map
         if(newValue) {
+          console.log(newValue);
           SearchFactory.filterArtwork(newValue).then(function(response) {
             scope.mapArtwork = [];
             var iterator = 0;
@@ -56,6 +57,24 @@ app.directive('datepickerPopup', function(SearchFactory, $timeout) {
   }
 
 });
+
+// scope.$watch(function($parent) {
+//   return ngModel.$modelValue;
+// }, function(newValue) {
+//   // Get artworks with corresponding date from database, repopulate map
+//   if(newValue) {
+//     SearchFactory.filterArtwork(newValue).then(function(response) {
+//       scope.mapArtwork = [];
+//       var iterator = 0;
+//       for (var i = 0; i < response.data.length; i++) {
+//         $timeout(function() {
+//             scope.mapArtwork.push(response.data[iterator++]);
+//             console.log(scope.mapArtwork);
+//         }, i * 100);
+//       }
+//     });
+//   }
+// });
 
 app.directive('artistArtworkMap', function() {
   
