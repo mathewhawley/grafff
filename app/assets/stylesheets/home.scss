@@ -3,13 +3,13 @@
 /* Header section */
 
 .index-header {
-  height: 650px;
+  height: 700px;
   background-image: url('https://s3-eu-west-1.amazonaws.com/grafff/landing_page_v1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   margin-bottom: 100px;
-  padding-top: 180px;
+  padding-top: 220px;
   text-align: center;
 }
 
@@ -205,5 +205,34 @@
   .artist-thumbnail:hover, .user-thumbnail:hover {
     box-shadow: 0px 0px 10px 0px $mid-grey;
     border-radius: 5px;
+  }
+}
+
+#index-outro {
+  margin: 80px auto;
+  padding: 80px;
+  border-top: 1px solid $mid-grey;
+  text-align: center;
+
+  .index-outro-section-copy {
+    width: 700px;
+    font-size: 18px;
+    color: $dark-grey;
+    margin: 0 auto 60px;
+  }
+
+  #index-signup-btn {
+    padding: 18px 40px;
+    background: rgb(51, 122, 183);
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff;
+    transition: .3s;
+  }
+
+  #index-signup-btn:hover {
+    color: #fff;
+    background: rgb(39, 96, 144);
+    transition: .3s;
   }
 }
