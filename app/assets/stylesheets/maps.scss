@@ -1,7 +1,8 @@
 @import 'colors';
 
 #main-map {
-  height: 100%;
+  margin-top: -100px;
+  height: calc(100% - 60px);
 
   .date-search {
     position: absolute;
