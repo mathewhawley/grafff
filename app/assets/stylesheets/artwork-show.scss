@@ -47,6 +47,34 @@
   }
 }
 
+.artwork-info {
+  margin: 50px 0;
+  text-align: center;
+
+  i {
+    margin: 0 3px 0 20px;
+  }
+
+  .artwork-info-heading {
+    color: $dark-grey;
+    margin-left: 20px;
+  }
+}
+.artwork-info-heading,
+.artwork-info-content {
+  display: inline-block;
+  margin: 0;
+}
+.artwork-info-segment {
+  display: inline-block;
+  margin-right: 35px;
+  border-left: 1px solid $mid-grey;
+  padding: 10px 0;
+}
+.artwork-info .artwork-info-segment:first-child {
+  border-left: none;
+}
+
 .artwork-body {
 
   .artwork-body-copy {
@@ -111,6 +139,15 @@
   }
 
   .artwork-aside {
+    .like-buttons {
+      width: 100%;
+      margin-bottom: 20px;
+
+      button {
+        width: 100%;
+      }
+    }
+
     i {
       margin-right: 5px;
     }

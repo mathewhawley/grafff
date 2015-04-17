@@ -16,20 +16,33 @@
 </div>
 
 <div id="wrapper">
+  <div class="artwork-info">
+    <div class="artwork-info-segment">
+      <p class="artwork-info-heading"><i class="fa fa-thumbs-up"></i></p>
+      <p class="artwork-info-content">{{ artworkLikes.length }}</p>
+    </div>
+    <div class="artwork-info-segment">
+      <p class="artwork-info-heading"><i class="fa fa-comment"></i></p>
+      <p class="artwork-info-content">{{ artworkComments.length }}</p>
+    </div>
+    <div class="artwork-info-segment">
+      <p class="artwork-info-heading"><i class="fa fa-calendar"></i></p>
+      <p class="artwork-info-content">{{ artwork.created_at | amCalendar }}</p>
+    </div>
+    <div class="artwork-info-segment">
+      <p class="artwork-info-heading"><i class="fa fa-map-marker"></i></p>
+      <p class="artwork-info-content">{{ artwork.address }}</p>
+    </div>
+  </div>
+
   <div class="row artwork-body"><!-- Artwork information: description, location, likes etc -->
     <div class="col-md-7">
       <div class="artwork-body-copy"><!-- Main: Description -->
         <p id="artwork-description">{{ artwork.description }}</p>
       </div>
-      
-      <div ng-if="(artwork.user.id !== currentUser.id) && !currentUser.is_artist"><!-- Likes -->
-        <button ng-disabled="!currentUser" class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork()">Like</button>
-        <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork()">Unlike</button>
-        <p>Likes: {{ artworkLikes.length }}</p>
-      </div>
 
       <div class="comment-area"><!-- Comments -->
-        <h3>Comments: ({{ artworkComments.length }})</h3>
+        <!-- <h4>Comments</h4> -->
         <div><!-- Comment field -->
           <form ng-keypress="($event.which === 13) ? postComment(commentContent, artwork.id) : 0">
             <textarea ng-disabled="!currentUser" id="comment-field" class="form-control" ng-model="commentContent" placeholder="Write a commment" ></textarea>
@@ -51,7 +64,11 @@
       </div>
     </div>
 
-    <div class="col-md-5 artwork-aside"><!-- Aside: Map, likes, address -->
+    <div class="col-md-5 artwork-aside"><!-- Aside: Map, like button -->
+      <div class="like-buttons" ng-if="(artwork.user.id !== currentUser.id) && !currentUser.is_artist"><!-- Likes -->
+        <button ng-disabled="!currentUser" class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork()">Like</button>
+        <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork()">Unlike</button>
+      </div>
       <map id="artwork-map"
         zoom="15"
         center="{{ artwork.lat }}, {{ artwork.lng }}"
@@ -60,7 +77,6 @@
         <marker position="{{ artwork.lat }}, {{ artwork.lng }}">
         </marker>
       </map>
-      <p><i class="fa fa-map-marker"></i>{{ artwork.address }}</p>
       
     </div>
   </div>

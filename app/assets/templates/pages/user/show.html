@@ -8,15 +8,15 @@
       <div class="profile-info col-md-9"><!-- Profile information -->
         <h2>{{ user.username }} <span class="role" ng-if="user.is_artist"><strong>Artist</strong></span></h2>
         <a ng-href="/users/edit">
-          <button ng-if="currentUser.id === user.id"  class="btn btn-default btn-xs registration-button">Edit account</button>
+          <button ng-if="currentUser.id === user.id"  class="btn btn-default btn-sm registration-button">Edit account</button>
         </a>
         <div class="follow-unfollow-button" ng-if="user.is_artist && !currentUser.is_artist">
           <form ng-submit="followArtist()" novalidate>
-            <button ng-disabled="!currentUser" class="btn btn-success btn-xs" ng-hide="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Follow</button>
+            <button ng-disabled="!currentUser" class="btn btn-success btn-sm" ng-hide="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Follow</button>
           </form>
 
           <form ng-submit="unfollowArtist()" novalidate>
-            <button class="btn btn-success btn-xs" ng-show="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Unfollow</button>
+            <button class="btn btn-success btn-sm" ng-show="followingThisArtist"><i class="fa fa-users"></i><strong>{{ user.passive_relationships.length }}</strong>Unfollow</button>
           </form>
         </div>
         <p id="profile-about">{{ user.bio }}</p>
