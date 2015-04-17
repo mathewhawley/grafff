@@ -13,6 +13,17 @@
     border-radius: 5px;
     border: 1px solid $mid-grey;
 
+    .date-picker-title {
+      display: inline-block;
+      font-weight: bold;
+      margin: 18px 17px;
+    }
+
+    a {
+      float: right;
+      margin: 13px 17px 0 0;
+    }
+
     p {
       margin: 12px 17px 10px;
     }
