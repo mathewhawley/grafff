@@ -66,7 +66,58 @@
 
 /* Activity Feed */
 
+.activity-feed {
+  width: 75%;
+  margin: 0 auto;
+
+  a {
+    color: black; 
+  }
+
+  .activity-feed-item {
+    padding: 25px;
+    background: #fafafa;
+    margin-bottom: 5px;
+    border-radius: 3px;
+
+    .activity-feed-artist {
+      margin-bottom: 5px;
+    }
+    
+    .activity-feed-artist-name {
+      color: $dark-grey;
+    }
+    strong {
+      color: black;
+    }
+
+    .feed-info-wrapper {
+      
+      .feed-info {
+        display: inline-block;
+        margin: 0 7px;
+
+        i {
+          margin-right: 3px;
+          color: $dark-grey;
+        }
+      }
+      .feed-info:first-child {
+        border-right: 1px solid $dark-grey;
+        padding-right: 18px;
+        margin-left: 8px;
+      }
+    }
+  }
+  .activity-feed-item:hover {
+    background: #f6f6f6;
+  }
+}
 .activity-feed-profile-pic {
   width: 30px;
+  margin-right: 5px;
   border-radius: 50%;
+}
+.activity-feed-artist-name {
+  display: inline-block;
 }

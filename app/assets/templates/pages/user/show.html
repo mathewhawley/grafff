@@ -55,13 +55,19 @@
     
     <div><!-- Content -->
       <div ng-if="isSelected(1)"><!-- Activity Feed -->
-        <div ng-repeat="artwork in feedArtworks | orderBy: '-created_at' | limitTo: '20'">
-          <!-- <img ng-src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic"> -->
-          <p>{{ artwork.user.username }} has posted a new artwork!</p>
-          <p>{{ artwork.title }}</p>
-          <p>{{ artwork.address }}</p>
-          <p>{{ artwork.created_at | amCalendar }}</p>
-          <hr>
+        <div class="activity-feed" ng-repeat="artwork in feedArtworks | orderBy: '-created_at' | limitTo: '12'">
+          <a href="#/artworks/{{ artwork.id }}">
+            <div class="activity-feed-item">
+              <div class="activity-feed-artist">
+                <img ng-src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic">
+                <p class="activity-feed-artist-name"><strong>{{ artwork.user.username }}</strong> has posted a new artwork!</p>
+              </div>
+              <div class="feed-info-wrapper">
+                <p class="feed-info"><i class="fa fa-calendar"></i> {{ artwork.created_at | amCalendar }}</p>
+                <p class="feed-info"><i class="fa fa-map-marker"></i> {{ artwork.address }}</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
       <div ng-if="isSelected(2)"><!-- Likes -->
