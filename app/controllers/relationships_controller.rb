@@ -35,17 +35,15 @@ class RelationshipsController < ApplicationController
   def activity_feed
     user = User.find(params[:id])
     followed_artist_ids = user.active_relationships.map { |relationship| relationship.followed_id }
-    followed_artist_artworks = []
-    Artwork.all.each do |artwork|
-      if (followed_artist_ids.include?(artwork.user_id))
-        artwork_object = Artwork.where(user_id: artwork.user_id).to_json(include: [ :user, :comments, :likes ])
-        ruby_hash = JSON.parse(artwork_object)
-        followed_artist_artworks << ruby_hash[0]
-      else
-        followed_artist_artworks
-      end
+    
+    artworks = []
+    followed_artist_ids.each do |id|
+      artwork_json = Artwork.where(user_id: id).to_json(include: [ :user ])
+      artwork_ruby = JSON.parse(artwork_json)
+      artworks << artwork_ruby
     end
-    render json: followed_artist_artworks
+
+    render json: artworks.flatten
   end
 
 end

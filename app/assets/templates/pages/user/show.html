@@ -58,7 +58,10 @@
         <div ng-repeat="artwork in feedArtworks | orderBy: '-created_at' | limitTo: '20'">
           <!-- <img ng-src="{{ artwork.user.profile_pic.url }}" class="activity-feed-profile-pic"> -->
           <p>{{ artwork.user.username }} has posted a new artwork!</p>
+          <p>{{ artwork.title }}</p>
+          <p>{{ artwork.address }}</p>
           <p>{{ artwork.created_at | amCalendar }}</p>
+          <hr>
         </div>
       </div>
       <div ng-if="isSelected(2)"><!-- Likes -->
