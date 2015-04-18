@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   post '/artworks/new_artwork' => 'artworks#new_artwork'
   post '/relationships/follow_artist' => 'relationships#follow_artist'
   post '/relationships/unfollow_artist' => 'relationships#unfollow_artist'
+  get '/relationships/activity_feed' => 'relationships#activity_feed'
 
   # Artwork show page
   post '/comments/new_comment' => 'comments#new_comment'

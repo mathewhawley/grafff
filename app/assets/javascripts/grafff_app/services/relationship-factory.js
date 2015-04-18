@@ -9,6 +9,9 @@ app.factory('RelationshipFactory', ['$http', function($http) {
     },
     checkIfFollowing: function(relationship) {
       return $http.get('/users/check_if_following', { params: relationship });
+    },
+    activityFeedArtwork: function(id) {
+      return $http.get('/relationships/activity_feed', { params: id })
     }
   };
 

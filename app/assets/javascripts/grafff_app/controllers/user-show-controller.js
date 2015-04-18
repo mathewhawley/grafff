@@ -21,7 +21,7 @@ app.controller('UserShowController', [
     var relationship = {};
     relationship['follower_id'] = currentUserId;
     relationship['followed_id'] = followedId;
-
+    
     RelationshipFactory.checkIfFollowing(relationship)
     .then(function(response) {
       $scope.followingThisArtist = response.data;
@@ -55,6 +55,13 @@ app.controller('UserShowController', [
   UserFactory.getThisUserFollowedArtists($routeParams)
   .then(function(response) {
     $scope.userRelationships = response.data;
+  });
+
+  // Get this user's followed artist artworks for activity feed
+  RelationshipFactory.activityFeedArtwork($routeParams)
+  .then(function(response) {
+    console.log(response.data);
+    $scope.feedArtworks = response.data;
   });
 
 

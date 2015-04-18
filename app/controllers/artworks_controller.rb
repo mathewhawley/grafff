@@ -31,11 +31,8 @@ class ArtworksController < ApplicationController
     year = date.year
     month = date.month
     results = []
-    puts date
-    puts year
-    puts month
     Artwork.all.each do |artwork|
-      if (artwork.created_at.year && artwork.created_at.month) == (year && month)
+      if ((artwork.created_at.year == year) && (artwork.created_at.month == month))
         artwork_object = Artwork.where(id: artwork.id).to_json(include: [ :comments, :likes, :user ])
         ruby_hash = JSON.parse(artwork_object)
         results << ruby_hash[0]
