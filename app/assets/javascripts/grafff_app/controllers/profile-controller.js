@@ -37,7 +37,6 @@ app.controller('ProfileController', ['$scope', '$http', '$route', 'ArtworkFactor
 
     }
     ifArtist($scope.user);
-    // console.log($scope.user);
 
   });
 

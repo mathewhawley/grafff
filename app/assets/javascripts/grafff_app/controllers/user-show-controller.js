@@ -37,7 +37,6 @@ app.controller('UserShowController', [
     if(!$scope.user.is_artist) {
       RelationshipFactory.activityFeedArtwork($routeParams)
       .then(function(response) {
-        console.log(response.data);
         $scope.feedArtworks = response.data;
       });
     }

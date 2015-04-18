@@ -41,7 +41,6 @@ app.directive('datepickerPopupCustom', ['SearchFactory', '$timeout', function(Se
       }, function(newValue) {
         // Get artworks with corresponding date from database, repopulate map
         if(newValue) {
-          console.log(newValue);
           SearchFactory.filterArtwork(newValue).then(function(response) {
             scope.mapArtwork = [];
             var iterator = 0;
