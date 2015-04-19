@@ -16,6 +16,10 @@
 </div>
 
 <div id="wrapper">
+  <div class="like-buttons" ng-if="(artwork.user.id !== currentUser.id) && !currentUser.is_artist"><!-- Likes -->
+    <button ng-disabled="!currentUser" class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork()">Like</button>
+    <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork()">Unlike</button>
+  </div>
   <div class="artwork-info">
     <div class="artwork-info-segment">
       <p class="artwork-info-heading"><i class="fa fa-thumbs-up"></i></p>
@@ -65,10 +69,6 @@
     </div>
 
     <div class="col-md-5 artwork-aside"><!-- Aside: Map, like button -->
-      <div class="like-buttons" ng-if="(artwork.user.id !== currentUser.id) && !currentUser.is_artist"><!-- Likes -->
-        <button ng-disabled="!currentUser" class="btn btn-primary" ng-hide="likeThisArtwork" ng-click="likeArtwork()">Like</button>
-        <button class="btn btn-primary" ng-show="likeThisArtwork" ng-click="unlikeArtwork()">Unlike</button>
-      </div>
       <map id="artwork-map"
         zoom="15"
         center="{{ artwork.lat }}, {{ artwork.lng }}"

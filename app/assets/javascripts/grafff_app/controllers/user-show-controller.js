@@ -43,7 +43,7 @@ app.controller('UserShowController', [
 
     // Check if the 'current user' is already following 'this' user and show the appropriate follow/unfollow button
     if($scope.currentUser) {
-      checkIfFollowing($scope.currentUser.id, $scope.user.id);      
+      checkIfFollowing($scope.currentUser.id, $scope.user.id);
     }
   });
 

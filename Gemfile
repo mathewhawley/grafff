@@ -4,7 +4,6 @@ ruby '2.1.4'
 
 gem 'devise'
 gem 'angularjs-rails'
-gem 'underscore-rails'
 gem 'gon'
 gem 'thin'
 gem 'rails_12factor', group: :production
