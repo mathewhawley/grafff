@@ -16,7 +16,7 @@ The challenges I set for myself in this project were to use AngularJS (completel
 To run this app locally, first clone the repository to your machine:
 
 ```
-$ git clone git@github.com:mathewhawley/grafff.git
+$ git clone https://github.com/mathewhawley/grafff.git
 ```
 Go into the new directory, make sure you have PostgreSQL running and type in the following commands into your terminal:
 
