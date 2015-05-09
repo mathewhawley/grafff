@@ -116,10 +116,12 @@ app.controller('UserShowController', [
 
   // NEW ARTWORK FORM
   // Set new artwork location
-  $scope.getPosition = function(position) {
+  var latitude = null,
+      longitude = null;
 
-    longitude = position.latLng.D;
-    latitude = position.latLng.k;
+  $scope.getPosition = function(position) {
+    longitude = position.latLng.lng();
+    latitude = position.latLng.lat();
 
     $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true')
     .then(function(response) {
