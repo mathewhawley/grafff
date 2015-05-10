@@ -158,9 +158,9 @@ app.controller('UserShowController', [
         };
       })
       .on('httpUploadProgress',function(progress) {
-            // Log Progress Information
-            console.log(Math.round(progress.loaded / progress.total * 100) + '% done');
-          });
+        // Log Progress Information
+        console.log(Math.round(progress.loaded / progress.total * 100) + '% done');
+      });
     } else {
       // No File Selected
       alert('No File Selected');
